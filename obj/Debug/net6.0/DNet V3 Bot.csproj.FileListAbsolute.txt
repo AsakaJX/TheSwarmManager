@@ -1,0 +1,497 @@
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/DNet V3 Bot
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/DNet V3 Bot.deps.json
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/DNet V3 Bot.runtimeconfig.json
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/DNet V3 Bot.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/ref/DNet V3 Bot.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/DNet V3 Bot.pdb
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Discord.Net.Commands.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Discord.Net.Core.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Discord.Net.Interactions.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Discord.Net.Rest.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Discord.Net.Webhook.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Discord.Net.WebSocket.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Configuration.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Binder.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Configuration.CommandLine.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Json.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Configuration.UserSecrets.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Yaml.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Physical.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Hosting.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Hosting.Abstractions.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Logging.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Logging.Configuration.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Logging.Console.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Logging.Debug.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Logging.EventLog.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Logging.EventSource.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Options.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/Newtonsoft.Json.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/System.Diagnostics.EventLog.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/System.Interactive.Async.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/System.Linq.Async.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/System.Reactive.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/YamlDotNet.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/obj/Debug/net6.0/DNet V3 Bot.csproj.AssemblyReference.cache
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/obj/Debug/net6.0/DNet V3 Bot.GeneratedMSBuildEditorConfig.editorconfig
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/obj/Debug/net6.0/DNet V3 Bot.AssemblyInfoInputs.cache
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/obj/Debug/net6.0/DNet V3 Bot.AssemblyInfo.cs
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/obj/Debug/net6.0/DNet V3 Bot.csproj.CoreCompileInputs.cache
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/obj/Debug/net6.0/DNet V3 Bot.csproj.CopyComplete
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/obj/Debug/net6.0/DNet V3 Bot.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/obj/Debug/net6.0/ref/DNet V3 Bot.dll
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/obj/Debug/net6.0/DNet V3 Bot.pdb
+/home/asaka/VSProjects/Discord.Net-V3-Bot-Tutorial-barebones/obj/Debug/net6.0/DNet V3 Bot.genruntimeconfig.cache
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/DNet V3 Bot
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/DNet V3 Bot.deps.json
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/DNet V3 Bot.runtimeconfig.json
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/DNet V3 Bot.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/DNet V3 Bot.pdb
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Discord.Net.Commands.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Discord.Net.Core.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Discord.Net.Interactions.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Discord.Net.Rest.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Discord.Net.Webhook.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Discord.Net.WebSocket.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Configuration.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Binder.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Configuration.CommandLine.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Json.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Configuration.UserSecrets.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Yaml.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Physical.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Hosting.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Hosting.Abstractions.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Logging.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Logging.Configuration.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Logging.Console.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Logging.Debug.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Logging.EventLog.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Logging.EventSource.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Options.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Newtonsoft.Json.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/System.Diagnostics.EventLog.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/System.Interactive.Async.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/System.Linq.Async.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/System.Reactive.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/YamlDotNet.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll
+/home/asaka/VSProjects/TheSwarmManager/obj/Debug/net6.0/DNet V3 Bot.csproj.AssemblyReference.cache
+/home/asaka/VSProjects/TheSwarmManager/obj/Debug/net6.0/DNet V3 Bot.GeneratedMSBuildEditorConfig.editorconfig
+/home/asaka/VSProjects/TheSwarmManager/obj/Debug/net6.0/DNet V3 Bot.AssemblyInfoInputs.cache
+/home/asaka/VSProjects/TheSwarmManager/obj/Debug/net6.0/DNet V3 Bot.AssemblyInfo.cs
+/home/asaka/VSProjects/TheSwarmManager/obj/Debug/net6.0/DNet V3 Bot.csproj.CoreCompileInputs.cache
+/home/asaka/VSProjects/TheSwarmManager/obj/Debug/net6.0/DNet V3 Bot.csproj.CopyComplete
+/home/asaka/VSProjects/TheSwarmManager/obj/Debug/net6.0/DNet V3 Bot.dll
+/home/asaka/VSProjects/TheSwarmManager/obj/Debug/net6.0/ref/DNet V3 Bot.dll
+/home/asaka/VSProjects/TheSwarmManager/obj/Debug/net6.0/DNet V3 Bot.pdb
+/home/asaka/VSProjects/TheSwarmManager/obj/Debug/net6.0/DNet V3 Bot.genruntimeconfig.cache
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/config.yml
+/home/asaka/VSProjects/TheSwarmManager/obj/Debug/net6.0/refint/DNet V3 Bot.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/MediaToolkit.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/libvideo.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/NReco.VideoConverter.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Xabe.FFmpeg.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Xabe.FFmpeg.Downloader.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/AngleSharp.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/YoutubeExplode.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/CliWrap.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Victoria.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/OpenAI.GPT3.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Http.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/System.Text.Json.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/EmbedIO.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/SpotifyAPI.Web.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/SpotifyAPI.Web.Auth.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Swan.Lite.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/DeepL.net.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.Extensions.Http.Polly.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Polly.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Polly.Extensions.Http.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/Microsoft.ML.OnnxRuntime.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/android/native/onnxruntime.aar
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/Info.plist
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/coreml_provider_factory.h
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/cpu_provider_factory.h
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_c_api.h
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_cxx_api.h
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Headers/onnxruntime_cxx_inline.h
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/Info.plist
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64/onnxruntime.framework/onnxruntime
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/coreml_provider_factory.h
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/cpu_provider_factory.h
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_c_api.h
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_cxx_api.h
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Headers/onnxruntime_cxx_inline.h
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/Info.plist
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/ios/native/onnxruntime.xcframework/ios-arm64_x86_64-simulator/onnxruntime.framework/onnxruntime
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/linux-arm64/native/libonnxruntime.so
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/linux-x64/native/libonnxruntime.so
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/osx.10.14-arm64/native/libonnxruntime.dylib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/osx.10.14-x64/native/libonnxruntime.dylib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-arm/native/onnxruntime.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-arm/native/onnxruntime.lib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-arm/native/onnxruntime_providers_shared.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-arm/native/onnxruntime_providers_shared.lib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-arm64/native/onnxruntime.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-arm64/native/onnxruntime.lib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-arm64/native/onnxruntime_providers_shared.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-arm64/native/onnxruntime_providers_shared.lib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x64/native/onnxruntime.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x64/native/onnxruntime.lib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x64/native/onnxruntime_providers_shared.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x64/native/onnxruntime_providers_shared.lib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x86/native/onnxruntime.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x86/native/onnxruntime.lib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x86/native/onnxruntime_providers_shared.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x86/native/onnxruntime_providers_shared.lib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/linux-x64/native/libonnxruntime_providers_cuda.so
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/linux-x64/native/libonnxruntime_providers_shared.so
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/linux-x64/native/libonnxruntime_providers_tensorrt.so
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x64/native/onnxruntime_providers_cuda.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x64/native/onnxruntime_providers_cuda.lib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x64/native/onnxruntime_providers_tensorrt.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x64/native/onnxruntime_providers_tensorrt.lib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/linux-x64/native/libmklml_gnu.so
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/osx-x64/native/libiomp5.dylib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/osx-x64/native/libmklml.dylib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/osx-x64/native/libonnxruntime.dylib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/osx-x64/native/libonnxruntime.dylib.dSYM/Contents/Info.plist
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/osx-x64/native/libonnxruntime.dylib.dSYM/Contents/Resources/DWARF/libonnxruntime.dylib
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x64/native/libiomp5md.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x64/native/mklml.dll
+/home/asaka/VSProjects/TheSwarmManager/bin/Debug/net6.0/runtimes/win-x64/native/onnxruntime.pdb
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\config.yml
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\DNet V3 Bot.exe
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\DNet V3 Bot.deps.json
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\DNet V3 Bot.runtimeconfig.json
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\DNet V3 Bot.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\DNet V3 Bot.pdb
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\AngleSharp.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\OpenAI.GPT3.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\CliWrap.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\DeepL.net.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Discord.Net.Commands.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Discord.Net.Core.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Discord.Net.Interactions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Discord.Net.Rest.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Discord.Net.Webhook.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Discord.Net.WebSocket.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\EmbedIO.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\MediaToolkit.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Yaml.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Hosting.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Http.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Http.Polly.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Logging.Configuration.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Logging.Console.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Logging.Debug.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Logging.EventLog.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Logging.EventSource.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Microsoft.ML.OnnxRuntime.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\NReco.VideoConverter.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Polly.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Polly.Extensions.Http.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\SpotifyAPI.Web.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\SpotifyAPI.Web.Auth.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\System.Diagnostics.EventLog.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\System.Interactive.Async.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\System.Linq.Async.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\System.Reactive.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\System.Text.Json.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Swan.Lite.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Victoria.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\libvideo.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Xabe.FFmpeg.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\Xabe.FFmpeg.Downloader.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\YamlDotNet.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\YoutubeExplode.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\android\native\onnxruntime.aar
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\Info.plist
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64\onnxruntime.framework\Headers\coreml_provider_factory.h
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64\onnxruntime.framework\Headers\cpu_provider_factory.h
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64\onnxruntime.framework\Headers\onnxruntime_c_api.h
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64\onnxruntime.framework\Headers\onnxruntime_cxx_api.h
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64\onnxruntime.framework\Headers\onnxruntime_cxx_inline.h
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64\onnxruntime.framework\Info.plist
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64\onnxruntime.framework\onnxruntime
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64_x86_64-simulator\onnxruntime.framework\Headers\coreml_provider_factory.h
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64_x86_64-simulator\onnxruntime.framework\Headers\cpu_provider_factory.h
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64_x86_64-simulator\onnxruntime.framework\Headers\onnxruntime_c_api.h
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64_x86_64-simulator\onnxruntime.framework\Headers\onnxruntime_cxx_api.h
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64_x86_64-simulator\onnxruntime.framework\Headers\onnxruntime_cxx_inline.h
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64_x86_64-simulator\onnxruntime.framework\Info.plist
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\ios\native\onnxruntime.xcframework\ios-arm64_x86_64-simulator\onnxruntime.framework\onnxruntime
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\linux-arm64\native\libonnxruntime.so
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\linux-x64\native\libonnxruntime.so
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\osx.10.14-arm64\native\libonnxruntime.dylib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\osx.10.14-x64\native\libonnxruntime.dylib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-arm\native\onnxruntime.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-arm\native\onnxruntime.lib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-arm\native\onnxruntime_providers_shared.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-arm\native\onnxruntime_providers_shared.lib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-arm64\native\onnxruntime.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-arm64\native\onnxruntime.lib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-arm64\native\onnxruntime_providers_shared.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-arm64\native\onnxruntime_providers_shared.lib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x64\native\onnxruntime.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x64\native\onnxruntime.lib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x64\native\onnxruntime_providers_shared.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x64\native\onnxruntime_providers_shared.lib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x86\native\onnxruntime.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x86\native\onnxruntime.lib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x86\native\onnxruntime_providers_shared.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x86\native\onnxruntime_providers_shared.lib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\linux-x64\native\libonnxruntime_providers_cuda.so
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\linux-x64\native\libonnxruntime_providers_shared.so
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\linux-x64\native\libonnxruntime_providers_tensorrt.so
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x64\native\onnxruntime_providers_cuda.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x64\native\onnxruntime_providers_cuda.lib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x64\native\onnxruntime_providers_tensorrt.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x64\native\onnxruntime_providers_tensorrt.lib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\linux-x64\native\libmklml_gnu.so
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\osx-x64\native\libiomp5.dylib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\osx-x64\native\libmklml.dylib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\osx-x64\native\libonnxruntime.dylib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\osx-x64\native\libonnxruntime.dylib.dSYM\Contents\Info.plist
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\osx-x64\native\libonnxruntime.dylib.dSYM\Contents\Resources\DWARF\libonnxruntime.dylib
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x64\native\libiomp5md.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x64\native\mklml.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win-x64\native\onnxruntime.pdb
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+D:\Projects\TheSwarmManager-main\obj\Debug\net6.0\DNet V3 Bot.csproj.AssemblyReference.cache
+D:\Projects\TheSwarmManager-main\obj\Debug\net6.0\DNet V3 Bot.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\TheSwarmManager-main\obj\Debug\net6.0\DNet V3 Bot.AssemblyInfoInputs.cache
+D:\Projects\TheSwarmManager-main\obj\Debug\net6.0\DNet V3 Bot.AssemblyInfo.cs
+D:\Projects\TheSwarmManager-main\obj\Debug\net6.0\DNet V3 Bot.csproj.CoreCompileInputs.cache
+D:\Projects\TheSwarmManager-main\obj\Debug\net6.0\DNet V3 Bot.csproj.CopyComplete
+D:\Projects\TheSwarmManager-main\obj\Debug\net6.0\DNet V3 Bot.dll
+D:\Projects\TheSwarmManager-main\obj\Debug\net6.0\refint\DNet V3 Bot.dll
+D:\Projects\TheSwarmManager-main\obj\Debug\net6.0\DNet V3 Bot.pdb
+D:\Projects\TheSwarmManager-main\obj\Debug\net6.0\DNet V3 Bot.genruntimeconfig.cache
+D:\Projects\TheSwarmManager-main\obj\Debug\net6.0\ref\DNet V3 Bot.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\Microsoft.CSharp.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\Microsoft.VisualBasic.Core.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\Microsoft.VisualBasic.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\Microsoft.Win32.Primitives.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\Microsoft.Win32.Registry.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.AppContext.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Buffers.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Collections.Concurrent.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Collections.Immutable.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Collections.NonGeneric.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Collections.Specialized.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Collections.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.ComponentModel.Annotations.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.ComponentModel.DataAnnotations.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.ComponentModel.EventBasedAsync.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.ComponentModel.Primitives.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.ComponentModel.TypeConverter.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.ComponentModel.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Configuration.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Console.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Core.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Data.Common.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Data.DataSetExtensions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Data.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Diagnostics.Contracts.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Diagnostics.Debug.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Diagnostics.DiagnosticSource.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Diagnostics.FileVersionInfo.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Diagnostics.Process.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Diagnostics.StackTrace.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Diagnostics.TextWriterTraceListener.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Diagnostics.Tools.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Diagnostics.TraceSource.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Diagnostics.Tracing.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Drawing.Primitives.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Drawing.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Dynamic.Runtime.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Formats.Asn1.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Formats.Tar.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Globalization.Calendars.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Globalization.Extensions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Globalization.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.Compression.Brotli.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.Compression.FileSystem.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.Compression.ZipFile.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.Compression.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.FileSystem.AccessControl.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.FileSystem.DriveInfo.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.FileSystem.Primitives.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.FileSystem.Watcher.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.FileSystem.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.IsolatedStorage.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.MemoryMappedFiles.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.Pipes.AccessControl.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.Pipes.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.UnmanagedMemoryStream.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.IO.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Linq.Expressions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Linq.Parallel.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Linq.Queryable.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Linq.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Memory.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.Http.Json.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.Http.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.HttpListener.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.Mail.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.NameResolution.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.NetworkInformation.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.Ping.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.Primitives.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.Quic.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.Requests.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.Security.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.ServicePoint.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.Sockets.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.WebClient.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.WebHeaderCollection.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.WebProxy.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.WebSockets.Client.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.WebSockets.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Net.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Numerics.Vectors.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Numerics.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.ObjectModel.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Reflection.DispatchProxy.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Reflection.Emit.ILGeneration.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Reflection.Emit.Lightweight.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Reflection.Emit.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Reflection.Extensions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Reflection.Metadata.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Reflection.Primitives.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Reflection.TypeExtensions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Reflection.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Resources.Reader.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Resources.ResourceManager.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Resources.Writer.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.CompilerServices.VisualC.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.Extensions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.Handles.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.InteropServices.JavaScript.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.InteropServices.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.Intrinsics.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.Loader.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.Numerics.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.Serialization.Formatters.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.Serialization.Json.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.Serialization.Primitives.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.Serialization.Xml.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.Serialization.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Runtime.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.AccessControl.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.Claims.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.Cryptography.Algorithms.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.Cryptography.Cng.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.Cryptography.Csp.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.Cryptography.Encoding.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.Cryptography.OpenSsl.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.Cryptography.Primitives.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.Cryptography.X509Certificates.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.Cryptography.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.Principal.Windows.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.Principal.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.SecureString.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Security.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.ServiceModel.Web.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.ServiceProcess.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Text.Encoding.CodePages.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Text.Encoding.Extensions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Text.Encoding.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Text.Encodings.Web.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Text.Json.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Text.RegularExpressions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Threading.Channels.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Threading.Overlapped.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Threading.Tasks.Dataflow.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Threading.Tasks.Extensions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Threading.Tasks.Parallel.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Threading.Tasks.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Threading.Thread.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Threading.ThreadPool.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Threading.Timer.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Threading.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Transactions.Local.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Transactions.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.ValueTuple.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Web.HttpUtility.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Web.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Windows.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Xml.Linq.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Xml.ReaderWriter.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Xml.Serialization.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Xml.XDocument.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Xml.XPath.XDocument.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Xml.XPath.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Xml.XmlDocument.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Xml.XmlSerializer.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.Xml.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\System.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\WindowsBase.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\mscorlib.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\ref\netstandard.dll
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\unix\lib\net7.0\Modules\Microsoft.PowerShell.Host\Microsoft.PowerShell.Host.psd1
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\unix\lib\net7.0\Modules\Microsoft.PowerShell.Management\Microsoft.PowerShell.Management.psd1
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\unix\lib\net7.0\Modules\Microsoft.PowerShell.Security\Microsoft.PowerShell.Security.psd1
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\unix\lib\net7.0\Modules\Microsoft.PowerShell.Utility\Microsoft.PowerShell.Utility.psd1
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\CimCmdlets\CimCmdlets.psd1
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\Microsoft.PowerShell.Diagnostics\Diagnostics.format.ps1xml
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\Microsoft.PowerShell.Diagnostics\Event.format.ps1xml
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\Microsoft.PowerShell.Diagnostics\GetEvent.types.ps1xml
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\Microsoft.PowerShell.Diagnostics\Microsoft.PowerShell.Diagnostics.psd1
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\Microsoft.PowerShell.Host\Microsoft.PowerShell.Host.psd1
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\Microsoft.PowerShell.Management\Microsoft.PowerShell.Management.psd1
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\Microsoft.PowerShell.Security\Microsoft.PowerShell.Security.psd1
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\Microsoft.PowerShell.Security\Security.types.ps1xml
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\Microsoft.PowerShell.Utility\Microsoft.PowerShell.Utility.psd1
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\Microsoft.WSMan.Management\Microsoft.WSMan.Management.psd1
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\Microsoft.WSMan.Management\WSMan.format.ps1xml
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\PSDiagnostics\PSDiagnostics.psd1
+D:\Projects\TheSwarmManager-main\bin\Debug\net6.0\runtimes\win\lib\net7.0\Modules\PSDiagnostics\PSDiagnostics.psm1

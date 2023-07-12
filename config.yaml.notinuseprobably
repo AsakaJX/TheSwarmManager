@@ -1,0 +1,12 @@
+prefix: <
+serverGuild: 923615051116589086
+tokens:
+  discord: MTA2ODk2Mjg5ODg0NTYzODcxNg.GMZF9Z.U0cZSZ82AjsZnFC3pb1bDRz3T60skKxrOvrPDc
+  openai: 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
+usersGuild:
+  owner: 230758744798134282
+roleGuild:
+  owner: 1067504487901696131
+  elite: 1081175936495538246
+colors:
+  red: [176, 98, 101]

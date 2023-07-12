@@ -1,0 +1,207 @@
+{
+  "format": 1,
+  "restore": {
+    "d:\\Projects\\TheSwarmManager-main\\DNet V3 Bot.csproj": {}
+  },
+  "projects": {
+    "d:\\Projects\\TheSwarmManager-main\\DNet V3 Bot.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "d:\\Projects\\TheSwarmManager-main\\DNet V3 Bot.csproj",
+        "projectName": "DNet V3 Bot",
+        "projectPath": "d:\\Projects\\TheSwarmManager-main\\DNet V3 Bot.csproj",
+        "packagesPath": "C:\\Users\\paged\\.nuget\\packages\\",
+        "outputPath": "d:\\Projects\\TheSwarmManager-main\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\paged\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Betalgo.OpenAI.GPT3": {
+              "target": "Package",
+              "version": "[6.8.3, )"
+            },
+            "CliWrap": {
+              "target": "Package",
+              "version": "[3.6.0, )"
+            },
+            "DeepL.net": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Discord.Net": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "Discord.Net.Commands": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "Discord.Net.Core": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "Discord.Net.Interactions": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "Discord.Net.Rest": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "Discord.Net.WebSocket": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "Discord.Net.Webhook": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "MediaToolkit": {
+              "target": "Package",
+              "version": "[1.1.0.1, )",
+              "noWarn": [
+                "NU1701"
+              ]
+            },
+            "Microsoft.Extensions.Configuration.Yaml": {
+              "target": "Package",
+              "version": "[2.0.0-preview2, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.ML.OnnxRuntime": {
+              "target": "Package",
+              "version": "[1.14.1, )"
+            },
+            "Microsoft.ML.OnnxRuntime.DirectML": {
+              "target": "Package",
+              "version": "[1.14.1, )"
+            },
+            "Microsoft.ML.OnnxRuntime.Gpu": {
+              "target": "Package",
+              "version": "[1.14.1, )"
+            },
+            "Microsoft.ML.OnnxRuntime.MKLML": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
+            "Microsoft.ML.OnnxRuntime.Managed": {
+              "target": "Package",
+              "version": "[1.14.1, )"
+            },
+            "Microsoft.PowerShell.SDK": {
+              "target": "Package",
+              "version": "[7.3.5, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.20.0, )"
+            },
+            "NReco.VideoConverter": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[1.7.2, )"
+            },
+            "SpotifyAPI.Web": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "SpotifyAPI.Web.Auth": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Victoria": {
+              "target": "Package",
+              "version": "[5.2.8, )"
+            },
+            "VideoLibrary": {
+              "target": "Package",
+              "version": "[3.2.3, )"
+            },
+            "Xabe.FFmpeg": {
+              "target": "Package",
+              "version": "[5.2.5, )"
+            },
+            "Xabe.FFmpeg.Downloader": {
+              "target": "Package",
+              "version": "[5.2.5, )"
+            },
+            "YamlDotNet": {
+              "target": "Package",
+              "version": "[8.1.2, )"
+            },
+            "YoutubeExplode": {
+              "target": "Package",
+              "version": "[6.2.8, )",
+              "noWarn": [
+                "NU1603"
+              ]
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.4.23260.5\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
