@@ -555,3 +555,8 @@
 2023-07-12 19:13:50.949  INFO 15292 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
 2023-07-12 19:13:50.949  INFO 15292 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
 2023-07-12 19:13:50.974  INFO 15292 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
+2023-07-12 23:31:01.855  INFO 15292 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:59624 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
+2023-07-12 23:31:31.855  INFO 15292 --- [pool-6-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-07-12 23:32:23.609  INFO 15292 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
+2023-07-12 23:32:23.616  INFO 15292 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-12 23:32:23.619  INFO 15292 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
