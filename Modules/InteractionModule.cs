@@ -568,10 +568,8 @@ namespace TheSwarmManager.Modules.Interactions {
                     );
                 }
             } else {
-                if (completionResult.Error == null) {
-                    throw new Exception("Unknown Error");
-                }
-                Console.WriteLine($"{completionResult.Error.Code}: {completionResult.Error.Message}");
+                if (completionResult.Error == null)
+                    Log.NewLog(Logging.LogSeverity.Error, "Interaction Handler", completionResult.Error?.Message ?? "this message shouldn't be null, but it is.");
             }
         }
 

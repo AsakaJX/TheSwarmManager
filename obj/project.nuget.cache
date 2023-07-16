@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hlJtSSN2EbXUQhOywbIHb8L6SuwdOK5gdpytyHDzuLzdBvyQEkqMNSwusiDGYMX58XsQ1Jui8c/HpB2uMEMl7A==",
+  "dgSpecHash": "SYmYxuFgdG6Q9xq1PhlNf7lWf8DqnvnYJ3A2g7gxW+Oo3uV2eMGErUY/qIsroljlboVkuWJcCxrbq4F+/KLkhg==",
   "success": true,
-  "projectFilePath": "d:\\Projects\\TheSwarmManager-main\\DNet V3 Bot.csproj",
+  "projectFilePath": "D:\\Projects\\TheSwarmManager-main\\DNet V3 Bot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paged\\.nuget\\packages\\anglesharp\\1.0.1\\anglesharp.1.0.1.nupkg.sha512",
     "C:\\Users\\paged\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
