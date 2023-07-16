@@ -219,3 +219,4 @@
 2023-07-16 14:26:08.323  INFO 9168 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
 2023-07-16 14:26:08.323  INFO 9168 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
 2023-07-16 14:26:08.350  INFO 9168 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
+2023-07-16 14:27:29.375  INFO 9168 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:55131 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria

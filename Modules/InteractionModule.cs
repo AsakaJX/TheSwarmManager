@@ -82,7 +82,7 @@ namespace TheSwarmManager.Modules.Interactions {
         }
 
         [SlashCommand("admin-cleanup", "Очистить сообщения от бота в последних x сообщениях (Только для админов).", runMode: RunMode.Async)]
-        public async Task HandleCleanUPCommand(
+        public async Task HandleCleanupCommand(
             [Summary("amount", "Количество последних сообщений.")]
             [MinValue(1)]
             int amount
@@ -110,7 +110,13 @@ namespace TheSwarmManager.Modules.Interactions {
                 await RespondAsync(embed: EB.ErrorWithAuthor(Context.User, "Нечего удалять!"));
             else {
                 await Context.Channel.DeleteMessageAsync(await GetOriginalResponseAsync());
-                await (Context.Channel as ITextChannel).DeleteMessagesAsync(filteredMessages);
+                ITextChannel? textChannel = Context.Channel as ITextChannel;
+                if (textChannel != null)
+                    await (textChannel).DeleteMessagesAsync(filteredMessages);
+                else {
+                    Log.NewLog(Logging.LogSeverity.Error, "Interaction Module", "Error while trying to cast ISocketMessageChannel to ITextChannel in HandleCleanupCommand.");
+                    return;
+                }
                 await ReplyAsync(embed: EB.SuccessWithAuthor(Context.User, $"Removed {++count} message{(count > 1 ? "s" : "")}."));
             }
         }
