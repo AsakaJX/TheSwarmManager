@@ -227,3 +227,8 @@
 2023-07-16 14:27:40.373  INFO 9168 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
 2023-07-16 19:56:08.138  INFO 9168 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:55231 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
 2023-07-16 19:56:38.149  INFO 9168 --- [pool-12-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-07-16 19:58:49.480  INFO 9168 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:53191
+2023-07-16 19:58:49.489  INFO 9168 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
+2023-07-16 19:58:49.495  INFO 9168 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from Victoria/5.2.8.0
+2023-07-16 19:58:49.523  INFO 9168 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
+2023-07-16 19:58:49.523  WARN 9168 --- [XNIO-1 I/O-10] lavalink.server.io.WebSocketHandler      : Sending websocket commands to Lavalink has been deprecated and will be removed in API version 4. API version 3 will be removed in Lavalink 5. Please use the new REST endpoints instead.
