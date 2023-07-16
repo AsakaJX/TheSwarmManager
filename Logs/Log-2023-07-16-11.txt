@@ -1,0 +1,9 @@
+2023-07-16 14:26:02 Discord Discord.Net v3.11.0 (API v10)
+2023-07-16 14:26:02 Gateway Connecting
+2023-07-16 14:26:03 Gateway Connected
+2023-07-16 14:26:04 Gateway Ready
+2023-07-16 14:26:04 Rest Rate limit triggered: PUT applications/1068962898845638716/commands Remaining: 64s 
+2023-07-16 14:26:08 Victoria Websocket connection established.
+2023-07-16 14:26:08 Victoria {"resumed":true,"sessionId":"d8kq24qez2w07ri3","op":"ready"}
+2023-07-16 14:26:08 Victoria Unknown OP code received (ready), check Lavalink implementation.
+2023-07-16 14:26:31 Victoria {"players":0,"playingPlayers":0,"uptime":3127691,"memory":{"free":179974024,"used":63295608,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.11352106185545416,"lavalinkLoad":6.308604714500898E-4},"op":"stats"}

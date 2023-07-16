@@ -1,4 +1,7 @@
-﻿using Discord;
+﻿using System.Text;
+using Discord;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Yaml;
 using TheSwarmManager.Services;
 
 namespace TheSwarmManager.Modules.Logging {
@@ -11,6 +14,10 @@ namespace TheSwarmManager.Modules.Logging {
         Warning,
     }
     public class Logger {
+        private IConfigurationRoot _config = new ConfigurationBuilder()
+            .SetBasePath(AppContext.BaseDirectory)
+            .AddYamlFile("config.yml")
+            .Build();
         private PowerShellHandler PowerShell = new PowerShellHandler();
         Dictionary<LogSeverity, ConsoleColor> ColorTable = new Dictionary<LogSeverity, ConsoleColor> {
             {LogSeverity.Critical, ConsoleColor.Magenta},
@@ -33,6 +40,22 @@ namespace TheSwarmManager.Modules.Logging {
             string message = "* empty *",
             int depth = 0
         ) {
+            //? /```                Save Logs to file                  ```\
+            string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            var path = "config.yml";
+            var deserializer = new YamlDotNet.Serialization.Deserializer();
+            using var reader = new StreamReader(path);
+            var obj = deserializer.Deserialize<Dictionary<object, object>>(reader);
+            reader.Close();
+
+            var logsName = $"Logs/Log-{_config["lastRunDate"]}-{obj["DailyRunCounter"]}.txt";
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"{date} {source} {message}");
+            File.AppendAllText(logsName, sb.ToString());
+            //? \...                Save Logs to file                  .../
+
             if (source == "Victoria" && (message.IndexOf("Unable to connect to the remote server") == -1 && message.IndexOf("Unknown OP code received (ready)") == -1)) { return; }
             // string addSpacesDepth = String.Concat(Enumerable.Repeat(" ", depth));
             string arrow = "⇢";
@@ -59,7 +82,6 @@ namespace TheSwarmManager.Modules.Logging {
                 source = firstWord + addSpacesSource.Insert(0, " ") + secondWord;
                 addSpacesSource = "";
             }
-            string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             Console.ForegroundColor = ConsoleColor.DarkGray; Console.Write($"{date}  ");
             Console.ForegroundColor = ColorTable[severity]; Console.Write($"{addSpacesSeverity}{severity.ToString().ToUpper()}");
             Console.ForegroundColor = ConsoleColor.Cyan; Console.Write(" ⇢ ");

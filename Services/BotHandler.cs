@@ -40,10 +40,41 @@ namespace TheSwarmManager.Services {
         }
 
         public async Task InitializeAsync() {
-            System.IO.DirectoryInfo di = new DirectoryInfo("Resources/StableDiffusionOutput/");
-            foreach (FileInfo file in di.EnumerateFiles()) {
+            System.IO.DirectoryInfo STDO_dir = new DirectoryInfo("Resources/StableDiffusionOutput/");
+            foreach (FileInfo file in STDO_dir.EnumerateFiles()) {
                 file.Delete();
             }
+
+            System.IO.DirectoryInfo PINGCTS_dir = new DirectoryInfo(Directory.GetCurrentDirectory());
+            foreach (FileInfo file in PINGCTS_dir.EnumerateFiles()) {
+                if (file.Name.IndexOf("cts-") == -1) { continue; }
+                file.Delete();
+            }
+
+            //? /```                    Saving run counter for log files                     ```\
+            var path = "config.yml";
+            var deserializer = new YamlDotNet.Serialization.Deserializer();
+
+            try {
+                using var reader = new StreamReader(path);
+                var obj = deserializer.Deserialize<Dictionary<object, object>>(reader);
+                reader.Close();
+
+                int writeCounter = obj["lastRunDate"].ToString() != DateTime.Now.ToString("yyyy-MM-dd") ? 0 : Convert.ToInt32(obj["DailyRunCounter"]) + 1;
+                obj["DailyRunCounter"] = writeCounter;
+
+                var writeDate = DateTime.Now.ToString("yyyy-MM-dd");
+                obj["lastRunDate"] = writeDate;
+
+                using var writer = new StreamWriter(path);
+                // Save Changes
+                var serializer = new YamlDotNet.Serialization.Serializer();
+                serializer.Serialize(writer, obj);
+                writer.Close();
+            } catch (Exception e) {
+                Log.NewLog(Modules.Logging.LogSeverity.Error, "Bot Handler", e.ToString());
+            }
+            //? \...                    Saving run counter for log files                     .../
 
             await _client.LoginAsync(TokenType.Bot, _config["tokens:discord"]);
             await _client.StartAsync();
