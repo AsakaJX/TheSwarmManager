@@ -1,0 +1,10 @@
+2023-07-18 00:09:13 Discord Discord.Net v3.11.0 (API v10)
+2023-07-18 00:09:13 Gateway Connecting
+2023-07-18 00:09:15 Gateway Connected
+2023-07-18 00:09:16 Gateway Ready
+2023-07-18 00:09:16 Victoria Websocket connection established.
+2023-07-18 00:09:16 Victoria {"resumed":true,"sessionId":"kwg3qw361231nwmq","op":"ready"}
+2023-07-18 00:09:16 Victoria Unknown OP code received (ready), check Lavalink implementation.
+2023-07-18 00:09:16 Victoria {"players":0,"playingPlayers":0,"uptime":23461166,"memory":{"free":85309568,"used":157960064,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.06806336541239748,"lavalinkLoad":4.349106835184135E-4},"op":"stats"}
+2023-07-18 00:09:17 Interaction Handler|Request thisusernameisunavailable. requested slots
+2023-07-18 00:10:10 Victoria {"players":0,"playingPlayers":0,"uptime":23521161,"memory":{"free":79247144,"used":164022488,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.06086038532594352,"lavalinkLoad":4.775071903699015E-4},"op":"stats"}

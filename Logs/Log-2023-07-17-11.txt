@@ -1,0 +1,17 @@
+2023-07-17 23:42:05 Discord Discord.Net v3.11.0 (API v10)
+2023-07-17 23:42:05 Gateway Connecting
+2023-07-17 23:42:06 Gateway Connected
+2023-07-17 23:42:07 Gateway Ready
+2023-07-17 23:42:07 Victoria Websocket connection established.
+2023-07-17 23:42:07 Victoria {"resumed":true,"sessionId":"05vosxso4hq9hu3n","op":"ready"}
+2023-07-17 23:42:07 Victoria Unknown OP code received (ready), check Lavalink implementation.
+2023-07-17 23:42:08 Interaction Handler|Request thisusernameisunavailable. requested slots
+2023-07-17 23:42:22 Victoria {"players":0,"playingPlayers":0,"uptime":21853319,"memory":{"free":105625184,"used":137644448,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.06906391505209267,"lavalinkLoad":3.901347283773728E-4},"op":"stats"}
+2023-07-17 23:42:25 Interaction Handler|Request thisusernameisunavailable. requested slots
+2023-07-17 23:43:22 Victoria {"players":0,"playingPlayers":0,"uptime":21913317,"memory":{"free":100165352,"used":143104280,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.04530218356747055,"lavalinkLoad":4.126237871361408E-4},"op":"stats"}
+2023-07-17 23:44:22 Victoria {"players":0,"playingPlayers":0,"uptime":21973310,"memory":{"free":94339712,"used":148929920,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.04584159846199152,"lavalinkLoad":3.679206513167394E-4},"op":"stats"}
+2023-07-17 23:45:22 Victoria {"players":0,"playingPlayers":0,"uptime":22033322,"memory":{"free":87582488,"used":155687144,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.07512222078746149,"lavalinkLoad":3.6936441548775543E-4},"op":"stats"}
+2023-07-17 23:46:22 Victoria {"players":0,"playingPlayers":0,"uptime":22093315,"memory":{"free":81754248,"used":161515384,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.06853648337572814,"lavalinkLoad":4.3499046634313377E-4},"op":"stats"}
+2023-07-17 23:47:22 Victoria {"players":0,"playingPlayers":0,"uptime":22153312,"memory":{"free":77567848,"used":165701784,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.0861242623683929,"lavalinkLoad":6.068433038937955E-4},"op":"stats"}
+2023-07-17 23:48:22 Victoria {"players":0,"playingPlayers":0,"uptime":22213311,"memory":{"free":200507616,"used":42762016,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.06573152693966265,"lavalinkLoad":3.9166013899768337E-4},"op":"stats"}
+2023-07-17 23:49:22 Victoria {"players":0,"playingPlayers":0,"uptime":22273322,"memory":{"free":194482672,"used":48786960,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.06799548974082674,"lavalinkLoad":3.6798809107219235E-4},"op":"stats"}

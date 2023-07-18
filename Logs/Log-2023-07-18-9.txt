@@ -1,0 +1,13 @@
+2023-07-18 00:11:19 Discord Discord.Net v3.11.0 (API v10)
+2023-07-18 00:11:19 Gateway Connecting
+2023-07-18 00:11:20 Gateway Connected
+2023-07-18 00:11:21 Gateway Ready
+2023-07-18 00:11:21 Interaction Handler|Request thisusernameisunavailable. requested slots
+2023-07-18 00:11:21 Victoria Websocket connection established.
+2023-07-18 00:11:21 Victoria {"resumed":true,"sessionId":"kwg3qw361231nwmq","op":"ready"}
+2023-07-18 00:11:21 Victoria Unknown OP code received (ready), check Lavalink implementation.
+2023-07-18 00:11:28 Slots System.Threading.Tasks.Task`1[MongoDB.Driver.IAsyncCursor`1[MongoDB.Bson.BsonDocument]]
+2023-07-18 00:12:10 Victoria {"players":0,"playingPlayers":0,"uptime":23641168,"memory":{"free":196354472,"used":46915160,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.0761934257251937,"lavalinkLoad":4.1243126145642394E-4},"op":"stats"}
+2023-07-18 00:13:10 Victoria {"players":0,"playingPlayers":0,"uptime":23701170,"memory":{"free":190351560,"used":52918072,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.09447377703466492,"lavalinkLoad":3.9162097755261884E-4},"op":"stats"}
+2023-07-18 00:14:10 Victoria {"players":0,"playingPlayers":0,"uptime":23761160,"memory":{"free":185064040,"used":58205592,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.09227488382108795,"lavalinkLoad":4.555935216823624E-4},"op":"stats"}
+2023-07-18 00:15:10 Victoria {"players":0,"playingPlayers":0,"uptime":23821171,"memory":{"free":178802392,"used":64467240,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.10505530761476017,"lavalinkLoad":3.902517609937115E-4},"op":"stats"}

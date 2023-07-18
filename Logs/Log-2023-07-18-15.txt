@@ -1,0 +1,18 @@
+2023-07-18 00:24:42 Discord Discord.Net v3.11.0 (API v10)
+2023-07-18 00:24:42 Gateway Connecting
+2023-07-18 00:24:43 Gateway Connected
+2023-07-18 00:24:44 Gateway Ready
+2023-07-18 00:24:44 Victoria Websocket connection established.
+2023-07-18 00:24:44 Victoria {"resumed":true,"sessionId":"kwg3qw361231nwmq","op":"ready"}
+2023-07-18 00:24:44 Victoria Unknown OP code received (ready), check Lavalink implementation.
+2023-07-18 00:24:45 Interaction Handler|Request thisusernameisunavailable. requested slots
+2023-07-18 00:24:52 Slots { "Name" : "stats", "Value" : { "Ничего xD" : "0", "Кирпичи :bricks:" : "0", "Бетон :bricks:" : "0", "meow" : "0", "Таймаут на 5 минут :skull:" : "0", "Таймаут на 15 минут :skull:" : "0", "Таймаут на 30 минут :skull:" : "0", "Кик с сервера" : "0", "Шанс на получение админки!" : "0", "Роль Элитного раба Нейро-самы" : "0" } }
+2023-07-18 00:25:10 Victoria {"players":0,"playingPlayers":0,"uptime":24421168,"memory":{"free":119882872,"used":123386760,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.05581490314166304,"lavalinkLoad":4.140130928167339E-4},"op":"stats"}
+2023-07-18 00:26:10 Victoria {"players":0,"playingPlayers":0,"uptime":24481175,"memory":{"free":113760872,"used":129508760,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.030227196978113543,"lavalinkLoad":3.6830723216420107E-4},"op":"stats"}
+2023-07-18 00:27:10 Victoria {"players":0,"playingPlayers":0,"uptime":24541160,"memory":{"free":108530248,"used":134739384,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.016301501366330885,"lavalinkLoad":3.042731622734624E-4},"op":"stats"}
+2023-07-18 00:28:10 Victoria {"players":0,"playingPlayers":0,"uptime":24601163,"memory":{"free":102276520,"used":140993112,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.01612495555950582,"lavalinkLoad":3.041768058935298E-4},"op":"stats"}
+2023-07-18 00:29:10 Victoria {"players":0,"playingPlayers":0,"uptime":24661170,"memory":{"free":96978392,"used":146291240,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.015991335018190906,"lavalinkLoad":2.8052750280527504E-4},"op":"stats"}
+2023-07-18 00:30:10 Victoria {"players":0,"playingPlayers":0,"uptime":24721173,"memory":{"free":91758288,"used":151511344,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.09533121486189196,"lavalinkLoad":4.3454840286107776E-4},"op":"stats"}
+2023-07-18 00:31:10 Victoria {"players":0,"playingPlayers":0,"uptime":24781161,"memory":{"free":86525080,"used":156744552,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.10037218103085394,"lavalinkLoad":3.043695797198132E-4},"op":"stats"}
+2023-07-18 00:31:10 Interaction Handler|Request thisusernameisunavailable. requested admin-cleanup with arguments:
+2023-07-18 00:31:10 Interaction Handler|Argument [Integer]amount: 1000

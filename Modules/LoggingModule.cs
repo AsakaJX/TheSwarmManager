@@ -49,7 +49,7 @@ namespace TheSwarmManager.Modules.Logging {
             var obj = deserializer.Deserialize<Dictionary<object, object>>(reader);
             reader.Close();
 
-            var logsName = $"Logs/Log-{_config["lastRunDate"]}-{obj["DailyRunCounter"]}.txt";
+            var logsName = $"Logs/Log-{obj["lastRunDate"]}-{obj["DailyRunCounter"]}.txt";
 
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"{date} {source} {message}");

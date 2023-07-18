@@ -1,0 +1,26 @@
+2023-07-17 22:51:35 Discord Discord.Net v3.11.0 (API v10)
+2023-07-17 22:51:35 Gateway Connecting
+2023-07-17 22:51:36 Gateway Connected
+2023-07-17 22:51:36 Gateway Ready
+2023-07-17 22:51:37 Victoria Websocket connection established.
+2023-07-17 22:51:37 Victoria {"resumed":true,"sessionId":"05vosxso4hq9hu3n","op":"ready"}
+2023-07-17 22:51:37 Victoria Unknown OP code received (ready), check Lavalink implementation.
+2023-07-17 22:51:40 Interaction Handler|Request thisusernameisunavailable. requested asaka-shutdown
+2023-07-17 22:51:46 Interaction Handler|Request thisusernameisunavailable. requested asaka-shutdown-abort
+2023-07-17 22:52:22 Victoria {"players":0,"playingPlayers":0,"uptime":18853318,"memory":{"free":134557616,"used":108712016,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.13080588334141127,"lavalinkLoad":4.7600808242295056E-4},"op":"stats"}
+2023-07-17 22:52:34 Interaction Handler|Request asakaistaken requested asaka-shutdown
+2023-07-17 22:53:22 Victoria {"players":0,"playingPlayers":0,"uptime":18913316,"memory":{"free":129178632,"used":114091000,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.09473211966659582,"lavalinkLoad":3.6991917405114336E-4},"op":"stats"}
+2023-07-17 22:54:22 Victoria {"players":0,"playingPlayers":0,"uptime":18973309,"memory":{"free":123413200,"used":119856432,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.06576251599093812,"lavalinkLoad":3.0410077816473097E-4},"op":"stats"}
+2023-07-17 22:54:29 Interaction Handler|Request thisusernameisunavailable. requested debug-components
+2023-07-17 22:54:32 Interaction Handler|Request thisusernameisunavailable. requested  with arguments:
+2023-07-17 22:54:50 Interaction Handler|Request thisusernameisunavailable. requested debug-components
+2023-07-17 22:55:22 Victoria {"players":0,"playingPlayers":0,"uptime":19033316,"memory":{"free":118156184,"used":125113448,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.06769843110514248,"lavalinkLoad":2.8198674245581283E-4},"op":"stats"}
+2023-07-17 22:56:05 Gateway 
+2023-07-17 22:56:05 Gateway Disconnecting
+2023-07-17 22:56:05 Gateway Disconnected
+2023-07-17 22:56:06 Gateway Connecting
+2023-07-17 22:56:06 Gateway Resumed previous session
+2023-07-17 22:56:22 Victoria {"players":0,"playingPlayers":0,"uptime":19093315,"memory":{"free":112396136,"used":130873496,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.08047418642443435,"lavalinkLoad":3.485588272870181E-4},"op":"stats"}
+2023-07-17 22:57:22 Victoria {"players":0,"playingPlayers":0,"uptime":19153315,"memory":{"free":107163976,"used":136105656,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.07823461356303672,"lavalinkLoad":2.598348173097231E-4},"op":"stats"}
+2023-07-17 22:58:22 Victoria {"players":0,"playingPlayers":0,"uptime":19213324,"memory":{"free":101924208,"used":141345424,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.08640031107222708,"lavalinkLoad":3.455856636077478E-4},"op":"stats"}
+2023-07-17 22:58:24 Interaction Handler|Request thisusernameisunavailable. requested debug-test1

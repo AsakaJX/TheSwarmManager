@@ -40,8 +40,27 @@ namespace TheSwarmManager.Modules.Interactions {
             BsonDocument testDoc = new BsonDocument{
                 { "test", "tom" }
             };
+            BsonDocument testDoc1 = new BsonDocument{
+                { "test1", "tom1" }
+            };
+            BsonDocument testDoc2 = new BsonDocument{
+                { "test2", "tom" }
+            };
 
-            dbCollection.InsertOne(testDoc);
+            // dbCollection.InsertOne(testDoc);
+            // dbCollection.InsertOne(testDoc1);
+            // dbCollection.InsertOne(testDoc2);
+
+            // ? \/ this is how you find and edit documents
+
+            var filter = Builders<BsonDocument>.Filter
+                .Eq("test", "tom");
+            System.Console.WriteLine(dbCollection.Find(filter).CountDocuments());
+            // var newdoc = new BsonDocument {
+            //     // _id is optional here, but if it's present, it must match the replaced doc's _id
+            //     {"asdadasd", "asdadadsa"}
+            // };
+            // var result = dbCollection.ReplaceOne(filter, newdoc);
         }
 
         [SlashCommand("debug-test2", "test")]
@@ -55,13 +74,13 @@ namespace TheSwarmManager.Modules.Interactions {
             await ReplyAsync("SUCCESS WITH AUTHOR", embed: EB.SuccessWithAuthor(Context.User, "description"));
         }
 
-        [SlashCommand("help", "Братик, через эту команду ты можешь узнать весь мой внутренний мир (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)")]
+        [SlashCommand("help", "brother, через эту команду ты можешь узнать весь мой внутренний мир (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)")]
         public async Task HandleHelpCommand() {
             string DeveloperNotes = File.ReadAllText("Resources/Help/DeveloperNotes.txt");
 
             var devNotes = new EmbedBuilder { };
             devNotes.WithColor(ColorConverter.GetColor("normal"))
-                 .WithAuthor("<- Этот братик хочет узнать меня получше (≧◡≦)", Context.User.GetAvatarUrl())
+                 .WithAuthor("<- Этот brother хочет узнать меня получше (≧◡≦)", Context.User.GetAvatarUrl())
                   //  .WithTitle("**General**\n")
                   .WithDescription(
                     $"Это страница помощи бота **{Context.Guild.CurrentUser.Username}**!\n" +
@@ -139,6 +158,35 @@ namespace TheSwarmManager.Modules.Interactions {
                 else
                     await RespondAsync(embed: EB.ErrorWithAuthor(Context.User, "Ты не можешь крутить за других людей. anger"));
             }
+
+            // ? Database
+
+            MongoClient dbClient = new MongoClient("mongodb://localhost:27017");
+            IMongoDatabase dbCluster = dbClient.GetDatabase("TheSwarmManagerCluster0");
+            IMongoCollection<BsonDocument> dbCollection = dbCluster.GetCollection<BsonDocument>("Slots");
+
+            BsonDocument userDocument = new BsonDocument{
+                { "user_id", user?.Id.ToString() },
+                { "money", "0" },
+                { "stats", new BsonDocument() {
+                    { "Ничего xD", "0" },
+                    { "Кирпичи :bricks:", "0" },
+                    { "Бетон :bricks:", "0" },
+                    { "meow", "0" },
+                    { "Таймаут на 5 минут :skull:", "0" },
+                    { "Таймаут на 15 минут :skull:", "0" },
+                    { "Таймаут на 30 минут :skull:", "0" },
+                    { "Кик с сервера", "0" },
+                    { "Шанс на получение админки!", "0" },
+                    { "Роль Элитного раба Нейро-самы", "0" }
+                }}
+            };
+
+            var filterCheck = Builders<BsonDocument>.Filter
+                .Eq("user_id", user?.Id.ToString());
+
+            if (dbCollection.Find(filterCheck).CountDocuments() == 0)
+                dbCollection.InsertOne(userDocument);
 
             if (user == null) { return; }
 
@@ -348,15 +396,24 @@ namespace TheSwarmManager.Modules.Interactions {
             for (int i = 0; i < MultiplierBlackList.Length; i++) {
                 if (PrizeMultiplier < 1) { break; }
                 if (MiddleRowMaxKey == MultiplierBlackList[i]) {
-                    CongratulationString = $"<@{user.Id}> Братик, ты выйграл ***{PrizesArray[MiddleRowMaxKey]}***";
+                    CongratulationString = $"<@{user.Id}> brother, ты выйграл ***{PrizesArray[MiddleRowMaxKey]}***";
                     break;
                 }
-                CongratulationString = $"<@{user.Id}> Братик, ты выйграл ***{PrizesArray[MiddleRowMaxKey]} x {PrizeMultiplier}***";
+                CongratulationString = $"<@{user.Id}> brother, ты выйграл ***{PrizesArray[MiddleRowMaxKey]} x {PrizeMultiplier}***";
             }
+
+            // ? \/ this is how you find and edit documents
+
+            var filter = Builders<BsonDocument>.Filter
+                .Eq("user_id", user.Id.ToString());
+            var getDoc = dbCollection.Find(filter).FirstOrDefault();
+            Log.NewLog(Logging.LogSeverity.Debug, "Slots", getDoc.GetElement("stats").ToBsonDocument().ToString());
+            // dbCollection.DeleteMany(filter);
+            // dbCollection.ReplaceOne(filter, newDoc);
 
             switch (MiddleValue) {
                 case 1:
-                    await ReplyAsync($"<@{user.Id}> Братик, ты выйграл ***{PrizesArray[0]}***");
+                    await ReplyAsync($"<@{user.Id}> brother, ты выйграл ***{PrizesArray[0]}***");
                     embedAuthorName = $"{embedAuthorName} - {PrizesArray[0]}"; break;
                 case 2 or 3 or 4:
                     await ReplyAsync(CongratulationString);
@@ -372,18 +429,14 @@ namespace TheSwarmManager.Modules.Interactions {
 
             await ModifyOriginalResponseAsync(x => x.Embed = embed.WithAuthor(embedAuthorName, user.GetAvatarUrl()).Build());
 
-            var _pconfig = new ConfigurationBuilder()
-                    .SetBasePath(AppContext.BaseDirectory)
-                    .AddYamlFile("config.yml")
-                    .Build();
-
             if (MiddleValue == 1) { return; }
             if (MiddleRowMaxKey == 4 || MiddleRowMaxKey == 5 || MiddleRowMaxKey == 6 || MiddleRowMaxKey == 7) {
                 if (user.Roles.ToArray().Contains(ownerRole)) {
-                    await ReplyAsync("Братик, ты слишком ценный материал в моем улье, я не могу позволить себе причинить тебе боль :heart:");
+                    await ReplyAsync("brother, ты слишком ценный материал в моем улье, я не могу позволить себе причинить тебе боль :heart:");
                     return;
                 }
             }
+
 
             switch (MiddleRowMaxKey) {
                 case 3:
@@ -406,22 +459,22 @@ namespace TheSwarmManager.Modules.Interactions {
                     break;
                 case 7:
                     if (!user.Roles.ToArray().Contains(ownerRole)) {
-                        await Discord.UserExtensions.SendMessageAsync(user, "Поздравляем с получением приза в рулетке Асаки (asaka#3260)!\nhttps://discord.gg/aQ2VMhSeak");
-                        await user.KickAsync("Поздравляем с получением приза в рулетке Асаки (asaka#3260)!");
+                        await Discord.UserExtensions.SendMessageAsync(user, "Поздравляем с получением приза в рулетке Асаки (thisusernameisunavailable.)!\nhttps://discord.gg/aQ2VMhSeak");
+                        await user.KickAsync("Поздравляем с получением приза в рулетке Асаки (thisusernameisunavailable.)!");
                     }
                     break;
                 case 8:
                     if (MiddleValue != 5) {
-                        await ReplyAsync("Братик ты не смог выбить все 5 восьмерок! Поэтому админки ты не получишь. ( `ε´ )");
+                        await ReplyAsync("brother ты не смог выбить все 5 восьмерок! Поэтому админки ты не получишь. ( `ε´ )");
                         return;
                     }
-                    await ReplyAsync("Поздравляю братик! Ты выбил 5 восьмерок! Молодец! Хотя мне казалось что шанса 1 к 100 миллиардам будет достаточно... ");
+                    await ReplyAsync("Поздравляю brother! Ты выбил 5 восьмерок! Молодец! Хотя мне казалось что шанса 1 к 100 миллиардам будет достаточно... ");
                     await Task.Delay(3000);
                     await ReplyAsync("А теперь перейдем к самой интересной части! У тебя есть шанс 50 на 50 чтобы выбить админку либо же получить вместо нее ***:bricks: ЦЕЛУЮ КУЧУ КИРПИЧЕЙ :bricks:***!!!");
                     await Task.Delay(1000);
-                    await ReplyAsync("Удачи Братик!");
+                    await ReplyAsync("Удачи brother!");
 
-                    string str = "Поздравляю братик! Ты выйграл";
+                    string str = "Поздравляю brother! Ты выйграл";
                     for (int f = 0; f < 3; f++) {
                         str = str.Insert(str.Length, ".");
                         await Task.Delay(1000);
@@ -430,11 +483,11 @@ namespace TheSwarmManager.Modules.Interactions {
 
                     int PrizeAdmin = rand.Next(0, 2);
                     if (PrizeAdmin == 0)
-                        await ReplyAsync("Поздравляю братик! Ты выйграл ***:bricks: ЦЕЛУЮ КУЧУ КИРПИЧЕЙ :bricks:***");
+                        await ReplyAsync("Поздравляю brother! Ты выйграл ***:bricks: ЦЕЛУЮ КУЧУ КИРПИЧЕЙ :bricks:***");
                     else {
-                        await ReplyAsync("Поздравляю братик! Ты выйграл ***:crown: Админку :crown:***");
+                        await ReplyAsync("Поздравляю brother! Ты выйграл ***:crown: Админку :crown:***");
                         if (user.Roles.ToArray().Contains(ownerRole)) {
-                            await ReplyAsync("Братик, ты выйграл админку, но так как у тебя она уже была, я заберу у тебя ее!");
+                            await ReplyAsync("brother, ты выйграл админку, но так как у тебя она уже была, я заберу у тебя ее!");
                             await user.RemoveRoleAsync(ownerRole);
                             await Task.Delay(1000);
                             await ReplyAsync("Удачи в следующий раз! (ノ_<。)ヾ(´ ▽ ` )");
@@ -447,7 +500,7 @@ namespace TheSwarmManager.Modules.Interactions {
                     if (!user.Roles.ToArray().Contains(eliteVictimRole)) {
                         await user.AddRoleAsync(eliteVictimRole);
                     } else {
-                        await ReplyAsync("Братик, ты уже мой любимый и элитный раб, тебе не нужна вторая такая же роль ( 〃▽〃)");
+                        await ReplyAsync("brother, ты уже мой любимый и элитный раб, тебе не нужна вторая такая же роль ( 〃▽〃)");
                     }
                     break;
                 default:
@@ -457,7 +510,7 @@ namespace TheSwarmManager.Modules.Interactions {
 
         [SlashCommand("asaka-shutdown", "Выключить пк Асаки(Только для Асаки)")]
         public async Task HandleShutDownCommand() {
-            if (Context.User.Id != 230758744798134282) { await RespondAsync(embed: EB.ErrorWithAuthor(Context.User, "Только для Асаки...")); return; }
+            if (Context.User.Id != Convert.ToUInt64(_config["usersGuild:owner"])) { await RespondAsync(embed: EB.ErrorWithAuthor(Context.User, "Только для Асаки...")); return; }
 
             DateTime now = DateTime.UtcNow;
             long nowUnix = new DateTimeOffset(now).ToUnixTimeSeconds();
@@ -469,7 +522,7 @@ namespace TheSwarmManager.Modules.Interactions {
 
         [SlashCommand("asaka-shutdown-halt", "Выключить пк Асаки(Только для Асаки)")]
         public async Task HandleShutDownHaltCommand() {
-            if (Context.User.Id != 230758744798134282) { await RespondAsync(embed: EB.ErrorWithAuthor(Context.User, "Только для Асаки...")); return; }
+            if (Context.User.Id != Convert.ToUInt64(_config["usersGuild:owner"])) { await RespondAsync(embed: EB.ErrorWithAuthor(Context.User, "Только для Асаки...")); return; }
 
             await RespondAsync(embed: EB.Success($"ПК Асаки выключается в halt режиме!"));
             PowerShell.Command("shutdown /h");
@@ -477,7 +530,7 @@ namespace TheSwarmManager.Modules.Interactions {
 
         [SlashCommand("asaka-shutdown-abort", "Выключить пк Асаки(Только для Асаки)")]
         public async Task HandleShutDownAbortCommand() {
-            if (Context.User.Id != 230758744798134282) { await RespondAsync(embed: EB.ErrorWithAuthor(Context.User, "Только для Асаки...")); return; }
+            if (Context.User.Id != Convert.ToUInt64(_config["usersGuild:owner"])) { await RespondAsync(embed: EB.ErrorWithAuthor(Context.User, "Только для Асаки...")); return; }
 
             await RespondAsync(embed: EB.Success($"Выключение ПК Асаки остановлено!"));
             PowerShell.Command("shutdown /a");
