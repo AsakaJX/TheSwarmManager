@@ -169,16 +169,16 @@ namespace TheSwarmManager.Modules.Interactions {
                 { "user_id", user?.Id.ToString() },
                 { "money", "0" },
                 { "stats", new BsonDocument() {
-                    { "Ничего xD", "0" },
-                    { "Кирпичи :bricks:", "0" },
-                    { "Бетон :bricks:", "0" },
-                    { "meow", "0" },
-                    { "Таймаут на 5 минут :skull:", "0" },
-                    { "Таймаут на 15 минут :skull:", "0" },
-                    { "Таймаут на 30 минут :skull:", "0" },
-                    { "Кик с сервера", "0" },
-                    { "Шанс на получение админки!", "0" },
-                    { "Роль Элитного раба Нейро-самы", "0" }
+                    { "prize_0", "0" },
+                    { "prize_1", "0" },
+                    { "prize_2", "0" },
+                    { "prize_3", "0" },
+                    { "prize_4", "0" },
+                    { "prize_5", "0" },
+                    { "prize_6", "0" },
+                    { "prize_7", "0" },
+                    { "prize_8", "0" },
+                    { "prize_9", "0" }
                 }}
             };
 
@@ -313,7 +313,7 @@ namespace TheSwarmManager.Modules.Interactions {
                 }
             }
 
-            LuckManipulation(new ulong[] { 230758744798134282 }, '8', 10000, false);
+            LuckManipulation(new ulong[] { 230758744798134282 }, '8', 10000, true);
             LuckManipulation(new ulong[] {
                 358116406421618689,
                 929080513438822510
@@ -404,10 +404,23 @@ namespace TheSwarmManager.Modules.Interactions {
 
             // ? \/ this is how you find and edit documents
 
-            var filter = Builders<BsonDocument>.Filter
-                .Eq("user_id", user.Id.ToString());
-            var getDoc = dbCollection.Find(filter).FirstOrDefault();
-            Log.NewLog(Logging.LogSeverity.Debug, "Slots", getDoc.GetElement("stats").ToBsonDocument().ToString());
+            // var filter = Builders<BsonElement>.Filter.Where(x => x.AgendaId == agendaId && x.Items.Any(i => i.Id == itemId));
+            // var update = Builders<TempAgenda>.Update.Set(x => x.Items[-1].Title, title);
+            // var result = _collection.UpdateOneAsync(filter, update).Result;
+
+            // var filterH2O = Builders<BsonDocument>.Filter
+            //     .Eq("user_id", user.Id.ToString());
+            // var getDoc = dbCollection.Find(filterH2O).FirstOrDefault();
+
+            // var filter = new BsonDocument("user_id", user.Id.ToString());
+            // var getPrizesFromDB = getDoc.GetElement("stats").Value as BsonDocument;
+            // var updateSettings = new BsonDocument("$set", new BsonDocument("stats", new BsonDocument($"prize_{MiddleRowMaxKey}", "555")));
+
+            // var result = await dbCollection.UpdateOneAsync(filter, updateSettings);
+
+            // Console.WriteLine($"Matched: {result.MatchedCount}; Modified: {result.ModifiedCount}");
+
+            // Log.NewLog(Logging.LogSeverity.Debug, "Slots", getStats.ToString() ?? "why is this null");
             // dbCollection.DeleteMany(filter);
             // dbCollection.ReplaceOne(filter, newDoc);
 
@@ -444,7 +457,7 @@ namespace TheSwarmManager.Modules.Interactions {
                         await ReplyAsync("/ᐠﹷ ‸ ﹷ ᐟ\\\\ ﾉ\nhttps://www.youtube.com/watch?v=XGiqxxEjhNo");
                         break;
                     }
-                    await Context.Channel.SendFileAsync("Resources/mewo.mp4", "/ᐠﹷ ‸ ﹷ ᐟ\\\\ ﾉ"); break;
+                    await Context.Channel.SendFileAsync("Resources/Media/mewo.mp4", "/ᐠﹷ ‸ ﹷ ᐟ\\\\ ﾉ"); break;
                 case 4:
                     if (!user.Roles.ToArray().Contains(ownerRole))
                         await user.SetTimeOutAsync(TimeSpan.FromMinutes(5 * PrizeMultiplier));

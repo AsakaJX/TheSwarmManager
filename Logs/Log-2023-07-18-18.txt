@@ -1,0 +1,11 @@
+2023-07-18 22:31:46 Discord Discord.Net v3.11.0 (API v10)
+2023-07-18 22:31:46 Gateway Connecting
+2023-07-18 22:31:47 Gateway Connected
+2023-07-18 22:31:47 Gateway Ready
+2023-07-18 22:31:48 Victoria Websocket connection established.
+2023-07-18 22:31:48 Victoria {"resumed":true,"sessionId":"rq8yz513p5bu5d4d","op":"ready"}
+2023-07-18 22:31:48 Victoria Unknown OP code received (ready), check Lavalink implementation.
+2023-07-18 22:31:49 Interaction Handler|Request thisusernameisunavailable. requested slots
+2023-07-18 22:31:52 Victoria {"players":0,"playingPlayers":0,"uptime":75808,"memory":{"free":92979976,"used":150289656,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.08733819748766616,"lavalinkLoad":0.0012476894639556378},"op":"stats"}
+2023-07-18 22:31:56 Slots { "Name" : "stats", "Value" : { "Ничего xD" : "0", "Кирпичи :bricks:" : "0", "Бетон :bricks:" : "0", "meow" : "0", "Таймаут на 5 минут :skull:" : "0", "Таймаут на 15 минут :skull:" : "0", "Таймаут на 30 минут :skull:" : "0", "Кик с сервера" : "0", "Шанс на получение админки!" : "0", "Роль Элитного раба Нейро-самы" : "0" } }
+2023-07-18 22:32:52 Victoria {"players":0,"playingPlayers":0,"uptime":135810,"memory":{"free":87443480,"used":155826152,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.05151954534469971,"lavalinkLoad":6.497292794668888E-4},"op":"stats"}

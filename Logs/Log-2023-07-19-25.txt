@@ -1,0 +1,62 @@
+2023-07-19 22:54:28 Discord Discord.Net v3.11.0 (API v10)
+2023-07-19 22:54:28 Gateway Connecting
+2023-07-19 22:54:29 Gateway Connected
+2023-07-19 22:54:30 Gateway Ready
+2023-07-19 22:54:30 Victoria Websocket connection established.
+2023-07-19 22:54:30 Victoria {"resumed":true,"sessionId":"eydxczzw1dsd83bu","op":"ready"}
+2023-07-19 22:54:30 Victoria Unknown OP code received (ready), check Lavalink implementation.
+2023-07-19 22:54:30 Victoria {"state":{"time":1689796470861,"position":0,"connected":true,"ping":290},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:54:33 Interaction Handler|Request thisusernameisunavailable. requested music-join
+2023-07-19 22:54:33 Victoria {"state":{"time":1689796473843,"position":0,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:54:35 Victoria {"code":4006,"reason":"Session is no longer valid.","byRemote":true,"guildId":"923615051116589086","op":"event","type":"WebSocketClosedEvent"}
+2023-07-19 22:54:35 Audio Handler Discord WebSocket connection closed with following reason: Session is no longer valid.
+2023-07-19 22:54:35 Victoria {"state":{"time":1689796475223,"position":0,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:54:44 Interaction Handler|Request thisusernameisunavailable. requested music-queue
+2023-07-19 22:54:54 Victoria {"players":1,"playingPlayers":0,"uptime":34648457,"memory":{"free":192954072,"used":520077608,"allocated":713031680,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.20445508043895236,"lavalinkLoad":7.597855376836959E-4},"op":"stats"}
+2023-07-19 22:55:08 Interaction Handler|Request thisusernameisunavailable. requested music-play with arguments:
+2023-07-19 22:55:08 Interaction Handler|Argument [String]search-query: https://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3D
+2023-07-19 22:55:08 Victoria {"state":{"time":1689796508730,"position":0,"connected":true,"ping":55},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:08 Victoria {"encodedTrack":"QAAAhAIAGkItQ29tcGxleCAtIEJlYXV0aWZ1bCBMaWVzABBIb3NwaXRhbCBSZWNvcmRzAAAAAAAGLggAC3R6cXdfRHFhMFNVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dHpxd19EcWEwU1UAB3lvdXR1YmUAAAAAAAAAAA==","track":"QAAAhAIAGkItQ29tcGxleCAtIEJlYXV0aWZ1bCBMaWVzABBIb3NwaXRhbCBSZWNvcmRzAAAAAAAGLggAC3R6cXdfRHFhMFNVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dHpxd19EcWEwU1UAB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"event","type":"TrackStartEvent"}
+2023-07-19 22:55:09 Victoria {"state":{"time":1689796508731,"position":0,"connected":true,"ping":55},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:09 Victoria {"state":{"time":1689796509732,"position":0,"connected":true,"ping":55},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:10 Interaction Handler|Request thisusernameisunavailable. requested music-play with arguments:
+2023-07-19 22:55:10 Interaction Handler|Argument [String]search-query: https://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3D
+2023-07-19 22:55:10 Victoria {"state":{"time":1689796510744,"position":20,"connected":true,"ping":55},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:11 Victoria {"state":{"time":1689796511738,"position":1380,"connected":true,"ping":55},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:12 Victoria {"state":{"time":1689796512741,"position":2380,"connected":true,"ping":55},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:13 Victoria {"state":{"time":1689796513734,"position":3380,"connected":true,"ping":55},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:14 Victoria {"state":{"time":1689796514743,"position":4420,"connected":true,"ping":55},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:14 Interaction Handler|Request thisusernameisunavailable. requested music-queue
+2023-07-19 22:55:15 Victoria {"state":{"time":1689796515731,"position":5380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:16 Victoria {"state":{"time":1689796516738,"position":6380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:17 Victoria {"state":{"time":1689796517731,"position":7380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:18 Victoria {"state":{"time":1689796518736,"position":8380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:19 Victoria {"state":{"time":1689796519745,"position":9380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:20 Victoria {"state":{"time":1689796520746,"position":10420,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:21 Victoria {"state":{"time":1689796521742,"position":11380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:22 Victoria {"state":{"time":1689796522735,"position":12380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:23 Victoria {"state":{"time":1689796523745,"position":13400,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:24 Victoria {"state":{"time":1689796524739,"position":14380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:25 Victoria {"state":{"time":1689796525734,"position":15380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:26 Victoria {"state":{"time":1689796526740,"position":16380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:27 Victoria {"state":{"time":1689796527746,"position":17400,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:28 Victoria {"state":{"time":1689796528737,"position":18380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:29 Victoria {"state":{"time":1689796529744,"position":19400,"connected":true,"ping":89},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:30 Victoria {"state":{"time":1689796530745,"position":20380,"connected":true,"ping":89},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:31 Victoria {"state":{"time":1689796531736,"position":21380,"connected":true,"ping":89},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:32 Victoria {"state":{"time":1689796532745,"position":22380,"connected":true,"ping":89},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:33 Victoria {"state":{"time":1689796533742,"position":23380,"connected":true,"ping":89},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:34 Victoria {"state":{"time":1689796534738,"position":24380,"connected":true,"ping":89},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:35 Victoria {"state":{"time":1689796535732,"position":25380,"connected":true,"ping":89},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:36 Victoria {"state":{"time":1689796536738,"position":26380,"connected":true,"ping":89},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:37 Victoria {"state":{"time":1689796537733,"position":27380,"connected":true,"ping":89},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:38 Victoria {"state":{"time":1689796538739,"position":28380,"connected":true,"ping":89},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:39 Victoria {"state":{"time":1689796539734,"position":29400,"connected":true,"ping":89},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:40 Victoria {"state":{"time":1689796540736,"position":30380,"connected":true,"ping":89},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:41 Victoria {"state":{"time":1689796541732,"position":31380,"connected":true,"ping":89},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:42 Victoria {"state":{"time":1689796542736,"position":32380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:43 Victoria {"state":{"time":1689796543743,"position":33380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:44 Victoria {"state":{"time":1689796544734,"position":34380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:45 Victoria {"state":{"time":1689796545733,"position":35380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:46 Victoria {"state":{"time":1689796546738,"position":36380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:55:47 Victoria {"state":{"time":1689796547743,"position":37380,"connected":true,"ping":56},"guildId":"923615051116589086","op":"playerUpdate"}

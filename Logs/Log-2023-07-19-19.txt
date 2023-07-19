@@ -1,0 +1,19 @@
+2023-07-19 22:33:09 Discord Discord.Net v3.11.0 (API v10)
+2023-07-19 22:33:09 Gateway Connecting
+2023-07-19 22:33:10 Gateway Connected
+2023-07-19 22:33:11 Gateway Ready
+2023-07-19 22:33:11 Victoria Websocket connection established.
+2023-07-19 22:33:11 Victoria {"resumed":true,"sessionId":"eydxczzw1dsd83bu","op":"ready"}
+2023-07-19 22:33:11 Victoria Unknown OP code received (ready), check Lavalink implementation.
+2023-07-19 22:33:11 Victoria {"state":{"time":1689795191893,"position":0,"connected":true,"ping":72},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:33:20 Interaction Handler|Request thisusernameisunavailable. requested music-play with arguments:
+2023-07-19 22:33:20 Interaction Handler|Argument [String]search-query: frog muhahaha meme
+2023-07-19 22:33:20 Interaction Handler|Argument [String]type: YouTube
+2023-07-19 22:33:21 Victoria {"state":{"time":1689795201413,"position":0,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:33:22 Victoria {"code":4006,"reason":"Session is no longer valid.","byRemote":true,"guildId":"923615051116589086","op":"event","type":"WebSocketClosedEvent"}
+2023-07-19 22:33:22 Audio Handler Discord WebSocket connection closed with following reason: Session is no longer valid.
+2023-07-19 22:33:22 Victoria {"state":{"time":1689795202663,"position":0,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:33:44 Interaction Handler|Request thisusernameisunavailable. requested music-play with arguments:
+2023-07-19 22:33:44 Interaction Handler|Argument [String]search-query: B-Complex - Beautiful Lies
+2023-07-19 22:33:44 Interaction Handler|Argument [String]type: YouTube
+2023-07-19 22:33:54 Victoria {"players":1,"playingPlayers":0,"uptime":33388459,"memory":{"free":269838880,"used":409638368,"allocated":679477248,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.19837483071153245,"lavalinkLoad":0.0012354727835062996},"op":"stats"}

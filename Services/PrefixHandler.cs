@@ -28,10 +28,11 @@ namespace TheSwarmManager.Services {
 
         public async Task ifMessageRespond(SocketMessage message, string ifMessage, string respondMessage, string respondMessageType = "string", string respondMessageWithFile = "") {
             if (message.Author.IsBot || message.Content.ToLower() != ifMessage) { return; }
+            Log.NewLog(Modules.Logging.LogSeverity.Info, "Prefix Handler|Request", $"{message.Author.ToString()} requested {ifMessage}");
 
             switch (respondMessageType) {
                 case "video":
-                    await message.Channel.SendFileAsync($"Resources/{respondMessage}", respondMessageWithFile);
+                    await message.Channel.SendFileAsync($"Resources/Media/{respondMessage}", respondMessageWithFile);
                     return;
                 default:
                     await message.Channel.SendMessageAsync(respondMessage);
@@ -45,9 +46,10 @@ namespace TheSwarmManager.Services {
                 if (message.Content.ToString().Substring(i, ifMessage.Length).ToLower() != ifMessage)
                     continue;
 
+                Log.NewLog(Modules.Logging.LogSeverity.Info, "Prefix Handler|Request", $"{message.Author.ToString()} requested {ifMessage}");
                 switch (respondMessageType) {
                     case "video":
-                        await message.Channel.SendFileAsync($"Resources/{respondMessage}", respondMessageWithFile);
+                        await message.Channel.SendFileAsync($"Resources/Media/{respondMessage}", respondMessageWithFile);
                         return;
                     default:
                         await message.Channel.SendMessageAsync(respondMessage);
@@ -68,36 +70,6 @@ namespace TheSwarmManager.Services {
             }
         }
 
-        public async Task HandlePingCommand(SocketMessage message, CancellationToken token) {
-
-            while (!token.IsCancellationRequested) {
-                for (int i = 0; i < message.Content.ToString().Length - 4; i++) {
-                    if (message.Author.IsBot || message.Content.ToString().Substring(i, "ping".Length) != "ping")
-                        continue;
-                    for (int h = 0; h < message.MentionedUsers.ToArray().Length; h++) {
-                        if (message.MentionedUsers.ToArray()[h].Id == _client.CurrentUser.Id) {
-                            await message.Channel.SendMessageAsync($"(￢_￢;) Братик, я не умею разговаривать сама с собой...");
-                            continue;
-                        }
-                        string msgOriginal = message.Content.ToString();
-                        string msgUserText = msgOriginal.Substring(msgOriginal.IndexOf('>', 1) + 1, (msgOriginal.IndexOf('*', 1)) - (msgOriginal.IndexOf('>', 1) + 1));
-                        string msgToSend = $"<@{message.MentionedUsers.ToArray()[h].Id}>{msgUserText}";
-
-                        int msgLimit = Convert.ToInt32(msgOriginal.Substring(msgOriginal.IndexOf('*', 1) + 1));
-                        if (msgLimit <= 0 || msgLimit > 250) {
-                            await message.Channel.SendMessageAsync($"(￢_￢;) Братик, лимит может быть в пределе от 1 до 250...");
-                            break;
-                        }
-
-                        for (int g = msgLimit; g != 0; g--) {
-                            await Discord.UserExtensions.SendMessageAsync(message.MentionedUsers.ToArray()[h], msgToSend);
-                            await message.Channel.SendMessageAsync($"[ Left: {g - 1} ] {msgToSend}");
-                        }
-                    }
-                }
-            }
-        }
-
         public async Task HandleCommandAsync(SocketMessage messageParam) {
             _ = Task.Run(async () => {
                 var message = messageParam as SocketUserMessage;
@@ -106,9 +78,10 @@ namespace TheSwarmManager.Services {
                 if (message == null) return;
 
                 await ifMessageRespond(message, "forcedivorce", "https://cdn.discordapp.com/attachments/1069011963759304825/1071811178671656970/cat-jam.gif");
+                await ifMessageRespond(message, "ayo", "ayo.gif", "video");
+
                 await ifMessageRespond(message, true, "trade", "https://cdn.discordapp.com/attachments/1069011963759304825/1071812371678494870/trade-offer.gif");
                 await ifMessageRespond(message, true, "meow", "mewo.mp4", "video", "/ᐠﹷ ‸ ﹷ ᐟ\\\\ ﾉ");
-                await ifMessageRespond(message, "ayo", "ayo.gif", "video");
 
                 await ifMentionedRespondWithPrefix(message);
                 if (!(message.HasCharPrefix(_config["prefix"][0], ref argPos)) || message.Author.IsBot || message.Content.ToString().Trim().IndexOf('>') != -1) return;
@@ -124,7 +97,7 @@ namespace TheSwarmManager.Services {
                 if (!(_commands.Search(contextConverted).IsSuccess) && message.MentionedUsers.ToArray().Length == 0)
                     await message.Channel.SendMessageAsync("(￢_￢;) Братик... я тебя не понимаю...");
 
-                Log.NewLog(Modules.Logging.LogSeverity.Info, "Prefix Handler|Request", $"{message.Author.ToString()} requested {contextConverted}");
+                Log.NewLog(Modules.Logging.LogSeverity.Info, "Prefix Handler|Request", $"{context.User.Username} requested {contextConverted}");
             });
             await Task.CompletedTask;
         }

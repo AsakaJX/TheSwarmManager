@@ -8,6 +8,7 @@ using OpenAI.GPT3;
 using OpenAI.GPT3.Managers;
 using OpenAI.GPT3.ObjectModels;
 using OpenAI.GPT3.ObjectModels.RequestModels;
+using TheSwarmManager.Modules.ColorConverter;
 using TheSwarmManager.Modules.CustomEmbedBuilder;
 using TheSwarmManager.Modules.XPlayer;
 using TheSwarmManager.Services;
@@ -20,7 +21,8 @@ namespace TheSwarmManager.Modules.Audio {
         private readonly LavaNode<XLavaPlayer> _lavaNode;
         private readonly AudioHandler _audioService;
         private readonly IConfigurationRoot _config;
-        private readonly EmbedBuilding _EmbedBuilder;
+        private readonly EmbedBuilding EB;
+        private readonly Colors ColorConverter = new Colors();
         private static readonly IEnumerable<int> Range = Enumerable.Range(1900, 2000);
         private AudioOutStream? _pcmStream;
 
@@ -28,7 +30,7 @@ namespace TheSwarmManager.Modules.Audio {
             _lavaNode = lavaNode;
             _audioService = audioService;
             _config = config;
-            _EmbedBuilder = new EmbedBuilding();
+            EB = new EmbedBuilding();
         }
 
         [SlashCommand("ai-ask-waifu", "Задать вопрос ChatGPT и получить ответ в ГОЛОСОВОМ формате И в АСМР стиле на ЯПОНСКОМ языке.")]
@@ -225,82 +227,89 @@ namespace TheSwarmManager.Modules.Audio {
         [SlashCommand("music-join", "Подключиться к голосовому каналу.", runMode: RunMode.Async)]
         public async Task JoinAsync() {
             if (_lavaNode.HasPlayer(Context.Guild)) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"I'm already connected to a voice channel!"));
+                await RespondAsync(embed: EB.Error($"Я уже подключена к голосовому каналу."));
                 return;
             }
 
             var voiceState = Context.User as IVoiceState;
             if (voiceState?.VoiceChannel == null) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"You must be connected to a voice channel!"));
+                await RespondAsync(embed: EB.Error($"Ты должен быть подключен к голосовому каналу!"));
                 return;
             }
 
             try {
                 await _lavaNode.JoinAsync(voiceState.VoiceChannel, Context.Channel as ITextChannel);
-                await RespondAsync(embed: _EmbedBuilder.Success($"Joined {voiceState.VoiceChannel.Name}!"));
+                await RespondAsync(embed: EB.Success($"Подключилась к {voiceState.VoiceChannel.Name}!"));
             } catch (Exception exception) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"{exception.Message}"));
+                await RespondAsync(embed: EB.Error($"{exception.Message}"));
             }
         }
 
         [SlashCommand("music-leave", "Отключиться от голосового канала.", runMode: RunMode.Async)]
         public async Task LeaveAsync() {
             if (!_lavaNode.TryGetPlayer(Context.Guild, out var player)) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"I'm not connected to any voice channels!"));
+                await RespondAsync(embed: EB.Error($"Я не подключена ни к какому каналу."));
                 return;
             }
 
             var voiceChannel = (Context.User as IVoiceState)?.VoiceChannel ?? player.VoiceChannel;
             if (voiceChannel == null) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"Not sure which voice channel to disconnect from."));
+                await RespondAsync(embed: EB.Error($"Не могу понять к какому каналу подключиться."));
                 return;
             }
 
             try {
                 await _lavaNode.LeaveAsync(voiceChannel);
-                await RespondAsync(embed: _EmbedBuilder.Success($"I've left {voiceChannel.Name}!"));
+                await RespondAsync(embed: EB.Success($"Я вышла с {voiceChannel.Name}!"));
             } catch (Exception exception) {
-                await RespondAsync(embed: _EmbedBuilder.Error(exception.Message));
+                await RespondAsync(embed: EB.Error(exception.Message));
             }
         }
 
         [SlashCommand("music-play", "Добавить трек в очередь.", runMode: RunMode.Async)]
-        public async Task PlayAsync([Discord.Commands.Remainder] string searchQuery) {
+        public async Task PlayAsync(
+            [Discord.Commands.Remainder]
+            string searchQuery,
+            [Summary("type", "Где искать трек ? (МОЖНО НЕ УКАЗЫВАТЬ ЕСЛИ ИСПОЛЬЗУЕТСЯ ССЫЛКА)")]
+            SearchType setType = SearchType.Direct
+        ) {
             if (string.IsNullOrWhiteSpace(searchQuery)) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"Please provide search terms."));
+                await RespondAsync(embed: EB.Error($"Укажите правильную ссылку/слова для поиска."));
                 return;
             }
 
             if (!_lavaNode.HasPlayer(Context.Guild)) {
                 var voiceState = Context.User as IVoiceState;
                 if (voiceState?.VoiceChannel == null) {
-                    await RespondAsync(embed: _EmbedBuilder.Error($"You must be connected to a voice channel!"));
+                    await RespondAsync(embed: EB.Error($"Ты должен быть подключен к голосовому каналу!"));
                     return;
                 }
 
                 try {
                     await _lavaNode.JoinAsync(voiceState.VoiceChannel, Context.Channel as ITextChannel);
-                    // await ReplyAsync(embed: _EmbedBuilder.Success($"Joined {voiceState.VoiceChannel.Name}!"));
+                    // await ReplyAsync(embed: EB.Success($"Joined {voiceState.VoiceChannel.Name}!"));
                 } catch (Exception exception) {
-                    await ReplyAsync(embed: _EmbedBuilder.Error($"{exception.Message}"));
+                    await ReplyAsync(embed: EB.Error($"{exception.Message}"));
                 }
             }
 
-            var searchResponse = await _lavaNode.SearchAsync(SearchType.Direct, searchQuery);
+            SearchType type = setType;
+
+            var searchResponse = await _lavaNode.SearchAsync(type, searchQuery);
             if (searchResponse.Status is SearchStatus.LoadFailed or SearchStatus.NoMatches) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"I wasn't able to find anything for `{searchQuery}`."));
+                await RespondAsync(embed: EB.Error($"Я ничего не нашла по запросу `{searchQuery}`"));
                 return;
             }
 
             var player = _lavaNode.GetPlayer(Context.Guild);
             if (!string.IsNullOrWhiteSpace(searchResponse.Playlist.Name)) {
                 player.Queue.Enqueue(searchResponse.Tracks);
-                await RespondAsync(embed: _EmbedBuilder.Success($"Enqueued {searchResponse.Tracks.Count} songs."));
+                await RespondAsync(embed: EB.Success($"Добавила {searchResponse.Tracks.Count} треков в очередь."));
             } else {
                 var track = searchResponse.Tracks.FirstOrDefault();
                 player.Queue.Enqueue(track);
 
-                await RespondAsync(embed: _EmbedBuilder.Success($"**Enqueued**: [{track?.Title}]({track?.Url})\n**Duration**: {track?.Duration.ToString(@"hh\:mm\:ss")}"));
+                await RespondAsync(embed: EB.Success($"**Добавила в очередь**: [{track?.Title}]({track?.Url})\n**Длина**: {track?.Duration.ToString(@"hh\:mm\:ss")}"));
             }
 
             if (player.PlayerState is PlayerState.Playing or PlayerState.Paused) {
@@ -317,99 +326,106 @@ namespace TheSwarmManager.Modules.Audio {
         [SlashCommand("music-pause", "Поставить трек на паузу.", runMode: RunMode.Async)]
         public async Task PauseAsync() {
             if (!_lavaNode.TryGetPlayer(Context.Guild, out var player)) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"I'm not connected to a voice channel."));
+                await RespondAsync(embed: EB.Error($"Я не подключена к голосовому каналу."));
                 return;
             }
 
             if (player.PlayerState != PlayerState.Playing) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"I cannot pause when I'm not playing anything!"));
+                await RespondAsync(embed: EB.Error($"Сейчас ничего не играет!"));
                 return;
             }
 
             try {
                 await player.PauseAsync();
-                await RespondAsync(embed: _EmbedBuilder.Success($"Paused: {player.Track.Title}"));
+                await RespondAsync(embed: EB.Success($"На паузе: {player.Track.Title}"));
             } catch (Exception exception) {
-                await RespondAsync(embed: _EmbedBuilder.Error(exception.Message));
+                await RespondAsync(embed: EB.Error(exception.Message));
             }
         }
 
-        [SlashCommand("music-resume", "Снять паузу.", runMode: RunMode.Async)]
+        [SlashCommand("music-resume", "Продолжить воспроизведение.", runMode: RunMode.Async)]
         public async Task ResumeAsync() {
             if (!_lavaNode.TryGetPlayer(Context.Guild, out var player)) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"I'm not connected to a voice channel."));
+                await RespondAsync(embed: EB.Error($"Я не подключена к голосовому каналу."));
                 return;
             }
 
             if (player.PlayerState != PlayerState.Paused) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"I cannot resume when I'm not playing anything!"));
+                await RespondAsync(embed: EB.Error($"Сейчас ничего не играет!"));
                 return;
             }
 
             try {
                 await player.ResumeAsync();
-                await RespondAsync(embed: _EmbedBuilder.Success($"Resumed: {player.Track.Title}"));
+                await RespondAsync(embed: EB.Success($"Продолжается воспроизведение: {player.Track.Title}"));
             } catch (Exception exception) {
-                await RespondAsync(embed: _EmbedBuilder.Error(exception.Message));
+                await RespondAsync(embed: EB.Error(exception.Message));
             }
         }
 
-        [SlashCommand("music-stop", "Полностью остановить трек.", runMode: RunMode.Async)]
+        [SlashCommand("music-stop", "Полностью остановить трек и очистить очередь.", runMode: RunMode.Async)]
         public async Task StopAsync() {
             if (!_lavaNode.TryGetPlayer(Context.Guild, out var player)) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"I'm not connected to a voice channel."));
+                await RespondAsync(embed: EB.Error($"Я не подключена к голосовому каналу."));
                 return;
             }
 
             if (player.PlayerState == PlayerState.Stopped) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"Woaaah there, I can't stop the stopped forced."));
+                await RespondAsync(embed: EB.Error($"Сейчас ничего не играет!"));
                 return;
             }
 
             try {
                 await player.StopAsync();
-                await RespondAsync(embed: _EmbedBuilder.Success($"No longer playing anything."));
+                player.Queue.Clear();
+                await RespondAsync(embed: EB.Success($"Воспроизведение остановлено. Очередь очищена."));
             } catch (Exception exception) {
-                await RespondAsync(exception.Message);
-                await RespondAsync(embed: _EmbedBuilder.Error(exception.Message));
+                await RespondAsync(embed: EB.Error(exception.Message));
             }
         }
 
-        [SlashCommand("music-skip", "Голосовать за пропуск трека.", runMode: RunMode.Async)]
+        [SlashCommand("music-skip", "Пропустить трек.", runMode: RunMode.Async)]
         public async Task SkipAsync() {
             if (!_lavaNode.TryGetPlayer(Context.Guild, out var player)) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"I'm not connected to a voice channel."));
+                await RespondAsync(embed: EB.Error($"Я не подключена к голосовому каналу."));
                 return;
             }
 
             if (player.PlayerState != PlayerState.Playing) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"Woaaah there, I can't skip when nothing is playing."));
+                await RespondAsync(embed: EB.Error($"Сейчас ничего не играет!"));
                 return;
             }
 
-            var voiceChannelUsers = (player.VoiceChannel as SocketVoiceChannel)?.Users
-                .Where(x => !x.IsBot)
-                .ToArray();
+            // var voiceChannelUsers = (player.VoiceChannel as SocketVoiceChannel)?.Users
+            //     .Where(x => !x.IsBot)
+            //     .ToArray();
 
-            if (_audioService.VoteQueue.Contains(Context.User.Id)) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"You can't vote again."));
-                return;
-            }
+            // if (_audioService.VoteQueue.Contains(Context.User.Id)) {
+            //     await RespondAsync(embed: EB.Error($""));
+            //     return;
+            // }
 
-            _audioService.VoteQueue.Add(Context.User.Id);
-            if (voiceChannelUsers != null) {
-                var percentage = _audioService.VoteQueue.Count / voiceChannelUsers.Length * 100;
-                if (percentage < 85) {
-                    await RespondAsync(embed: _EmbedBuilder.Error($"You need more than 85% votes to skip this song."));
-                    return;
-                }
-            }
+            // ? Percentage shit
+            // _audioService.VoteQueue.Add(Context.User.Id);
+            // if (voiceChannelUsers != null) {
+            //     var percentage = _audioService.VoteQueue.Count / voiceChannelUsers.Length * 100;
+            //     if (percentage < 85) {
+            //         await RespondAsync(embed: EB.Error($"You need more than 85% votes to skip this song."));
+            //         return;
+            //     }
+            // }
 
             try {
-                var (oldTrack, currenTrack) = await player.SkipAsync();
-                await RespondAsync(embed: _EmbedBuilder.Success($"Skipped: {oldTrack.Title}\nNow Playing: {player.Track.Title}"));
+                var (oldTrack, currentTrack) = await player.SkipAsync();
+                await RespondAsync(embed: EB.Success($"Пропущен трек: {oldTrack.Title}\nТеперь играет: {player.Track.Title}"));
             } catch (Exception exception) {
-                await RespondAsync(embed: _EmbedBuilder.Error(exception.Message));
+                if (exception.Message == "Can't skip to the next item in queue.") {
+                    string oldTrack = player.Track.Title;
+                    await player.StopAsync();
+                    await RespondAsync(embed: EB.Success($"Пропущен трек: {oldTrack}\nЭто был последний трек в очереди."));
+                    return;
+                }
+                await RespondAsync(embed: EB.Error(exception.Message));
             }
 
             _audioService.VoteQueue.Clear();
@@ -418,20 +434,20 @@ namespace TheSwarmManager.Modules.Audio {
         [SlashCommand("music-seek", "Перемещение по треку.", runMode: RunMode.Async)]
         public async Task SeekAsync(TimeSpan timeSpan) {
             if (!_lavaNode.TryGetPlayer(Context.Guild, out var player)) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"I'm not connected to a voice channel."));
+                await RespondAsync(embed: EB.Error($"Я не подключена к голосовому каналу."));
                 return;
             }
 
             if (player.PlayerState != PlayerState.Playing) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"Woaaah there, I can't seek when nothing is playing."));
+                await RespondAsync(embed: EB.Error($"Сейчас ничего не играет!"));
                 return;
             }
 
             try {
                 await player.SeekAsync(timeSpan);
-                await RespondAsync(embed: _EmbedBuilder.Success($"I've seeked `{player.Track.Title}` to {timeSpan}."));
+                await RespondAsync(embed: EB.Success($"Новое положение трека `{player.Track.Title}`: {timeSpan}."));
             } catch (Exception exception) {
-                await RespondAsync(embed: _EmbedBuilder.Error(exception.Message));
+                await RespondAsync(embed: EB.Error(exception.Message));
             }
         }
 
@@ -442,28 +458,28 @@ namespace TheSwarmManager.Modules.Audio {
             ushort volume
         ) {
             if (!_lavaNode.TryGetPlayer(Context.Guild, out var player)) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"I'm not connected to a voice channel."));
+                await RespondAsync(embed: EB.Error($"Я не подключена к голосовому каналу."));
                 return;
             }
 
             try {
                 await player.UpdateVolumeAsync(volume);
-                await RespondAsync(embed: _EmbedBuilder.Success($"I've changed the player volume to {volume}."));
+                await RespondAsync(embed: EB.Success($"Громкость изменена на {volume}%."));
             } catch (Exception exception) {
                 await RespondAsync(exception.Message);
-                await RespondAsync(embed: _EmbedBuilder.Error(exception.Message));
+                await RespondAsync(embed: EB.Error(exception.Message));
             }
         }
 
         [SlashCommand("music-np", "Посмотреть текущий трек.", runMode: RunMode.Async)]
         public async Task NowPlayingAsync() {
             if (!_lavaNode.TryGetPlayer(Context.Guild, out var player)) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"I'm not connected to a voice channel."));
+                await RespondAsync(embed: EB.Error($"Я не подключена к голосовому каналу."));
                 return;
             }
 
             if (player.PlayerState != PlayerState.Playing) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"Woaaah there, I'm not playing any tracks."));
+                await RespondAsync(embed: EB.Error($"Сейчас ничего не играет!"));
                 return;
             }
 
@@ -476,10 +492,11 @@ namespace TheSwarmManager.Modules.Audio {
             string currentSec = (currentPos.Seconds.ToString().Length == 1 ? "0" : "") + currentPos.Seconds.ToString();
 
             var embed = new EmbedBuilder()
-                .WithTitle($"Now Playing - {track.Title}")
-                // .WithDescription($"[{track.Title}]({track.Url})")
-                .WithImageUrl(artwork)
-                .WithUrl(track.Url)
+                .WithTitle($"Текущий трек")
+                .WithDescription($"[{track.Title}]({track.Url})")
+                .WithColor(ColorConverter.GetColor("normal"))
+                // .WithImageUrl(artwork)
+                // .WithUrl(track.Url)
                 .WithFooter($"{currentHrs}:{currentMin}:{currentSec}/{track.Duration}")
             ;
 
@@ -489,23 +506,23 @@ namespace TheSwarmManager.Modules.Audio {
         [SlashCommand("music-queue", "Посмотреть очередь.", runMode: RunMode.Async)]
         public async Task QueueAsync() {
             if (!_lavaNode.TryGetPlayer(Context.Guild, out var player)) {
-                await RespondAsync(embed: _EmbedBuilder.Error($"I'm not connected to a voice channel."));
+                await RespondAsync(embed: EB.Error($"Я не подключена к голосовому каналу."));
             }
 
             List<LavaTrack> QueueList = player.Queue.ToList();
-            string FinalString = "***Queued tracks***\n";
+            string FinalString = "### Очередь\n";
             for (int i = 0; i < QueueList.Count; i++) {
                 FinalString += $"> [{QueueList[i].Title}]({QueueList[i].Url})\n";
             }
 
-            string currentlyPlaying = "*nothing*";
+            string currentlyPlaying = "*пусто*";
             if (player.PlayerState == PlayerState.Playing) {
                 currentlyPlaying = $"> [{player.Track.Title}]({player.Track.Url})";
             }
 
-            if (QueueList.Count <= 0) { FinalString = "***Queued tracks***\n*empty*"; }
+            if (QueueList.Count <= 0) { FinalString = "### Очередь\n*пусто*"; }
 
-            await RespondAsync(embed: _EmbedBuilder.Normal("Queue", "***Currently playing***\n" + $"{currentlyPlaying}\n\n" + FinalString));
+            await RespondAsync(embed: EB.Normal("Очередь", "### Сейчас играет\n" + $"{currentlyPlaying}\n\n" + FinalString));
         }
     }
 }

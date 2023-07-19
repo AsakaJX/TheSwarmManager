@@ -40,7 +40,7 @@ namespace TheSwarmManager.Services {
         }
 
         private async Task OnTrackStarted(TrackStartEventArgs arg) {
-            await arg.Player.TextChannel.SendMessageAsync(embed: EB.Normal("Now playing", $"{arg.Track.Title}"));
+            await arg.Player.TextChannel.SendMessageAsync(embed: EB.Normal("Сейчас играет", $"{arg.Track.Title}"));
             if (!_disconnectTokens.TryGetValue(arg.Player.VoiceChannel.Id, out var value)) {
                 return;
             }
@@ -59,22 +59,26 @@ namespace TheSwarmManager.Services {
             }
 
             var player = args.Player;
-            await player.TextChannel.SendMessageAsync(embed: EB.Normal("Track Ended", $"Player: {args.Player}\nTrack: {args.Track.Title}\nReason: {args.Reason.ToString()}"));
+            // await player.TextChannel.SendMessageAsync(embed: EB.Normal("Трек закончился", $"Плеер: {args.Player}\nТрек: {args.Track.Title}\nПричина: {args.Reason.ToString()}"));
 
             try {
                 if (!player.Queue.TryDequeue(out var lavaTrack)) {
-                    await player.TextChannel.SendMessageAsync(embed: EB.Normal("Queue Ended", "Please add more tracks or bot will auto-disconnect in 5 minutes."));
-                    _ = InitiateDisconnectAsync(args.Player, TimeSpan.FromSeconds(300));
+                    DateTime now = DateTime.UtcNow;
+                    long nowUnix = new DateTimeOffset(now).ToUnixTimeSeconds();
+                    long nowUnixPlusMinute = new DateTimeOffset(now.AddMinutes(5)).ToUnixTimeSeconds();
+
+                    await player.TextChannel.SendMessageAsync(embed: EB.Normal("Очередь закончилась", $"Добавьте еще треков или я автоматически отключусь через <t:{nowUnixPlusMinute}:R>."));
+                    _ = InitiateDisconnectAsync(args.Player, TimeSpan.FromMinutes(5));
                     return;
                 }
 
                 if (lavaTrack is null) {
-                    await player.TextChannel.SendMessageAsync(embed: EB.Error("Next item in queue is not a track."));
+                    await player.TextChannel.SendMessageAsync(embed: EB.Error("Не могу определить следующий трек в очереди (null).\nПожалуйста сообщите разработчику об этом Discord: thisusernameisunavailable."));
                     return;
                 }
 
                 await args.Player.PlayAsync(lavaTrack);
-                await args.Player.TextChannel.SendMessageAsync(embed: EB.Normal("{args.Reason}: {args.Track.Title}", $"Now playing: {lavaTrack.Title}"));
+                await args.Player.TextChannel.SendMessageAsync(embed: EB.Normal($"{args.Reason}: {args.Track.Title}", $"Сейчас играет: {lavaTrack.Title}"));
             } catch (Exception ex) {
                 Console.WriteLine(ex);
             }
@@ -89,26 +93,26 @@ namespace TheSwarmManager.Services {
                 value = _disconnectTokens[player.VoiceChannel.Id];
             }
 
-            await player.TextChannel.SendMessageAsync(embed: EB.Normal("Auto disconnect initiated!", $"Disconnecting in {timeSpan}..."));
+            // await player.TextChannel.SendMessageAsync(embed: EB.Normal("Auto disconnect initiated!", $"Disconnecting in {timeSpan}..."));
             var isCancelled = SpinWait.SpinUntil(() => value.IsCancellationRequested, timeSpan);
             if (isCancelled) {
                 return;
             }
 
             await _lavaNode.LeaveAsync(player.VoiceChannel);
-            await player.TextChannel.SendMessageAsync(embed: EB.Normal("Auto-Disconnect", "5 minutes passed. Disconnecting."));
+            await player.TextChannel.SendMessageAsync(embed: EB.Normal("Автоматическое отключение", "5 минут прошли. Отключаюсь."));
         }
 
         private async Task OnTrackException(TrackExceptionEventArgs arg) {
             Log.NewLog(LogSeverity.Error, "Audio Handler", $"Track {arg.Track.Title} threw an exception. Please check Lavalink console/logs.");
             arg.Player.Queue.Enqueue(arg.Track);
-            await arg.Player.TextChannel.SendMessageAsync(embed: EB.Normal("Queue", $"{arg.Track.Title} has been re-added to queue after throwing an exception."));
+            await arg.Player.TextChannel.SendMessageAsync(embed: EB.Normal("Очередь", $"Трек {arg.Track.Title} был заного добавлен в очередь после того как бросил ошибку."));
         }
 
         private async Task OnTrackStuck(TrackStuckEventArgs arg) {
             Log.NewLog(LogSeverity.Error, "Audio Handler", $"Track {arg.Track.Title} got stuck for {arg.Threshold}ms. Please check Lavalink console/logs.");
             arg.Player.Queue.Enqueue(arg.Track);
-            await arg.Player.TextChannel.SendMessageAsync(embed: EB.Normal("Queue", $"{arg.Track.Title} has been re-added to queue after getting stuck."));
+            await arg.Player.TextChannel.SendMessageAsync(embed: EB.Normal("Очередь", $"Трек {arg.Track.Title} был заного добавлен в очередь после того как он \"застрял\" на {arg.Threshold}мс."));
         }
 
         private Task OnWebSocketClosed(WebSocketClosedEventArgs arg) {

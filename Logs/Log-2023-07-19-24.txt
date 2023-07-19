@@ -1,0 +1,14 @@
+2023-07-19 22:54:08 Discord Discord.Net v3.11.0 (API v10)
+2023-07-19 22:54:08 Gateway Connecting
+2023-07-19 22:54:09 Gateway Connected
+2023-07-19 22:54:09 Gateway Ready
+2023-07-19 22:54:10 Victoria Websocket connection established.
+2023-07-19 22:54:10 Victoria {"resumed":true,"sessionId":"eydxczzw1dsd83bu","op":"ready"}
+2023-07-19 22:54:10 Victoria Unknown OP code received (ready), check Lavalink implementation.
+2023-07-19 22:54:10 Victoria {"state":{"time":1689796450530,"position":0,"connected":true,"ping":55},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:54:14 Interaction Handler|Request thisusernameisunavailable. requested music-join
+2023-07-19 22:54:15 Victoria {"state":{"time":1689796455143,"position":0,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-19 22:54:16 Interaction Handler|Request thisusernameisunavailable. requested music-queue
+2023-07-19 22:54:16 Victoria {"code":4006,"reason":"Session is no longer valid.","byRemote":true,"guildId":"923615051116589086","op":"event","type":"WebSocketClosedEvent"}
+2023-07-19 22:54:16 Audio Handler Discord WebSocket connection closed with following reason: Session is no longer valid.
+2023-07-19 22:54:16 Victoria {"state":{"time":1689796456843,"position":0,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}

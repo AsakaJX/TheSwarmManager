@@ -405,7 +405,7 @@ namespace TheSwarmManager.Modules.Prefixes {
                         await ReplyAsync("/ᐠﹷ ‸ ﹷ ᐟ\\\\ ﾉ\nhttps://www.youtube.com/watch?v=XGiqxxEjhNo");
                         break;
                     }
-                    await Context.Channel.SendFileAsync("Resources/mewo.mp4", "/ᐠﹷ ‸ ﹷ ᐟ\\\\ ﾉ"); break;
+                    await Context.Channel.SendFileAsync("Resources/Media/mewo.mp4", "/ᐠﹷ ‸ ﹷ ᐟ\\\\ ﾉ"); break;
                 case 4:
                     if (!user.Roles.ToArray().Contains(ownerRole)) {
                         await user.SetTimeOutAsync(TimeSpan.FromMinutes(5 * PrizeMultiplier));
