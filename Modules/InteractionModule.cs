@@ -563,11 +563,11 @@ namespace TheSwarmManager.Modules.Interactions {
         ) {
             if (user == Context.Guild.CurrentUser)
                 await RespondAsync(embed: EB.ErrorWithAuthor(Context.User, "Я себе не спамлю. ヾ(`ヘ´)ﾉﾞ"));
-            var myFile = File.Create($"cts-{Context.User.Id}");
+            var myFile = File.Create($"CTS/cts-{Context.User.Id}");
             myFile.Close();
             await RespondAsync(embed: EB.NormalWithAuthor(Context.User, $"Target: {user.Username}", $"Message: **{(msg == "" ? "*no message*" : msg)}**\nAmount: **{amount}**\nOnly PM: **{(only_pm ? "Yes" : "No")}**"));
             for (long i = 0; i < amount; i++) {
-                if (!File.Exists($"cts-{Context.User.Id}")) {
+                if (!File.Exists($"CTS/cts-{Context.User.Id}")) {
                     await ReplyAsync(embed: EB.SuccessWithAuthor(Context.User, "Ping has been stopped."));
                     await user.SendMessageAsync(embed: EB.SuccessWithAuthor(Context.User, "Ping has been stopped."));
                     break;
@@ -582,12 +582,13 @@ namespace TheSwarmManager.Modules.Interactions {
         [SlashCommand("ping-stop", "Оживить кого-нибудь после пингов ?")]
         public async Task HandleStopPingCommand() {
             await RespondAsync(embed: EB.NormalCCWithAuthor(Context.Interaction));
-            if (!File.Exists($"cts-{Context.User.Id}"))
+            if (!File.Exists($"CTS/cts-{Context.User.Id}"))
                 await ReplyAsync(embed: EB.ErrorWithAuthor(Context.User, "Ты не запускал спам пингами! anger"));
 
-            try { File.Delete($"cts-{Context.User.Id}"); } catch (Exception ex) {
+            try { File.Delete($"CTS/cts-{Context.User.Id}"); } catch (Exception ex) {
                 Log.NewLog(Logging.LogSeverity.Verbose, "Commands", ex.ToString());
             }
+            await DeleteOriginalResponseAsync();
         }
 
         [SlashCommand("ai-ask-neuro", "Задать вопрос ChatGPT.")]

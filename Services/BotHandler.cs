@@ -47,7 +47,7 @@ namespace TheSwarmManager.Services {
 
             System.IO.DirectoryInfo PINGCTS_dir = new DirectoryInfo(Directory.GetCurrentDirectory());
             foreach (FileInfo file in PINGCTS_dir.EnumerateFiles()) {
-                if (file.Name.IndexOf("cts-") == -1) { continue; }
+                if (file.Name.IndexOf("CTS/cts-") == -1) { continue; }
                 file.Delete();
             }
 
