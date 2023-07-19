@@ -1,7 +1,0 @@
-2023-07-16 14:18:50 Discord Discord.Net v3.11.0 (API v10)
-2023-07-16 14:18:50 Gateway Connecting
-2023-07-16 14:18:51 Gateway Connected
-2023-07-16 14:18:52 Gateway Ready
-2023-07-16 14:18:52 Victoria Websocket connection established.
-2023-07-16 14:18:52 Victoria {"resumed":true,"sessionId":"ml2omvzcxjv609yw","op":"ready"}
-2023-07-16 14:18:52 Victoria Unknown OP code received (ready), check Lavalink implementation.

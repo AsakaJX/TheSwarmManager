@@ -1,9 +1,0 @@
-2023-07-18 22:32:57 Discord Discord.Net v3.11.0 (API v10)
-2023-07-18 22:32:57 Gateway Connecting
-2023-07-18 22:32:59 Gateway Connected
-2023-07-18 22:32:59 Gateway Ready
-2023-07-18 22:33:00 Victoria Websocket connection established.
-2023-07-18 22:33:00 Victoria {"resumed":true,"sessionId":"rq8yz513p5bu5d4d","op":"ready"}
-2023-07-18 22:33:00 Victoria Unknown OP code received (ready), check Lavalink implementation.
-2023-07-18 22:33:01 Interaction Handler|Request thisusernameisunavailable. requested slots
-2023-07-18 22:33:08 Slots { "Ничего xD" : "0", "Кирпичи :bricks:" : "0", "Бетон :bricks:" : "0", "meow" : "0", "Таймаут на 5 минут :skull:" : "0", "Таймаут на 15 минут :skull:" : "0", "Таймаут на 30 минут :skull:" : "0", "Кик с сервера" : "0", "Шанс на получение админки!" : "0", "Роль Элитного раба Нейро-самы" : "0" }
