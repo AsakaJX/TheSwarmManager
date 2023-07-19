@@ -40,6 +40,9 @@ namespace TheSwarmManager.Services {
         }
 
         public async Task InitializeAsync() {
+            if (!Directory.Exists("Resources/StableDiffusionOutput")) { Directory.CreateDirectory("Resources/StableDiffusionOutput"); }
+            if (!Directory.Exists("CTS")) { Directory.CreateDirectory("CTS"); }
+
             System.IO.DirectoryInfo STDO_dir = new DirectoryInfo("Resources/StableDiffusionOutput/");
             foreach (FileInfo file in STDO_dir.EnumerateFiles()) {
                 file.Delete();
