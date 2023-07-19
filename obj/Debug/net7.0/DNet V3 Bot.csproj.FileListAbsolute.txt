@@ -549,3 +549,4 @@ D:\Projects\TheSwarmManager-main\bin\Debug\net7.0\runtimes\linux\native\libmongo
 D:\Projects\TheSwarmManager-main\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
 D:\Projects\TheSwarmManager-main\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
 D:\Projects\TheSwarmManager-main\bin\Debug\net7.0\OpenAI_API.dll
+D:\Projects\TheSwarmManager-main\obj\Debug\net7.0\DNet V3 Bot.sourcelink.json

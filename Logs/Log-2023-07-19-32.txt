@@ -1,0 +1,4 @@
+2023-07-19 23:37:59 Discord Discord.Net v3.11.0 (API v10)
+2023-07-19 23:37:59 Gateway Connecting
+2023-07-19 23:38:00 Gateway Connected
+2023-07-19 23:38:01 Gateway Ready
