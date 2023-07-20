@@ -52,7 +52,7 @@ namespace TheSwarmManager.Modules.Logging {
             var logsName = $"Logs/Log-{obj["lastRunDate"]}-{obj["DailyRunCounter"]}.txt";
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"{date} {source} {message}");
+            sb.AppendLine($"{date}\t{source}\t{message}");
             File.AppendAllText(logsName, sb.ToString());
             //? \...                Save Logs to file                  .../
 
@@ -82,6 +82,7 @@ namespace TheSwarmManager.Modules.Logging {
                 source = firstWord + addSpacesSource.Insert(0, " ") + secondWord;
                 addSpacesSource = "";
             }
+
             Console.ForegroundColor = ConsoleColor.DarkGray; Console.Write($"{date}  ");
             Console.ForegroundColor = ColorTable[severity]; Console.Write($"{addSpacesSeverity}{severity.ToString().ToUpper()}");
             Console.ForegroundColor = ConsoleColor.Cyan; Console.Write(" ⇢ ");

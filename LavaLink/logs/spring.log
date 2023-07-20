@@ -1,8 +1,9 @@
-2023-07-19 13:17:26.612  INFO 13716 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 17.0.7 on rock with PID 13716 (D:\Projects\TheSwarmManager-main\LavaLink\Lavalink.jar started by paged in D:\Projects\TheSwarmManager-main\LavaLink)
-2023-07-19 13:17:26.633  INFO 13716 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
-2023-07-19 13:17:27.505  INFO 13716 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.574 seconds (JVM running for 2.094)
-2023-07-19 13:17:27.507  INFO 13716 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
-2023-07-19 13:17:27.604  INFO 13716 --- [main] lavalink.server.Launcher                 : 
+2023-07-20 00:05:20.861  INFO 10424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60004 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
+2023-07-20 00:37:07.658  INFO 19288 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 17.0.7 on rock with PID 19288 (D:\Projects\TheSwarmManager-main\LavaLink\Lavalink.jar started by paged in D:\Projects\TheSwarmManager-main\LavaLink)
+2023-07-20 00:37:07.662  INFO 19288 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-07-20 00:37:08.428  INFO 19288 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.309 seconds (JVM running for 1.716)
+2023-07-20 00:37:08.431  INFO 19288 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2023-07-20 00:37:08.477  INFO 19288 --- [main] lavalink.server.Launcher                 : 
 
 [32m       .  [31m _                  _ _       _    [32m__ _ _
 [32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
@@ -19,141 +20,144 @@
 	JVM:            17.0.7
 	Lavaplayer      1.4.0-original
 
-2023-07-19 13:17:27.610  INFO 13716 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
-2023-07-19 13:17:28.481  WARN 13716 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-07-19 13:17:28.505  INFO 13716 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2023-07-19 13:17:28.505  INFO 13716 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 891 ms
-2023-07-19 13:17:28.590  WARN 13716 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
-2023-07-19 13:17:28.809  INFO 13716 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2023-07-19 13:17:29.619  INFO 13716 --- [main] lavalink.server.config.KoeConfiguration  : OS: WINDOWS, Arch: X86_64
-2023-07-19 13:17:29.620  INFO 13716 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
-2023-07-19 13:17:29.623  INFO 13716 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
-2023-07-19 13:17:29.631  INFO 13716 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
-2023-07-19 13:17:29.872  INFO 13716 --- [main] io.undertow                              : starting server: Undertow - 2.2.16.Final
-2023-07-19 13:17:29.883  INFO 13716 --- [main] org.xnio                                 : XNIO version 3.8.6.Final
-2023-07-19 13:17:29.893  INFO 13716 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.6.Final
-2023-07-19 13:17:29.968  INFO 13716 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
-2023-07-19 13:17:30.014  INFO 13716 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 2333 (http)
-2023-07-19 13:17:30.019  INFO 13716 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.479 seconds (JVM running for 4.608)
-2023-07-19 13:17:30.020  INFO 13716 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
-2023-07-19 13:17:41.656  INFO 13716 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-19 13:17:41.656  INFO 13716 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-19 13:17:41.657  INFO 13716 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-07-19 13:17:41.674  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:59767
-2023-07-19 13:17:41.696  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 13:17:41.906  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from Victoria/5.2.8.0
-2023-07-19 13:17:41.923  INFO 13716 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 13:17:41.924  WARN 13716 --- [XNIO-1 I/O-4] lavalink.server.io.WebSocketHandler      : Sending websocket commands to Lavalink has been deprecated and will be removed in API version 4. API version 3 will be removed in Lavalink 5. Please use the new REST endpoints instead.
-2023-07-19 13:31:43.908  INFO 13716 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:59767 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 13:31:51.571  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60518
-2023-07-19 13:31:51.573  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 13:31:51.575  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 13:31:51.575  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 13:31:51.603  INFO 13716 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 13:43:33.296  INFO 13716 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60518 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 13:43:38.122  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61065
-2023-07-19 13:43:38.124  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 13:43:38.125  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 13:43:38.125  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 13:43:38.152  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 13:43:53.872  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61065 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 13:44:01.223  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61090
-2023-07-19 13:44:01.224  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 13:44:01.225  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 13:44:01.226  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 13:44:01.261  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 13:55:43.826  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61090 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 13:55:51.211  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61557
-2023-07-19 13:55:51.213  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 13:55:51.214  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 13:55:51.214  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 13:55:51.239  INFO 13716 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 13:59:04.199  INFO 13716 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61557 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 13:59:10.112  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61704
-2023-07-19 13:59:10.113  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 13:59:10.114  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 13:59:10.114  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 13:59:10.140  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 14:08:16.587  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61704 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 14:08:21.923  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:62284
-2023-07-19 14:08:21.925  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 14:08:21.925  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 14:08:21.926  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 14:08:21.951  INFO 13716 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 14:10:27.422  INFO 13716 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:62284 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 14:10:32.219  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:62377
-2023-07-19 14:10:32.221  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 14:10:32.222  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 14:10:32.223  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 14:10:32.249  INFO 13716 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 14:21:42.105  INFO 13716 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:62377 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 14:21:49.732  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:62847
-2023-07-19 14:21:49.734  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 14:21:49.735  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 14:21:49.736  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 14:21:49.764  INFO 13716 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 14:22:15.809  INFO 13716 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:62847 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 14:22:45.824  INFO 13716 --- [pool-3-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2023-07-19 14:22:56.173  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:62907
-2023-07-19 14:22:56.176  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 14:22:56.178  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from Victoria/5.2.8.0
-2023-07-19 14:22:56.206  INFO 13716 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 14:22:56.206  WARN 13716 --- [XNIO-1 I/O-8] lavalink.server.io.WebSocketHandler      : Sending websocket commands to Lavalink has been deprecated and will be removed in API version 4. API version 3 will be removed in Lavalink 5. Please use the new REST endpoints instead.
-2023-07-19 14:24:19.280  INFO 13716 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:62907 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 14:24:24.123  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:62968
-2023-07-19 14:24:24.124  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 14:24:24.125  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 14:24:24.125  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 14:24:24.154  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 14:26:44.379  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:62968 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 14:26:49.823  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:63076
-2023-07-19 14:26:49.825  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 14:26:49.826  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 14:26:49.827  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 14:26:49.856  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 15:44:32.360  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=0yZRuPQDs6w"
-2023-07-19 15:44:32.407  WARN 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : YouTube auth tokens can't be retrieved because email and password is not set in YoutubeAudioSourceManager, age restricted videos will throw exceptions.
-2023-07-19 15:44:32.500  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"07ede49143d8945f135d8df3d68f6558","event":{"token":"937789ce712e9e59","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 15:44:33.041  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is null).
-2023-07-19 15:44:33.218  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgtfVTRpeWdDamdvRSivtd-lBg%3D%3D, next update will be after 600 seconds.
-2023-07-19 15:44:33.316  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track 【METAL COVER】アイドル / IDOL (Yoasobi)【Futakuchi Mana 二口魔菜】
-2023-07-19 15:44:33.457  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=0yZRuPQDs6w, client=0:0:0:0:0:0:0:1
-2023-07-19 15:44:44.663  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=0yZRuPQDs6w"
-2023-07-19 15:44:44.751  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track 【METAL COVER】アイドル / IDOL (Yoasobi)【Futakuchi Mana 二口魔菜】
-2023-07-19 15:44:44.753  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=0yZRuPQDs6w, client=0:0:0:0:0:0:0:1
-2023-07-19 15:44:45.654  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"track":"QAAAygIAT\u002BOAkE1FVEFMIENPVkVS44CR44Ki44Kk44OJ44OrIC8gSURPTCAoWW9hc29iaSnjgJBGdXRha3VjaGkgTWFuYSDkuozlj6PprZToj5zjgJEAIUZ1dGFrdWNoaSBNYW5hIENoLiB8IOS6jOWPo\u002BmtlOiPnAAAAAAAA36IAAsweVpSdVBRRHM2dwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTB5WlJ1UFFEczZ3AAd5b3V0dWJlAAAAAAAAAAA=","guildId":"923615051116589086","op":"play"}
-2023-07-19 17:20:19.455  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Cdz_WYYnMpo"
-2023-07-19 17:20:19.457  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is CgtfVTRpeWdDamdvRSivtd-lBg%3D%3D).
-2023-07-19 17:20:19.639  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgtsOFZGTVcxbkdKZyih4t-lBg%3D%3D, next update will be after 600 seconds.
-2023-07-19 17:20:19.719  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track ミッドナイトシアター
-2023-07-19 17:20:19.725  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=Cdz_WYYnMpo&pp=ygUWa2FubyBtaWRuaWdodCB0aGVhdGVyIA%3D%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 17:21:44.547  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:63076 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 17:21:57.773  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:56779
-2023-07-19 17:21:57.790  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 17:21:57.792  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 1 events
-2023-07-19 17:21:57.793  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 17:21:57.832  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 17:22:09.941  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"65ee24718edd3933463d63d5cdaba46c","event":{"token":"937789ce712e9e59","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 17:22:13.385  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Cdz_WYYnMpo"
-2023-07-19 17:22:13.470  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track ミッドナイトシアター
-2023-07-19 17:22:13.474  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=Cdz_WYYnMpo&pp=ygUWa2FubyBtaWRuaWdodCB0aGVhdGVyIA%3D%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 17:22:13.990  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAHuODn\u002BODg\u002BODieODiuOCpOODiOOCt\u002BOCouOCv\u002BODvAAMS2FubyAtIFRvcGljAAAAAAADYzAAC0Nkel9XWVluTXBvAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Q2R6X1dZWW5NcG8AB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 17:30:57.751  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"stop"}
-2023-07-19 17:30:57.752  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"destroy"}
-2023-07-19 17:53:08.151  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://open.spotify.com/track/6vZaGg1QgKMcGTWMwqPEJn?si=9c4037eb40c84ea7"
-2023-07-19 17:53:08.429  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"65ee24718edd3933463d63d5cdaba46c","event":{"token":"982f42b4490a60e7","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 17:53:08.964 ERROR 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Load failed
+2023-07-20 00:37:08.484  INFO 19288 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-07-20 00:37:09.246  WARN 19288 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-07-20 00:37:09.270  INFO 19288 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-07-20 00:37:09.271  INFO 19288 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 782 ms
+2023-07-20 00:37:09.347  WARN 19288 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2023-07-20 00:37:09.516  INFO 19288 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2023-07-20 00:37:10.232  INFO 19288 --- [main] lavalink.server.config.KoeConfiguration  : OS: WINDOWS, Arch: X86_64
+2023-07-20 00:37:10.232  INFO 19288 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2023-07-20 00:37:10.238  INFO 19288 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2023-07-20 00:37:10.248  INFO 19288 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2023-07-20 00:37:10.529  INFO 19288 --- [main] io.undertow                              : starting server: Undertow - 2.2.16.Final
+2023-07-20 00:37:10.539  INFO 19288 --- [main] org.xnio                                 : XNIO version 3.8.6.Final
+2023-07-20 00:37:10.550  INFO 19288 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.6.Final
+2023-07-20 00:37:10.618  INFO 19288 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2023-07-20 00:37:10.663  INFO 19288 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 2333 (http)
+2023-07-20 00:37:10.668  INFO 19288 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.233 seconds (JVM running for 3.956)
+2023-07-20 00:37:10.669  INFO 19288 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2023-07-20 00:37:23.613  INFO 19288 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-20 00:37:23.613  INFO 19288 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-20 00:37:23.614  INFO 19288 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-20 00:37:23.661  INFO 19288 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:52815
+2023-07-20 00:37:23.680  INFO 19288 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
+2023-07-20 00:37:23.931  INFO 19288 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from Victoria/5.2.8.0
+2023-07-20 00:37:23.947  INFO 19288 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
+2023-07-20 00:37:23.948  WARN 19288 --- [XNIO-1 I/O-9] lavalink.server.io.WebSocketHandler      : Sending websocket commands to Lavalink has been deprecated and will be removed in API version 4. API version 3 will be removed in Lavalink 5. Please use the new REST endpoints instead.
+2023-07-20 01:05:32.529  INFO 19288 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:52815 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
+2023-07-20 11:41:54.669  INFO 22512 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 17.0.7 on rock with PID 22512 (D:\Projects\TheSwarmManager-main\LavaLink\Lavalink.jar started by paged in D:\Projects\TheSwarmManager-main\LavaLink)
+2023-07-20 11:41:54.691  INFO 22512 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-07-20 11:41:55.465  INFO 22512 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.301 seconds (JVM running for 1.711)
+2023-07-20 11:41:55.467  INFO 22512 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2023-07-20 11:41:55.508  INFO 22512 --- [main] lavalink.server.Launcher                 : 
 
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Unknown file format.
-	at com.sedmelluq.discord.lavaplayer.source.ProbingAudioSourceManager.handleLoadResult(ProbingAudioSourceManager.java:34) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:449) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:431) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:223) ~[lavaplayer-1.4.0.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.7.5
+	Build time:     06.03.2023 12:02:05 UTC
+	Branch          HEAD
+	Commit:         c00286d
+	Commit time:    06.03.2023 11:59:46 UTC
+	JVM:            17.0.7
+	Lavaplayer      1.4.0-original
+
+2023-07-20 11:41:55.515  INFO 22512 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-07-20 11:41:56.266  WARN 22512 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-07-20 11:41:56.289  INFO 22512 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-07-20 11:41:56.289  INFO 22512 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 769 ms
+2023-07-20 11:41:56.370  WARN 22512 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2023-07-20 11:41:56.535  INFO 22512 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2023-07-20 11:42:00.926  WARN 22512 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'websocketConfig' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/config/WebsocketConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'socketServer' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/io/SocketServer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
+2023-07-20 11:42:00.960 ERROR 22512 --- [main] lavalink.server.Launcher                 : Application failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'websocketConfig' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/config/WebsocketConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'socketServer' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/io/SocketServer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.18.jar!/:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.18.jar!/:5.3.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.6.jar!/:2.6.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.6.jar!/:2.6.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.6.jar!/:2.6.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.6.jar!/:2.6.6]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:164) ~[spring-boot-2.6.6.jar!/:2.6.6]
+	at lavalink.server.Launcher.launchMain(Launcher.kt:165) ~[classes!/:na]
+	at lavalink.server.Launcher.main(Launcher.kt:127) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[Lavalink.jar:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'socketServer' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/io/SocketServer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	... 41 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	... 55 common frames omitted
+Caused by: com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
+	at com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager.initRequestHeaders(TwitchStreamAudioSourceManager.java:205) ~[lavaplayer-1.4.0.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager.<init>(TwitchStreamAudioSourceManager.java:58) ~[lavaplayer-1.4.0.jar!/:na]
+	at lavalink.server.config.AudioPlayerConfiguration.audioPlayerManagerSupplier(AudioPlayerConfiguration.kt:157) ~[classes!/:na]
+	at lavalink.server.config.AudioPlayerConfiguration$$EnhancerBySpringCGLIB$$fe8d8264.CGLIB$audioPlayerManagerSupplier$1(<generated>) ~[classes!/:na]
+	at lavalink.server.config.AudioPlayerConfiguration$$EnhancerBySpringCGLIB$$fe8d8264$$FastClassBySpringCGLIB$$52fdd088.invoke(<generated>) ~[classes!/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.18.jar!/:5.3.18]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.18.jar!/:5.3.18]
+	at lavalink.server.config.AudioPlayerConfiguration$$EnhancerBySpringCGLIB$$fe8d8264.audioPlayerManagerSupplier(<generated>) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	... 56 common frames omitted
 	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
   lavaplayer.version: 1.4.0-original
   os.arch: amd64
@@ -163,21 +167,132 @@ com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Unknown file format.
   java.version: 17.0.7
   java.runtime.version: 17.0.7+7-LTS
   java.vm.version: 17.0.7+7-LTS
+Caused by: org.apache.http.conn.ConnectTimeoutException: Connect to www.twitch.tv:443 [www.twitch.tv/151.101.246.167] failed: Read timed out
+	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connectWithDestination(ExtendedConnectionOperator.java:162) ~[lavaplayer-1.4.0.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connect(ExtendedConnectionOperator.java:81) ~[lavaplayer-1.4.0.jar!/:na]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.4.0.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager.initRequestHeaders(TwitchStreamAudioSourceManager.java:193) ~[lavaplayer-1.4.0.jar!/:na]
+	... 68 common frames omitted
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator$AdditionalDetails: Encountered when opening a connection with the following details:
+  host: https://www.twitch.tv:443
+  localAddress: <unspecified>
+  remoteAddress: www.twitch.tv/151.101.246.167:443
+  connectTimeout: 3000
+  triedAddresses: www.twitch.tv/151.101.246.167
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:283) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1510) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1425) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426) ~[na:na]
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:436) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:384) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connectWithDestination(ExtendedConnectionOperator.java:157) ~[lavaplayer-1.4.0.jar!/:na]
+	... 79 common frames omitted
 
-2023-07-19 17:53:09.220  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://open.spotify.com/track/6vZaGg1QgKMcGTWMwqPEJn?si=9c4037eb40c84ea7, client=0:0:0:0:0:0:0:1
-2023-07-19 17:53:13.541  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://open.spotify.com/track/6vZaGg1QgKMcGTWMwqPEJn?si=9c4037eb40c84ea7"
-2023-07-19 17:53:14.090 ERROR 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Load failed
+2023-07-20 11:42:00.967  INFO 22512 --- [main] ConditionEvaluationReportLoggingListener : 
 
-com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Unknown file format.
-	at com.sedmelluq.discord.lavaplayer.source.ProbingAudioSourceManager.handleLoadResult(ProbingAudioSourceManager.java:34) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.http.HttpAudioSourceManager.loadItem(HttpAudioSourceManager.java:81) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:449) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:431) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:223) ~[lavaplayer-1.4.0.jar!/:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-07-20 11:42:01.013 ERROR 22512 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'websocketConfig' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/config/WebsocketConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'socketServer' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/io/SocketServer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.18.jar!/:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.18.jar!/:5.3.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.6.jar!/:2.6.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.6.jar!/:2.6.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.6.jar!/:2.6.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.6.jar!/:2.6.6]
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:164) ~[spring-boot-2.6.6.jar!/:2.6.6]
+	at lavalink.server.Launcher.launchMain(Launcher.kt:165) ~[classes!/:na]
+	at lavalink.server.Launcher.main(Launcher.kt:127) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Lavalink.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[Lavalink.jar:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'socketServer' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/io/SocketServer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	... 41 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	... 55 common frames omitted
+Caused by: com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
+	at com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager.initRequestHeaders(TwitchStreamAudioSourceManager.java:205) ~[lavaplayer-1.4.0.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager.<init>(TwitchStreamAudioSourceManager.java:58) ~[lavaplayer-1.4.0.jar!/:na]
+	at lavalink.server.config.AudioPlayerConfiguration.audioPlayerManagerSupplier(AudioPlayerConfiguration.kt:157) ~[classes!/:na]
+	at lavalink.server.config.AudioPlayerConfiguration$$EnhancerBySpringCGLIB$$fe8d8264.CGLIB$audioPlayerManagerSupplier$1(<generated>) ~[classes!/:na]
+	at lavalink.server.config.AudioPlayerConfiguration$$EnhancerBySpringCGLIB$$fe8d8264$$FastClassBySpringCGLIB$$52fdd088.invoke(<generated>) ~[classes!/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.18.jar!/:5.3.18]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.18.jar!/:5.3.18]
+	at lavalink.server.config.AudioPlayerConfiguration$$EnhancerBySpringCGLIB$$fe8d8264.audioPlayerManagerSupplier(<generated>) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.18.jar!/:5.3.18]
+	... 56 common frames omitted
 	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
   lavaplayer.version: 1.4.0-original
   os.arch: amd64
@@ -187,280 +302,42 @@ com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Unknown file format.
   java.version: 17.0.7
   java.runtime.version: 17.0.7+7-LTS
   java.vm.version: 17.0.7+7-LTS
+Caused by: org.apache.http.conn.ConnectTimeoutException: Connect to www.twitch.tv:443 [www.twitch.tv/151.101.246.167] failed: Read timed out
+	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connectWithDestination(ExtendedConnectionOperator.java:162) ~[lavaplayer-1.4.0.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connect(ExtendedConnectionOperator.java:81) ~[lavaplayer-1.4.0.jar!/:na]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.4.0.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager.initRequestHeaders(TwitchStreamAudioSourceManager.java:193) ~[lavaplayer-1.4.0.jar!/:na]
+	... 68 common frames omitted
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator$AdditionalDetails: Encountered when opening a connection with the following details:
+  host: https://www.twitch.tv:443
+  localAddress: <unspecified>
+  remoteAddress: www.twitch.tv/151.101.246.167:443
+  connectTimeout: 3000
+  triedAddresses: www.twitch.tv/151.101.246.167
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:283) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1510) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1425) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426) ~[na:na]
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:436) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:384) ~[httpclient-4.5.10.jar!/:4.5.10]
+	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connectWithDestination(ExtendedConnectionOperator.java:157) ~[lavaplayer-1.4.0.jar!/:na]
+	... 79 common frames omitted
 
-2023-07-19 17:53:14.092  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://open.spotify.com/track/6vZaGg1QgKMcGTWMwqPEJn?si=9c4037eb40c84ea7, client=0:0:0:0:0:0:0:1
-2023-07-19 17:53:22.852  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Cdz_WYYnMpo"
-2023-07-19 17:53:22.853  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is CgtsOFZGTVcxbkdKZyih4t-lBg%3D%3D).
-2023-07-19 17:53:23.059  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgthaEdiVDV4M29OQSjh8d-lBg%3D%3D, next update will be after 600 seconds.
-2023-07-19 17:53:23.169  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track ミッドナイトシアター
-2023-07-19 17:53:23.172  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=Cdz_WYYnMpo&pp=ygUWa2FubyBtaWRuaWdodCB0aGVhdGVyIA%3D%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 17:53:23.689  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAHuODn\u002BODg\u002BODieODiuOCpOODiOOCt\u002BOCouOCv\u002BODvAAMS2FubyAtIFRvcGljAAAAAAADYzAAC0Nkel9XWVluTXBvAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Q2R6X1dZWW5NcG8AB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 18:02:07.378  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"stop"}
-2023-07-19 18:02:07.379  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"destroy"}
-2023-07-19 19:49:21.423  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:56779 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 19:49:31.893  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:64559
-2023-07-19 19:49:31.926  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 19:49:31.928  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 19:49:31.928  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 19:49:31.960  INFO 13716 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 21:35:37.253  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Cdz_WYYnMpo"
-2023-07-19 21:35:37.267  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is CgthaEdiVDV4M29OQSjh8d-lBg%3D%3D).
-2023-07-19 21:35:37.795  INFO 13716 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"4c92d9cfeade1b42b79c7201b81faa67","event":{"token":"1823d8ae200ba91c","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 21:35:37.798  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgtLazJsSkdld0h3ayj52eClBg%3D%3D, next update will be after 600 seconds.
-2023-07-19 21:35:38.024  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track ミッドナイトシアター
-2023-07-19 21:35:38.038  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=Cdz_WYYnMpo&pp=ygUWa2FubyBtaWRuaWdodCB0aGVhdGVyIA%3D%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 21:35:38.745  INFO 13716 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAHuODn\u002BODg\u002BODieODiuOCpOODiOOCt\u002BOCouOCv\u002BODvAAMS2FubyAtIFRvcGljAAAAAAADYzAAC0Nkel9XWVluTXBvAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Q2R6X1dZWW5NcG8AB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 21:36:04.257  INFO 13716 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"stop"}
-2023-07-19 21:38:00.453  INFO 13716 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:64559 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 21:38:11.659  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:53058
-2023-07-19 21:38:11.662  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 21:38:11.663  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 21:38:11.663  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 21:38:11.693  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 21:38:18.688  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Cdz_WYYnMpo"
-2023-07-19 21:38:18.783  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track ミッドナイトシアター
-2023-07-19 21:38:18.787  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=Cdz_WYYnMpo&pp=ygUWa2FubyBtaWRuaWdodCB0aGVhdGVyIA%3D%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 21:38:18.992  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"60f0471372ad3c19f1c2d604c25e5b91","event":{"token":"1823d8ae200ba91c","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 21:38:19.402  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAHuODn\u002BODg\u002BODieODiuOCpOODiOOCt\u002BOCouOCv\u002BODvAAMS2FubyAtIFRvcGljAAAAAAADYzAAC0Nkel9XWVluTXBvAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Q2R6X1dZWW5NcG8AB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 21:38:28.503  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"stop"}
-2023-07-19 21:43:11.438  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:53058 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 21:43:18.418  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:53272
-2023-07-19 21:43:18.420  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 21:43:18.423  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 21:43:18.423  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 21:43:18.452  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 21:43:20.749  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Cdz_WYYnMpo"
-2023-07-19 21:43:21.294  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"886bf48ba85662edc63e881e1fd697f1","event":{"token":"1823d8ae200ba91c","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 21:43:21.354  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track ミッドナイトシアター
-2023-07-19 21:43:21.357  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=Cdz_WYYnMpo&pp=ygUWa2FubyBtaWRuaWdodCB0aGVhdGVyIA%3D%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 21:43:21.941  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAHuODn\u002BODg\u002BODieODiuOCpOODiOOCt\u002BOCouOCv\u002BODvAAMS2FubyAtIFRvcGljAAAAAAADYzAAC0Nkel9XWVluTXBvAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Q2R6X1dZWW5NcG8AB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 21:43:25.841  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"stop"}
-2023-07-19 21:45:46.728  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:53272 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 21:45:55.149  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:53397
-2023-07-19 21:45:55.151  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 21:45:55.152  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 1 events
-2023-07-19 21:45:55.153  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 21:45:55.181  INFO 13716 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 21:46:13.263  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Cdz_WYYnMpo"
-2023-07-19 21:46:13.263  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is CgtLazJsSkdld0h3ayj52eClBg%3D%3D).
-2023-07-19 21:46:13.555  INFO 13716 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"e013f2c9742f25082c1738939fa4662b","event":{"token":"1823d8ae200ba91c","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 21:46:13.623  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is Cgt4Q2F3ZWkwaWtfYyj13uClBg%3D%3D, next update will be after 600 seconds.
-2023-07-19 21:46:13.785  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track ミッドナイトシアター
-2023-07-19 21:46:13.827  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=Cdz_WYYnMpo, client=0:0:0:0:0:0:0:1
-2023-07-19 21:46:14.383  INFO 13716 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAHuODn\u002BODg\u002BODieODiuOCpOODiOOCt\u002BOCouOCv\u002BODvAAMS2FubyAtIFRvcGljAAAAAAADYzAAC0Nkel9XWVluTXBvAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Q2R6X1dZWW5NcG8AB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 21:46:58.125  INFO 13716 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:53397 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 21:47:04.238  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:53460
-2023-07-19 21:47:04.240  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 21:47:04.240  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 21:47:04.240  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 21:47:04.266  INFO 13716 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 21:47:07.918  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Cdz_WYYnMpo"
-2023-07-19 21:47:08.014  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track ミッドナイトシアター
-2023-07-19 21:47:08.016  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=Cdz_WYYnMpo, client=0:0:0:0:0:0:0:1
-2023-07-19 21:47:08.223  INFO 13716 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"9cb1a4a4747af7103055affdaaedf0b9","event":{"token":"1823d8ae200ba91c","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 21:47:08.593  INFO 13716 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAHuODn\u002BODg\u002BODieODiuOCpOODiOOCt\u002BOCouOCv\u002BODvAAMS2FubyAtIFRvcGljAAAAAAADYzAAC0Nkel9XWVluTXBvAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Q2R6X1dZWW5NcG8AB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 21:47:14.352  INFO 13716 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"stop"}
-2023-07-19 22:23:26.168  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Cdz_WYYnMpo"
-2023-07-19 22:23:26.170  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is Cgt4Q2F3ZWkwaWtfYyj13uClBg%3D%3D).
-2023-07-19 22:23:26.394  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is Cgs0TmhxNl83YThZbyiu8OClBg%3D%3D, next update will be after 600 seconds.
-2023-07-19 22:23:26.504  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track ミッドナイトシアター
-2023-07-19 22:23:26.522  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=Cdz_WYYnMpo, client=0:0:0:0:0:0:0:1
-2023-07-19 22:23:27.174  INFO 13716 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAHuODn\u002BODg\u002BODieODiuOCpOODiOOCt\u002BOCouOCv\u002BODvAAMS2FubyAtIFRvcGljAAAAAAADYzAAC0Nkel9XWVluTXBvAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Q2R6X1dZWW5NcG8AB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 22:23:31.185  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Cdz_WYYnMpo"
-2023-07-19 22:23:31.324  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track ミッドナイトシアター
-2023-07-19 22:23:31.325  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=Cdz_WYYnMpo, client=0:0:0:0:0:0:0:1
-2023-07-19 22:23:32.695  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Cdz_WYYnMpo"
-2023-07-19 22:23:32.823  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track ミッドナイトシアター
-2023-07-19 22:23:32.825  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=Cdz_WYYnMpo, client=0:0:0:0:0:0:0:1
-2023-07-19 22:23:34.515  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=Cdz_WYYnMpo"
-2023-07-19 22:23:34.604  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track ミッドナイトシアター
-2023-07-19 22:23:34.606  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=Cdz_WYYnMpo, client=0:0:0:0:0:0:0:1
-2023-07-19 22:23:49.785  INFO 13716 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"stop"}
-2023-07-19 22:31:34.732  INFO 13716 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:53460 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 22:31:44.434  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:55884
-2023-07-19 22:31:44.438  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 22:31:44.440  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 22:31:44.440  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 22:31:44.470  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 22:32:43.593  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "frog muhahaha"
-2023-07-19 22:32:43.594  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : No matches found
-2023-07-19 22:32:43.607  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=frog%20muhahaha, client=0:0:0:0:0:0:0:1
-2023-07-19 22:32:43.872  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"211c41e94f7d11465b2d8de06e38fb90","event":{"token":"1823d8ae200ba91c","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 22:33:06.341  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:55884 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 22:33:11.890  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:55946
-2023-07-19 22:33:11.892  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 22:33:11.893  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 22:33:11.893  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 22:33:11.925  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 22:33:20.818  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "frog muhahaha meme"
-2023-07-19 22:33:20.818  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : No matches found
-2023-07-19 22:33:20.835  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=frog%20muhahaha%20meme, client=0:0:0:0:0:0:0:1
-2023-07-19 22:33:21.123  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"1511162f073c0d87653ebf11ccaaceca","event":{"token":"1823d8ae200ba91c","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 22:33:44.116  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "B-Complex - Beautiful Lies"
-2023-07-19 22:33:44.116  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : No matches found
-2023-07-19 22:33:44.129  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=B-Complex%20-%20Beautiful%20Lies, client=0:0:0:0:0:0:0:1
-2023-07-19 22:34:33.732  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:55946 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 22:34:38.897  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:56035
-2023-07-19 22:34:38.899  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 22:34:38.899  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 22:34:38.899  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 22:34:38.926  INFO 13716 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 22:34:40.921  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:B-Complex - Beautiful Lies"
-2023-07-19 22:34:41.245  INFO 13716 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"d386906859e024864353455b8ff65369","event":{"token":"1823d8ae200ba91c","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 22:34:41.680  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: B-Complex - Beautiful Lies
-2023-07-19 22:34:41.688  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=ytsearch%3AB-Complex+-+Beautiful+Lies, client=0:0:0:0:0:0:0:1
-2023-07-19 22:34:42.471  INFO 13716 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAGkItQ29tcGxleCAtIEJlYXV0aWZ1bCBMaWVzABBIb3NwaXRhbCBSZWNvcmRzAAAAAAAGMfAAC3R6cXdfRHFhMFNVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dHpxd19EcWEwU1UAB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 22:34:42.472  INFO 13716 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is Cgs0TmhxNl83YThZbyiu8OClBg%3D%3D).
-2023-07-19 22:34:42.613  INFO 13716 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgtOa2I0SkYzNk4zTSjS9eClBg%3D%3D, next update will be after 600 seconds.
-2023-07-19 22:46:01.224  INFO 13716 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:56035 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 22:46:09.100  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:56522
-2023-07-19 22:46:09.102  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 22:46:09.103  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 22:46:09.103  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 22:46:09.132  INFO 13716 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 22:46:10.602  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:B-Complex - Beautiful Lies"
-2023-07-19 22:46:10.887  INFO 13716 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"00e248200505eb61d84d4449527ef2c8","event":{"token":"1823d8ae200ba91c","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 22:46:11.287  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: B-Complex - Beautiful Lies
-2023-07-19 22:46:11.301  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=ytsearch%3AB-Complex+-+Beautiful+Lies, client=0:0:0:0:0:0:0:1
-2023-07-19 22:46:11.736  INFO 13716 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAGkItQ29tcGxleCAtIEJlYXV0aWZ1bCBMaWVzABBIb3NwaXRhbCBSZWNvcmRzAAAAAAAGMfAAC3R6cXdfRHFhMFNVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dHpxd19EcWEwU1UAB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 22:46:11.737  INFO 13716 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is CgtOa2I0SkYzNk4zTSjS9eClBg%3D%3D).
-2023-07-19 22:46:12.143  INFO 13716 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is CgtCTkMzMVVvSEJmVSiE--ClBg%3D%3D, next update will be after 600 seconds.
-2023-07-19 22:46:26.589  INFO 13716 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"stop"}
-2023-07-19 22:46:37.806  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:frog muhahaha"
-2023-07-19 22:46:38.179  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: frog muhahaha
-2023-07-19 22:46:38.181  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=ytsearch%3Afrog+muhahaha, client=0:0:0:0:0:0:0:1
-2023-07-19 22:46:38.663  INFO 13716 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"track":"QAAAcgIAE0Zyb2cgbGF1Z2ggbXVoYWhhaGEABU1MQjBTAAAAAAAAE4gAC1hNR2lrcGk5UThjAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9WE1HaWtwaTlROGMAB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 22:47:16.881  INFO 13716 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:56522 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 22:47:23.263  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:56591
-2023-07-19 22:47:23.265  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 22:47:23.266  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 22:47:23.266  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 22:47:23.296  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 22:47:27.010  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:frog muhahaha"
-2023-07-19 22:47:27.316  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"c40074825905150866d6ca821f9dabb4","event":{"token":"1823d8ae200ba91c","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 22:47:27.366  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: frog muhahaha
-2023-07-19 22:47:27.405  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=ytsearch%3Afrog+muhahaha, client=0:0:0:0:0:0:0:1
-2023-07-19 22:47:27.874  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"track":"QAAAcgIAE0Zyb2cgbGF1Z2ggbXVoYWhhaGEABU1MQjBTAAAAAAAAE4gAC1hNR2lrcGk5UThjAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9WE1HaWtwaTlROGMAB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 22:49:30.135  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:beautiful lies b complex"
-2023-07-19 22:49:31.016  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: beautiful lies b complex
-2023-07-19 22:49:31.018  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=ytsearch%3Abeautiful+lies+b+complex, client=0:0:0:0:0:0:0:1
-2023-07-19 22:49:31.873  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAGkItQ29tcGxleCAtIEJlYXV0aWZ1bCBMaWVzABBIb3NwaXRhbCBSZWNvcmRzAAAAAAAGMfAAC3R6cXdfRHFhMFNVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dHpxd19EcWEwU1UAB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 22:49:32.555  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:beautiful lies b complex"
-2023-07-19 22:49:32.997  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: beautiful lies b complex
-2023-07-19 22:49:32.999  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=ytsearch%3Abeautiful+lies+b+complex, client=0:0:0:0:0:0:0:1
-2023-07-19 22:49:34.235  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:beautiful lies b complex"
-2023-07-19 22:49:34.696  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: beautiful lies b complex
-2023-07-19 22:49:34.698  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=ytsearch%3Abeautiful+lies+b+complex, client=0:0:0:0:0:0:0:1
-2023-07-19 22:49:35.974  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:beautiful lies b complex"
-2023-07-19 22:49:36.405  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: beautiful lies b complex
-2023-07-19 22:49:36.408  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=ytsearch%3Abeautiful+lies+b+complex, client=0:0:0:0:0:0:0:1
-2023-07-19 22:50:23.076  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"stop"}
-2023-07-19 22:51:37.777  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=tzqw_Dqa0SU"
-2023-07-19 22:51:37.864  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track B-Complex - Beautiful Lies
-2023-07-19 22:51:37.866  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 22:51:38.213  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAGkItQ29tcGxleCAtIEJlYXV0aWZ1bCBMaWVzABBIb3NwaXRhbCBSZWNvcmRzAAAAAAAGLggAC3R6cXdfRHFhMFNVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dHpxd19EcWEwU1UAB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 22:51:40.105  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=tzqw_Dqa0SU"
-2023-07-19 22:51:40.274  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track B-Complex - Beautiful Lies
-2023-07-19 22:51:40.275  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 22:51:44.204  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=tzqw_Dqa0SU"
-2023-07-19 22:51:44.293  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track B-Complex - Beautiful Lies
-2023-07-19 22:51:44.295  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 22:51:44.594  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=tzqw_Dqa0SU"
-2023-07-19 22:51:44.683  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track B-Complex - Beautiful Lies
-2023-07-19 22:51:44.685  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 22:51:46.954  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=tzqw_Dqa0SU"
-2023-07-19 22:51:47.085  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track B-Complex - Beautiful Lies
-2023-07-19 22:51:47.087  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 22:51:56.104  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"stop"}
-2023-07-19 22:52:33.919  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"stop"}
-2023-07-19 22:52:33.919  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"destroy"}
-2023-07-19 22:53:41.774  INFO 13716 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:56591 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 22:53:48.319  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:56916
-2023-07-19 22:53:48.320  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 22:53:48.321  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 22:53:48.321  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 22:53:48.347  INFO 13716 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 22:53:49.277  INFO 13716 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"f4272bf150007334b56ef52e1483bc33","event":{"token":"86993446cca4ed7f","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 22:54:05.440  INFO 13716 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:56916 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 22:54:10.528  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:56933
-2023-07-19 22:54:10.529  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 22:54:10.530  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 22:54:10.530  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 22:54:10.556  INFO 13716 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 22:54:14.776  INFO 13716 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"d312e0b73f821b01b64664988c0a7cc3","event":{"token":"86993446cca4ed7f","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 22:54:25.282  INFO 13716 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:56933 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 22:54:30.858  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:56958
-2023-07-19 22:54:30.860  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 22:54:30.861  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 22:54:30.861  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 22:54:30.889  INFO 13716 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 22:54:33.525  INFO 13716 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"802cefb6208ba0d9ef5d27473bc777b7","event":{"token":"86993446cca4ed7f","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 22:55:08.127  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=tzqw_Dqa0SU"
-2023-07-19 22:55:08.273  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track B-Complex - Beautiful Lies
-2023-07-19 22:55:08.275  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 22:55:08.730  INFO 13716 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAGkItQ29tcGxleCAtIEJlYXV0aWZ1bCBMaWVzABBIb3NwaXRhbCBSZWNvcmRzAAAAAAAGLggAC3R6cXdfRHFhMFNVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dHpxd19EcWEwU1UAB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 22:55:10.688  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=tzqw_Dqa0SU"
-2023-07-19 22:55:10.863  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track B-Complex - Beautiful Lies
-2023-07-19 22:55:10.865  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 22:55:48.681  INFO 13716 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:56958 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 22:55:53.940  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:57049
-2023-07-19 22:55:53.942  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 22:55:53.942  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 22:55:53.943  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 22:55:53.970  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 22:55:59.750  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=tzqw_Dqa0SU"
-2023-07-19 22:55:59.843  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track B-Complex - Beautiful Lies
-2023-07-19 22:55:59.845  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3Dhttps://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 22:56:00.053  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"f5ddd6a3fae69af730477c2f9644fe15","event":{"token":"86993446cca4ed7f","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 22:56:00.252  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAGkItQ29tcGxleCAtIEJlYXV0aWZ1bCBMaWVzABBIb3NwaXRhbCBSZWNvcmRzAAAAAAAGLggAC3R6cXdfRHFhMFNVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dHpxd19EcWEwU1UAB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 22:56:04.175  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=tzqw_Dqa0SU"
-2023-07-19 22:56:04.304  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track B-Complex - Beautiful Lies
-2023-07-19 22:56:04.305  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3Dhttps://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 22:56:13.066  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","op":"stop"}
-2023-07-19 22:56:16.735  INFO 13716 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:57049 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 22:56:46.740  INFO 13716 --- [pool-4-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2023-07-19 22:59:01.518  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:57182
-2023-07-19 22:59:01.520  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 22:59:01.521  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from Victoria/5.2.8.0
-2023-07-19 22:59:01.550  INFO 13716 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 22:59:01.550  WARN 13716 --- [XNIO-1 I/O-3] lavalink.server.io.WebSocketHandler      : Sending websocket commands to Lavalink has been deprecated and will be removed in API version 4. API version 3 will be removed in Lavalink 5. Please use the new REST endpoints instead.
-2023-07-19 22:59:06.400  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=tzqw_Dqa0SU"
-2023-07-19 22:59:06.401  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id (current is CgtCTkMzMVVvSEJmVSiE--ClBg%3D%3D).
-2023-07-19 22:59:06.453  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : Updating YouTube visitor id succeeded, new one is Cgt6cTZuTkgzM05HOCiKgeGlBg%3D%3D, next update will be after 600 seconds.
-2023-07-19 22:59:06.542  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track B-Complex - Beautiful Lies
-2023-07-19 22:59:06.544  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3Dhttps://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 22:59:06.684  INFO 13716 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"d573c0d7697c0bf8f67af16f9b6dc1e5","event":{"token":"c8d5d8072d6f49db","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 22:59:07.111  INFO 13716 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAGkItQ29tcGxleCAtIEJlYXV0aWZ1bCBMaWVzABBIb3NwaXRhbCBSZWNvcmRzAAAAAAAGLggAC3R6cXdfRHFhMFNVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dHpxd19EcWEwU1UAB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 23:00:07.794  INFO 13716 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:57182 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 23:00:17.879  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:57262
-2023-07-19 23:00:17.880  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 23:00:17.881  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 23:00:17.881  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 23:00:17.907  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 23:00:19.702  INFO 13716 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=tzqw_Dqa0SU"
-2023-07-19 23:00:19.784  INFO 13716 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track B-Complex - Beautiful Lies
-2023-07-19 23:00:19.786  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /loadtracks?identifier=https://www.youtube.com/watch?v=tzqw_Dqa0SU&pp=ygUaQi1Db21wbGV4IC0gQmVhdXRpZnVsIExpZXM%3D, client=0:0:0:0:0:0:0:1
-2023-07-19 23:00:19.974  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"923615051116589086","sessionId":"7f8a683d62a5508218310287cd591d74","event":{"token":"c8d5d8072d6f49db","endpoint":"stockholm8036.discord.media:443"},"op":"voiceUpdate"}
-2023-07-19 23:00:20.312  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAhAIAGkItQ29tcGxleCAtIEJlYXV0aWZ1bCBMaWVzABBIb3NwaXRhbCBSZWNvcmRzAAAAAAAGLggAC3R6cXdfRHFhMFNVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dHpxd19EcWEwU1UAB3lvdXR1YmUAAAAAAAAAAA==","guildId":"923615051116589086","op":"play"}
-2023-07-19 23:01:01.245  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:57262 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 23:01:07.043  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:57317
-2023-07-19 23:01:07.044  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 23:01:07.046  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 1 events
-2023-07-19 23:01:07.046  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 23:01:07.081  INFO 13716 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 23:09:18.172  INFO 13716 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:57317 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 23:09:25.970  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:57678
-2023-07-19 23:09:25.971  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 23:09:25.972  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 23:09:25.972  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 23:09:26.004  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 23:11:42.340  INFO 13716 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:57678 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 23:11:48.769  INFO 13716 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:57776
-2023-07-19 23:11:48.770  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-19 23:11:48.771  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
-2023-07-19 23:11:48.771  INFO 13716 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
-2023-07-19 23:11:48.797  INFO 13716 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-19 23:12:59.487  INFO 13716 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:57776 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-19 23:12:59.984  INFO 13716 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
-2023-07-19 23:13:00.010  INFO 13716 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-07-19 23:13:00.013  INFO 13716 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
