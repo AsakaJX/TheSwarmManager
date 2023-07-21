@@ -1,9 +1,9 @@
-2023-07-20 00:05:20.861  INFO 10424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60004 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-20 00:37:07.658  INFO 19288 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 17.0.7 on rock with PID 19288 (D:\Projects\TheSwarmManager-main\LavaLink\Lavalink.jar started by paged in D:\Projects\TheSwarmManager-main\LavaLink)
-2023-07-20 00:37:07.662  INFO 19288 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
-2023-07-20 00:37:08.428  INFO 19288 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.309 seconds (JVM running for 1.716)
-2023-07-20 00:37:08.431  INFO 19288 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
-2023-07-20 00:37:08.477  INFO 19288 --- [main] lavalink.server.Launcher                 : 
+2023-07-21 00:23:10.076  INFO 15884 --- [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:63738 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
+2023-07-21 11:28:53.961  INFO 21992 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 17.0.7 on rock with PID 21992 (D:\Projects\TheSwarmManager-main\LavaLink\Lavalink.jar started by paged in D:\Projects\TheSwarmManager-main\LavaLink)
+2023-07-21 11:28:53.965  INFO 21992 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-07-21 11:28:54.788  INFO 21992 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.381 seconds (JVM running for 1.806)
+2023-07-21 11:28:54.792  INFO 21992 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2023-07-21 11:28:54.840  INFO 21992 --- [main] lavalink.server.Launcher                 : 
 
 [32m       .  [31m _                  _ _       _    [32m__ _ _
 [32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
@@ -20,324 +20,52 @@
 	JVM:            17.0.7
 	Lavaplayer      1.4.0-original
 
-2023-07-20 00:37:08.484  INFO 19288 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
-2023-07-20 00:37:09.246  WARN 19288 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-07-20 00:37:09.270  INFO 19288 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2023-07-20 00:37:09.271  INFO 19288 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 782 ms
-2023-07-20 00:37:09.347  WARN 19288 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
-2023-07-20 00:37:09.516  INFO 19288 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2023-07-20 00:37:10.232  INFO 19288 --- [main] lavalink.server.config.KoeConfiguration  : OS: WINDOWS, Arch: X86_64
-2023-07-20 00:37:10.232  INFO 19288 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
-2023-07-20 00:37:10.238  INFO 19288 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
-2023-07-20 00:37:10.248  INFO 19288 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
-2023-07-20 00:37:10.529  INFO 19288 --- [main] io.undertow                              : starting server: Undertow - 2.2.16.Final
-2023-07-20 00:37:10.539  INFO 19288 --- [main] org.xnio                                 : XNIO version 3.8.6.Final
-2023-07-20 00:37:10.550  INFO 19288 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.6.Final
-2023-07-20 00:37:10.618  INFO 19288 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
-2023-07-20 00:37:10.663  INFO 19288 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 2333 (http)
-2023-07-20 00:37:10.668  INFO 19288 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.233 seconds (JVM running for 3.956)
-2023-07-20 00:37:10.669  INFO 19288 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
-2023-07-20 00:37:23.613  INFO 19288 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-07-20 00:37:23.613  INFO 19288 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-07-20 00:37:23.614  INFO 19288 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-07-20 00:37:23.661  INFO 19288 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:52815
-2023-07-20 00:37:23.680  INFO 19288 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
-2023-07-20 00:37:23.931  INFO 19288 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from Victoria/5.2.8.0
-2023-07-20 00:37:23.947  INFO 19288 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
-2023-07-20 00:37:23.948  WARN 19288 --- [XNIO-1 I/O-9] lavalink.server.io.WebSocketHandler      : Sending websocket commands to Lavalink has been deprecated and will be removed in API version 4. API version 3 will be removed in Lavalink 5. Please use the new REST endpoints instead.
-2023-07-20 01:05:32.529  INFO 19288 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:52815 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
-2023-07-20 11:41:54.669  INFO 22512 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 17.0.7 on rock with PID 22512 (D:\Projects\TheSwarmManager-main\LavaLink\Lavalink.jar started by paged in D:\Projects\TheSwarmManager-main\LavaLink)
-2023-07-20 11:41:54.691  INFO 22512 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
-2023-07-20 11:41:55.465  INFO 22512 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.301 seconds (JVM running for 1.711)
-2023-07-20 11:41:55.467  INFO 22512 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
-2023-07-20 11:41:55.508  INFO 22512 --- [main] lavalink.server.Launcher                 : 
+2023-07-21 11:28:54.848  INFO 21992 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-07-21 11:28:55.671  WARN 21992 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-07-21 11:28:55.693  INFO 21992 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-07-21 11:28:55.693  INFO 21992 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 840 ms
+2023-07-21 11:28:55.773  WARN 21992 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2023-07-21 11:28:55.939  INFO 21992 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2023-07-21 11:28:56.638  INFO 21992 --- [main] lavalink.server.config.KoeConfiguration  : OS: WINDOWS, Arch: X86_64
+2023-07-21 11:28:56.639  INFO 21992 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2023-07-21 11:28:56.642  INFO 21992 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2023-07-21 11:28:56.649  INFO 21992 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2023-07-21 11:28:56.888  INFO 21992 --- [main] io.undertow                              : starting server: Undertow - 2.2.16.Final
+2023-07-21 11:28:56.904  INFO 21992 --- [main] org.xnio                                 : XNIO version 3.8.6.Final
+2023-07-21 11:28:56.914  INFO 21992 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.6.Final
+2023-07-21 11:28:56.975  INFO 21992 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2023-07-21 11:28:57.018  INFO 21992 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 2333 (http)
+2023-07-21 11:28:57.022  INFO 21992 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.225 seconds (JVM running for 4.04)
+2023-07-21 11:28:57.023  INFO 21992 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2023-07-21 11:29:11.000  INFO 21992 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-21 11:29:11.000  INFO 21992 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-21 11:29:11.002  INFO 21992 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-21 11:29:11.083  INFO 21992 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:56291
+2023-07-21 11:29:11.116  INFO 21992 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
+2023-07-21 11:29:11.743  INFO 21992 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from Victoria/5.2.8.0
+2023-07-21 11:29:11.763  INFO 21992 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
+2023-07-21 11:29:11.764  WARN 21992 --- [XNIO-1 I/O-9] lavalink.server.io.WebSocketHandler      : Sending websocket commands to Lavalink has been deprecated and will be removed in API version 4. API version 3 will be removed in Lavalink 5. Please use the new REST endpoints instead.
+2023-07-21 11:57:29.211  INFO 21992 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
+2023-07-21 11:57:29.238  INFO 21992 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-21 11:57:29.240  INFO 21992 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2023-07-21 11:57:29.240 ERROR 21992 --- [XNIO-1 I/O-9] org.xnio.listener                        : XNIO001007: A channel event listener threw an exception
 
-[32m       .  [31m _                  _ _       _    [32m__ _ _
-[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
-[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
-[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
-[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
-[0m    =========================================[32m/_/_/_/[0m
-
-	Version:        3.7.5
-	Build time:     06.03.2023 12:02:05 UTC
-	Branch          HEAD
-	Commit:         c00286d
-	Commit time:    06.03.2023 11:59:46 UTC
-	JVM:            17.0.7
-	Lavaplayer      1.4.0-original
-
-2023-07-20 11:41:55.515  INFO 22512 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
-2023-07-20 11:41:56.266  WARN 22512 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2023-07-20 11:41:56.289  INFO 22512 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2023-07-20 11:41:56.289  INFO 22512 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 769 ms
-2023-07-20 11:41:56.370  WARN 22512 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
-2023-07-20 11:41:56.535  INFO 22512 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2023-07-20 11:42:00.926  WARN 22512 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'websocketConfig' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/config/WebsocketConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'socketServer' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/io/SocketServer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
-2023-07-20 11:42:00.960 ERROR 22512 --- [main] lavalink.server.Launcher                 : Application failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'websocketConfig' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/config/WebsocketConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'socketServer' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/io/SocketServer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.18.jar!/:5.3.18]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.18.jar!/:5.3.18]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.6.jar!/:2.6.6]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.6.jar!/:2.6.6]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.6.jar!/:2.6.6]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.6.jar!/:2.6.6]
-	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:164) ~[spring-boot-2.6.6.jar!/:2.6.6]
-	at lavalink.server.Launcher.launchMain(Launcher.kt:165) ~[classes!/:na]
-	at lavalink.server.Launcher.main(Launcher.kt:127) ~[classes!/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Lavalink.jar:na]
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[Lavalink.jar:na]
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Lavalink.jar:na]
-	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[Lavalink.jar:na]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'socketServer' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/io/SocketServer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	... 27 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	... 41 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	... 55 common frames omitted
-Caused by: com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
-	at com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager.initRequestHeaders(TwitchStreamAudioSourceManager.java:205) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager.<init>(TwitchStreamAudioSourceManager.java:58) ~[lavaplayer-1.4.0.jar!/:na]
-	at lavalink.server.config.AudioPlayerConfiguration.audioPlayerManagerSupplier(AudioPlayerConfiguration.kt:157) ~[classes!/:na]
-	at lavalink.server.config.AudioPlayerConfiguration$$EnhancerBySpringCGLIB$$fe8d8264.CGLIB$audioPlayerManagerSupplier$1(<generated>) ~[classes!/:na]
-	at lavalink.server.config.AudioPlayerConfiguration$$EnhancerBySpringCGLIB$$fe8d8264$$FastClassBySpringCGLIB$$52fdd088.invoke(<generated>) ~[classes!/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.18.jar!/:5.3.18]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.18.jar!/:5.3.18]
-	at lavalink.server.config.AudioPlayerConfiguration$$EnhancerBySpringCGLIB$$fe8d8264.audioPlayerManagerSupplier(<generated>) ~[classes!/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	... 56 common frames omitted
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.4.0-original
-  os.arch: amd64
-  os.name: Windows 11
-  os.version: 10.0
-  java.vendor: Amazon.com Inc.
-  java.version: 17.0.7
-  java.runtime.version: 17.0.7+7-LTS
-  java.vm.version: 17.0.7+7-LTS
-Caused by: org.apache.http.conn.ConnectTimeoutException: Connect to www.twitch.tv:443 [www.twitch.tv/151.101.246.167] failed: Read timed out
-	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connectWithDestination(ExtendedConnectionOperator.java:162) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connect(ExtendedConnectionOperator.java:81) ~[lavaplayer-1.4.0.jar!/:na]
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager.initRequestHeaders(TwitchStreamAudioSourceManager.java:193) ~[lavaplayer-1.4.0.jar!/:na]
-	... 68 common frames omitted
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator$AdditionalDetails: Encountered when opening a connection with the following details:
-  host: https://www.twitch.tv:443
-  localAddress: <unspecified>
-  remoteAddress: www.twitch.tv/151.101.246.167:443
-  connectTimeout: 3000
-  triedAddresses: www.twitch.tv/151.101.246.167
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:283) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[na:na]
-	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160) ~[na:na]
-	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1510) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1425) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426) ~[na:na]
-	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:436) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:384) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connectWithDestination(ExtendedConnectionOperator.java:157) ~[lavaplayer-1.4.0.jar!/:na]
-	... 79 common frames omitted
-
-2023-07-20 11:42:00.967  INFO 22512 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-07-20 11:42:01.013 ERROR 22512 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'websocketConfig' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/config/WebsocketConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'socketServer' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/io/SocketServer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.18.jar!/:5.3.18]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.18.jar!/:5.3.18]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.6.jar!/:2.6.6]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.6.jar!/:2.6.6]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.6.jar!/:2.6.6]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.6.jar!/:2.6.6]
-	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:164) ~[spring-boot-2.6.6.jar!/:2.6.6]
-	at lavalink.server.Launcher.launchMain(Launcher.kt:165) ~[classes!/:na]
-	at lavalink.server.Launcher.main(Launcher.kt:127) ~[classes!/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Lavalink.jar:na]
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[Lavalink.jar:na]
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Lavalink.jar:na]
-	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[Lavalink.jar:na]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'socketServer' defined in URL [jar:file:/D:/Projects/TheSwarmManager-main/LavaLink/Lavalink.jar!/BOOT-INF/classes!/lavalink/server/io/SocketServer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	... 27 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'audioPlayerManagerSupplier' defined in class path resource [lavalink/server/config/AudioPlayerConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	... 41 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager]: Factory method 'audioPlayerManagerSupplier' threw exception; nested exception is com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	... 55 common frames omitted
-Caused by: com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Loading Twitch main page failed.
-	at com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager.initRequestHeaders(TwitchStreamAudioSourceManager.java:205) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager.<init>(TwitchStreamAudioSourceManager.java:58) ~[lavaplayer-1.4.0.jar!/:na]
-	at lavalink.server.config.AudioPlayerConfiguration.audioPlayerManagerSupplier(AudioPlayerConfiguration.kt:157) ~[classes!/:na]
-	at lavalink.server.config.AudioPlayerConfiguration$$EnhancerBySpringCGLIB$$fe8d8264.CGLIB$audioPlayerManagerSupplier$1(<generated>) ~[classes!/:na]
-	at lavalink.server.config.AudioPlayerConfiguration$$EnhancerBySpringCGLIB$$fe8d8264$$FastClassBySpringCGLIB$$52fdd088.invoke(<generated>) ~[classes!/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.18.jar!/:5.3.18]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.18.jar!/:5.3.18]
-	at lavalink.server.config.AudioPlayerConfiguration$$EnhancerBySpringCGLIB$$fe8d8264.audioPlayerManagerSupplier(<generated>) ~[classes!/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.18.jar!/:5.3.18]
-	... 56 common frames omitted
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
-  lavaplayer.version: 1.4.0-original
-  os.arch: amd64
-  os.name: Windows 11
-  os.version: 10.0
-  java.vendor: Amazon.com Inc.
-  java.version: 17.0.7
-  java.runtime.version: 17.0.7+7-LTS
-  java.vm.version: 17.0.7+7-LTS
-Caused by: org.apache.http.conn.ConnectTimeoutException: Connect to www.twitch.tv:443 [www.twitch.tv/151.101.246.167] failed: Read timed out
-	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connectWithDestination(ExtendedConnectionOperator.java:162) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connect(ExtendedConnectionOperator.java:81) ~[lavaplayer-1.4.0.jar!/:na]
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:374) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.io.HttpInterface.execute(HttpInterface.java:72) ~[lavaplayer-1.4.0.jar!/:na]
-	at com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager.initRequestHeaders(TwitchStreamAudioSourceManager.java:193) ~[lavaplayer-1.4.0.jar!/:na]
-	... 68 common frames omitted
-	Suppressed: com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator$AdditionalDetails: Encountered when opening a connection with the following details:
-  host: https://www.twitch.tv:443
-  localAddress: <unspecified>
-  remoteAddress: www.twitch.tv/151.101.246.167:443
-  connectTimeout: 3000
-  triedAddresses: www.twitch.tv/151.101.246.167
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:283) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350) ~[na:na]
-	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803) ~[na:na]
-	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160) ~[na:na]
-	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1510) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1425) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[na:na]
-	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426) ~[na:na]
-	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:436) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:384) ~[httpclient-4.5.10.jar!/:4.5.10]
-	at com.sedmelluq.discord.lavaplayer.tools.http.ExtendedConnectionOperator.connectWithDestination(ExtendedConnectionOperator.java:157) ~[lavaplayer-1.4.0.jar!/:na]
-	... 79 common frames omitted
+java.util.concurrent.RejectedExecutionException: XNIO007007: Thread is terminating
+	at org.xnio.nio.WorkerThread.execute(WorkerThread.java:620) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:396) ~[undertow-websockets-jsr-2.2.16.Final.jar!/:2.2.16.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:388) ~[undertow-websockets-jsr-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:1081) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:994) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.terminated(WriteReadyHandler.java:70) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.writeTerminated(NioSocketConduit.java:204) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.terminateWrites(NioSocketConduit.java:193) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.truncateWrites(NioSocketConduit.java:198) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.conduits.IdleTimeoutConduit.truncateWrites(IdleTimeoutConduit.java:387) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.conduits.ConduitStreamSinkChannel.close(ConduitStreamSinkChannel.java:186) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.IoUtils.safeClose(IoUtils.java:152) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.forceTermination(WriteReadyHandler.java:57) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.forceTermination(NioSocketConduit.java:108) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:507) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
 
