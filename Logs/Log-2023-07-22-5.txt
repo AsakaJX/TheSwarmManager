@@ -1,0 +1,19 @@
+2023-07-22 14:48:08	Discord	Discord.Net v3.11.0 (API v10)
+2023-07-22 14:48:08	Gateway	Connecting
+2023-07-22 14:48:09	Gateway	Connected
+2023-07-22 14:48:09	Gateway	Ready
+2023-07-22 14:48:10	Victoria	Websocket connection established.
+2023-07-22 14:48:10	Victoria	{"resumed":true,"sessionId":"2q1dbd02ml0suknz","op":"ready"}
+2023-07-22 14:48:10	Victoria	Unknown OP code received (ready), check Lavalink implementation.
+2023-07-22 14:48:10	Victoria	{"players":0,"playingPlayers":0,"uptime":307859,"memory":{"free":126125504,"used":289110592,"allocated":415236096,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.09839629689103616,"lavalinkLoad":8.452416641684155E-4},"op":"stats"}
+2023-07-22 14:48:10	Victoria	{"state":{"time":1690026490307,"position":0,"connected":true,"ping":68},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:48:12	Interaction Handler|Request	thisusernameisunavailable. requested music-play with arguments:
+2023-07-22 14:48:12	Interaction Handler|Argument	[String]search-query: spongebob goes frenchcore
+2023-07-22 14:48:12	Interaction Handler|Argument	[String]type: SoundCloud
+2023-07-22 14:48:14	Victoria	{"state":{"time":1690026494131,"position":0,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:48:14	Victoria	{"code":4006,"reason":"Session is no longer valid.","byRemote":true,"guildId":"923615051116589086","op":"event","type":"WebSocketClosedEvent"}
+2023-07-22 14:48:14	Audio Handler	Discord WebSocket connection closed with following reason: Session is no longer valid.
+2023-07-22 14:48:14	Victoria	{"state":{"time":1690026494968,"position":0,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:48:26	Audio Module	System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Victoria.DefaultQueue`1.Enqueue(T value)
+   at TheSwarmManager.Modules.Audio.AudioModule.PlayAsync(String searchQuery, SearchType setType) in D:\Projects\TheSwarmManager-main\Modules\AudioModule.cs:line 318

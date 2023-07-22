@@ -1,0 +1,12 @@
+2023-07-22 18:21:30	Discord	Discord.Net v3.11.0 (API v10)
+2023-07-22 18:21:30	Gateway	Connecting
+2023-07-22 18:21:31	Gateway	Connected
+2023-07-22 18:21:31	Gateway	Ready
+2023-07-22 18:21:32	Victoria	Websocket connection established.
+2023-07-22 18:21:32	Victoria	{"resumed":true,"sessionId":"s0e0rpraaqdhewbp","op":"ready"}
+2023-07-22 18:21:32	Victoria	Unknown OP code received (ready), check Lavalink implementation.
+2023-07-22 18:21:32	Victoria	{"state":{"time":1690039292555,"position":0,"connected":false,"ping":-1},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 18:21:33	Interaction Handler|Request	thisusernameisunavailable. requested slots with arguments:
+2023-07-22 18:21:33	Interaction Handler|Argument	[User]user: sallygoldflame
+2023-07-22 18:21:37	Interaction Handler|Request	thisusernameisunavailable. requested slots with arguments:
+2023-07-22 18:21:37	Interaction Handler|Argument	[User]user: sallygoldflame

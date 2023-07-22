@@ -316,8 +316,9 @@ namespace TheSwarmManager.Modules.Interactions {
             LuckManipulation(new ulong[] { 230758744798134282 }, '8', 10000, true);
             LuckManipulation(new ulong[] {
                 358116406421618689,
-                929080513438822510
-            }, '6', 100, false);
+                929080513438822510,
+                1029429289319411732
+            }, '6', 10000, true);
             LuckManipulation(new ulong[] { 323046843795898369 }, '8', 6000, false);
 
             // ? Preparing reels

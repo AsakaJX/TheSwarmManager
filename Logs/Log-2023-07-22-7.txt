@@ -1,0 +1,33 @@
+2023-07-22 15:16:42	Discord	Discord.Net v3.11.0 (API v10)
+2023-07-22 15:16:42	Gateway	Connecting
+2023-07-22 15:16:43	Gateway	Connected
+2023-07-22 15:16:44	Gateway	Ready
+2023-07-22 15:16:44	Victoria	Websocket connection established.
+2023-07-22 15:16:44	Victoria	{"resumed":true,"sessionId":"zr6t0f4ylzbkhkpm","op":"ready"}
+2023-07-22 15:16:44	Victoria	Unknown OP code received (ready), check Lavalink implementation.
+2023-07-22 15:16:44	Victoria	{"players":0,"playingPlayers":0,"uptime":7698,"memory":{"free":161475096,"used":81794536,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.0,"lavalinkLoad":0.0929009009009009},"op":"stats"}
+2023-07-22 15:17:36	Victoria	System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+   at System.Net.WebSockets.ManagedWebSocket.ThrowEOFUnexpected()
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TResult](Memory`1 payloadBuffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Victoria.LavaSocket.ReceiveAsync()
+2023-07-22 15:17:36	Victoria	Lavalink reconnect attempt #1. Waiting 10s before next attempt.
+2023-07-22 15:17:46	Victoria	Websocket connection established.
+2023-07-22 15:17:46	Victoria	{"resumed":false,"sessionId":"tvghcaqvntqlwjxn","op":"ready"}
+2023-07-22 15:17:46	Victoria	Unknown OP code received (ready), check Lavalink implementation.
+2023-07-22 15:17:47	Victoria	{"players":0,"playingPlayers":0,"uptime":8292,"memory":{"free":122632104,"used":120637528,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.0,"lavalinkLoad":0.09468468468468468},"op":"stats"}
+2023-07-22 15:18:47	Victoria	{"players":0,"playingPlayers":0,"uptime":68298,"memory":{"free":178871504,"used":64398128,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.08885717827500521,"lavalinkLoad":0.0014194454233723225},"op":"stats"}
+2023-07-22 15:19:44	Victoria	System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+   at System.Net.WebSockets.ManagedWebSocket.ThrowEOFUnexpected()
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TResult](Memory`1 payloadBuffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Victoria.LavaSocket.ReceiveAsync()
+2023-07-22 15:19:44	Victoria	Lavalink reconnect attempt #1. Waiting 10s before next attempt.

@@ -10,6 +10,7 @@ using OpenAI.GPT3.ObjectModels;
 using OpenAI.GPT3.ObjectModels.RequestModels;
 using TheSwarmManager.Modules.ColorConverter;
 using TheSwarmManager.Modules.CustomEmbedBuilder;
+using TheSwarmManager.Modules.Logging;
 using TheSwarmManager.Modules.XPlayer;
 using TheSwarmManager.Services;
 using Victoria;
@@ -22,8 +23,8 @@ namespace TheSwarmManager.Modules.Audio {
         private readonly AudioHandler _audioService;
         private readonly IConfigurationRoot _config;
         private readonly EmbedBuilding EB;
+        private readonly Logger Log = new Logger();
         private readonly Colors ColorConverter = new Colors();
-        private static readonly IEnumerable<int> Range = Enumerable.Range(1900, 2000);
         private AudioOutStream? _pcmStream;
 
         public AudioModule(LavaNode<XLavaPlayer> lavaNode, AudioHandler audioService, IConfigurationRoot config) {
@@ -273,54 +274,64 @@ namespace TheSwarmManager.Modules.Audio {
             [Summary("type", "Где искать трек ? (МОЖНО НЕ УКАЗЫВАТЬ ЕСЛИ ИСПОЛЬЗУЕТСЯ ССЫЛКА)")]
             SearchType setType = SearchType.Direct
         ) {
-            if (string.IsNullOrWhiteSpace(searchQuery)) {
-                await RespondAsync(embed: EB.Error($"Укажите правильную ссылку/слова для поиска."));
-                return;
-            }
+            try {
 
-            if (!_lavaNode.HasPlayer(Context.Guild)) {
-                var voiceState = Context.User as IVoiceState;
-                if (voiceState?.VoiceChannel == null) {
-                    await RespondAsync(embed: EB.Error($"Ты должен быть подключен к голосовому каналу!"));
+                if (setType == SearchType.SoundCloud) {
+                    await RespondAsync(embed: EB.Error($"SoundCloud не работает, потому что разработчик россиянин :)\n:fist: Россия великая страна :fist:"));
                     return;
                 }
 
-                try {
-                    await _lavaNode.JoinAsync(voiceState.VoiceChannel, Context.Channel as ITextChannel);
-                    // await ReplyAsync(embed: EB.Success($"Joined {voiceState.VoiceChannel.Name}!"));
-                } catch (Exception exception) {
-                    await ReplyAsync(embed: EB.Error($"{exception.Message}"));
+                if (string.IsNullOrWhiteSpace(searchQuery)) {
+                    await RespondAsync(embed: EB.Error($"Укажите правильную ссылку/слова для поиска."));
+                    return;
                 }
+
+                if (!_lavaNode.HasPlayer(Context.Guild)) {
+                    var voiceState = Context.User as IVoiceState;
+                    if (voiceState?.VoiceChannel == null) {
+                        await RespondAsync(embed: EB.Error($"Ты должен быть подключен к голосовому каналу!"));
+                        return;
+                    }
+
+                    try {
+                        await _lavaNode.JoinAsync(voiceState.VoiceChannel, Context.Channel as ITextChannel);
+                        // await ReplyAsync(embed: EB.Success($"Joined {voiceState.VoiceChannel.Name}!"));
+                    } catch (Exception exception) {
+                        await ReplyAsync(embed: EB.Error($"{exception.Message}"));
+                    }
+                }
+
+                SearchType type = setType;
+
+                var searchResponse = await _lavaNode.SearchAsync(type, searchQuery);
+                if (searchResponse.Status is SearchStatus.LoadFailed or SearchStatus.NoMatches) {
+                    await RespondAsync(embed: EB.Error($"Я ничего не нашла по запросу `{searchQuery}`"));
+                    return;
+                }
+
+                var player = _lavaNode.GetPlayer(Context.Guild);
+                if (!string.IsNullOrWhiteSpace(searchResponse.Playlist.Name)) {
+                    player.Queue.Enqueue(searchResponse.Tracks);
+                    await RespondAsync(embed: EB.Success($"Добавила {searchResponse.Tracks.Count} треков в очередь."));
+                } else {
+                    var track = searchResponse.Tracks.FirstOrDefault();
+                    player.Queue.Enqueue(track);
+
+                    await RespondAsync(embed: EB.Success($"**Добавила в очередь**: [{track?.Title}]({track?.Url})\n**Длина**: {track?.Duration.ToString(@"hh\:mm\:ss")}"));
+                }
+
+                if (player.PlayerState is PlayerState.Playing or PlayerState.Paused) {
+                    return;
+                }
+
+                player.Queue.TryDequeue(out var lavaTrack);
+                await player.PlayAsync(x => {
+                    x.Track = lavaTrack;
+                    x.ShouldPause = false;
+                });
+            } catch (Exception ex) {
+                Log.NewLog(Logging.LogSeverity.Error, "Audio Module", ex.ToString());
             }
-
-            SearchType type = setType;
-
-            var searchResponse = await _lavaNode.SearchAsync(type, searchQuery);
-            if (searchResponse.Status is SearchStatus.LoadFailed or SearchStatus.NoMatches) {
-                await RespondAsync(embed: EB.Error($"Я ничего не нашла по запросу `{searchQuery}`"));
-                return;
-            }
-
-            var player = _lavaNode.GetPlayer(Context.Guild);
-            if (!string.IsNullOrWhiteSpace(searchResponse.Playlist.Name)) {
-                player.Queue.Enqueue(searchResponse.Tracks);
-                await RespondAsync(embed: EB.Success($"Добавила {searchResponse.Tracks.Count} треков в очередь."));
-            } else {
-                var track = searchResponse.Tracks.FirstOrDefault();
-                player.Queue.Enqueue(track);
-
-                await RespondAsync(embed: EB.Success($"**Добавила в очередь**: [{track?.Title}]({track?.Url})\n**Длина**: {track?.Duration.ToString(@"hh\:mm\:ss")}"));
-            }
-
-            if (player.PlayerState is PlayerState.Playing or PlayerState.Paused) {
-                return;
-            }
-
-            player.Queue.TryDequeue(out var lavaTrack);
-            await player.PlayAsync(x => {
-                x.Track = lavaTrack;
-                x.ShouldPause = false;
-            });
         }
 
         [SlashCommand("music-pause", "Поставить трек на паузу.", runMode: RunMode.Async)]

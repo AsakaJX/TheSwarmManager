@@ -1,0 +1,96 @@
+2023-07-22 14:40:30	Discord	Discord.Net v3.11.0 (API v10)
+2023-07-22 14:40:30	Gateway	Connecting
+2023-07-22 14:40:32	Gateway	Connected
+2023-07-22 14:40:33	Gateway	Ready
+2023-07-22 14:40:33	Victoria	Websocket connection established.
+2023-07-22 14:40:33	Victoria	{"resumed":true,"sessionId":"9ezdd3n6e0xb80gu","op":"ready"}
+2023-07-22 14:40:33	Victoria	Unknown OP code received (ready), check Lavalink implementation.
+2023-07-22 14:40:33	Victoria	{"players":0,"playingPlayers":0,"uptime":69052,"memory":{"free":33517680,"used":58757008,"allocated":92274688,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.06162200864548846,"lavalinkLoad":0.0027755860347731687},"op":"stats"}
+2023-07-22 14:40:36	Interaction Handler|Request	thisusernameisunavailable. requested music-play with arguments:
+2023-07-22 14:40:36	Interaction Handler|Argument	[String]search-query: spongebob goes frenchcore
+2023-07-22 14:40:36	Interaction Handler|Argument	[String]type: SoundCloud
+2023-07-22 14:40:37	Victoria	{"encodedTrack":"QAABCQIAJU1hbHRvcmlhbiAtIFNwb25nZWJvYiBHb2VzIEZyZW5jaGNvcmUACU1hbHRvcmlhbgAAAAAAAfcQAHFPOmh0dHBzOi8vYXBpLXYyLnNvdW5kY2xvdWQuY29tL21lZGlhL3NvdW5kY2xvdWQ6dHJhY2tzOjcxNjk0NjA5Ny8wNGE3NzFhYS1hNzYyLTRkZDUtYjdlZi0yNTU1MTA0Yzc2ZTIvc3RyZWFtL2hscwABAENodHRwczovL3NvdW5kY2xvdWQuY29tL21hbHRvcmlhbi9tYWx0b3JpYW4tc3BvbmdlYm9iLWdvZXMtZnJlY2hjb3JlAApzb3VuZGNsb3VkAAAAAAAAAAA=","track":"QAABCQIAJU1hbHRvcmlhbiAtIFNwb25nZWJvYiBHb2VzIEZyZW5jaGNvcmUACU1hbHRvcmlhbgAAAAAAAfcQAHFPOmh0dHBzOi8vYXBpLXYyLnNvdW5kY2xvdWQu
+2023-07-22 14:40:37	Victoria	Expected end of string, but instead reached end of data. LineNumber: 0 | BytePositionInLine: 512.
+2023-07-22 14:40:37	Victoria	{"state":{"time":1690026037733,"position":0,"connected":false,"ping":-1},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:37	Victoria	{"state":{"time":1690026037748,"position":0,"connected":false,"ping":-1},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:38	Victoria	{"state":{"time":1690026038739,"position":0,"connected":false,"ping":-1},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:39	Victoria	{"state":{"time":1690026039176,"position":0,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:39	Victoria	{"state":{"time":1690026039745,"position":0,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:40	Victoria	{"state":{"time":1690026040740,"position":1140,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:41	Victoria	{"state":{"time":1690026041748,"position":2160,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:42	Victoria	{"state":{"time":1690026042742,"position":3140,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:43	Victoria	{"state":{"time":1690026043734,"position":4140,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:44	Victoria	{"state":{"time":1690026044744,"position":5140,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:45	Victoria	{"state":{"time":1690026045738,"position":6140,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:46	Victoria	{"state":{"time":1690026046733,"position":7160,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:47	Victoria	{"state":{"time":1690026047743,"position":8140,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:48	Victoria	{"state":{"time":1690026048733,"position":9160,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:49	Victoria	{"state":{"time":1690026049739,"position":10160,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:50	Gateway	
+2023-07-22 14:40:50	Gateway	Disconnecting
+2023-07-22 14:40:50	Gateway	Disconnected
+2023-07-22 14:40:50	Victoria	{"state":{"time":1690026050733,"position":11160,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:51	Gateway	Connecting
+2023-07-22 14:40:51	Victoria	{"state":{"time":1690026051748,"position":12160,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:52	Gateway	Resumed previous session
+2023-07-22 14:40:52	Victoria	{"encodedTrack":"QAABCQIAJU1hbHRvcmlhbiAtIFNwb25nZWJvYiBHb2VzIEZyZW5jaGNvcmUACU1hbHRvcmlhbgAAAAAAAfcQAHFPOmh0dHBzOi8vYXBpLXYyLnNvdW5kY2xvdWQuY29tL21lZGlhL3NvdW5kY2xvdWQ6dHJhY2tzOjcxNjk0NjA5Ny8wNGE3NzFhYS1hNzYyLTRkZDUtYjdlZi0yNTU1MTA0Yzc2ZTIvc3RyZWFtL2hscwABAENodHRwczovL3NvdW5kY2xvdWQuY29tL21hbHRvcmlhbi9tYWx0b3JpYW4tc3BvbmdlYm9iLWdvZXMtZnJlY2hjb3JlAApzb3VuZGNsb3VkAAAAAAAAMrQ=","track":"QAABCQIAJU1hbHRvcmlhbiAtIFNwb25nZWJvYiBHb2VzIEZyZW5jaGNvcmUACU1hbHRvcmlhbgAAAAAAAfcQAHFPOmh0dHBzOi8vYXBpLXYyLnNvdW5kY2xvdWQu
+2023-07-22 14:40:52	Victoria	Expected end of string, but instead reached end of data. LineNumber: 0 | BytePositionInLine: 512.
+2023-07-22 14:40:52	Victoria	{"state":{"time":1690026052746,"position":13160,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:53	Victoria	{"state":{"time":1690026053738,"position":14160,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:54	Victoria	{"state":{"time":1690026054746,"position":15160,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:55	Victoria	{"state":{"time":1690026055738,"position":16160,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:56	Victoria	{"state":{"time":1690026056736,"position":17160,"connected":true,"ping":0},"guildId":"923615051116589086","op":"playerUpdate"}
+2023-07-22 14:40:57	Victoria	{"encodedTrack":"QAABCQIAJU1hbHRvcmlhbiAtIFNwb25nZWJvYiBHb2VzIEZyZW5jaGNvcmUACU1hbHRvcmlhbgAAAAAAAfcQAHFPOmh0dHBzOi8vYXBpLXYyLnNvdW5kY2xvdWQuY29tL21lZGlhL3NvdW5kY2xvdWQ6dHJhY2tzOjcxNjk0NjA5Ny8wNGE3NzFhYS1hNzYyLTRkZDUtYjdlZi0yNTU1MTA0Yzc2ZTIvc3RyZWFtL2hscwABAENodHRwczovL3NvdW5kY2xvdWQuY29tL21hbHRvcmlhbi9tYWx0b3JpYW4tc3BvbmdlYm9iLWdvZXMtZnJlY2hjb3JlAApzb3VuZGNsb3VkAAAAAAAARig=","track":"QAABCQIAJU1hbHRvcmlhbiAtIFNwb25nZWJvYiBHb2VzIEZyZW5jaGNvcmUACU1hbHRvcmlhbgAAAAAAAfcQAHFPOmh0dHBzOi8vYXBpLXYyLnNvdW5kY2xvdWQu
+2023-07-22 14:40:57	Victoria	Expected end of string, but instead reached end of data. LineNumber: 0 | BytePositionInLine: 512.
+2023-07-22 14:41:05	Victoria	System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+   at System.Net.WebSockets.ManagedWebSocket.ThrowEOFUnexpected()
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TResult](Memory`1 payloadBuffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Victoria.LavaSocket.ReceiveAsync()
+2023-07-22 14:41:05	Victoria	Lavalink reconnect attempt #1. Waiting 10s before next attempt.
+2023-07-22 14:41:13	Interaction Handler|Request	thisusernameisunavailable. requested music-play with arguments:
+2023-07-22 14:41:13	Interaction Handler|Argument	[String]search-query: spongebob goes frenchcore
+2023-07-22 14:41:13	Interaction Handler|Argument	[String]type: SoundCloud
+2023-07-22 14:41:15	Victoria	Websocket connection established.
+2023-07-22 14:41:15	Victoria	{"resumed":false,"sessionId":"e346tygdmbri5vvz","op":"ready"}
+2023-07-22 14:41:15	Victoria	Unknown OP code received (ready), check Lavalink implementation.
+2023-07-22 14:41:16	Victoria	{"players":0,"playingPlayers":0,"uptime":8441,"memory":{"free":113929032,"used":129340600,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.14285714285714285,"lavalinkLoad":0.09588528075770754},"op":"stats"}
+2023-07-22 14:41:20	Interaction Handler|Request	thisusernameisunavailable. requested music-play with arguments:
+2023-07-22 14:41:20	Interaction Handler|Argument	[String]search-query: spongebob goes frenchcore
+2023-07-22 14:41:20	Interaction Handler|Argument	[String]type: SoundCloud
+2023-07-22 14:41:26	Audio Module	System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Victoria.DefaultQueue`1.Enqueue(T value)
+   at TheSwarmManager.Modules.Audio.AudioModule.PlayAsync(String searchQuery, SearchType setType) in D:\Projects\TheSwarmManager-main\Modules\AudioModule.cs:line 313
+2023-07-22 14:41:26	Interaction Handler|Request	thisusernameisunavailable. requested music-play with arguments:
+2023-07-22 14:41:26	Interaction Handler|Argument	[String]search-query: spongebob goes frenchcore
+2023-07-22 14:41:26	Interaction Handler|Argument	[String]type: SoundCloud
+2023-07-22 14:41:26	Audio Module	System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Victoria.DefaultQueue`1.Enqueue(T value)
+   at TheSwarmManager.Modules.Audio.AudioModule.PlayAsync(String searchQuery, SearchType setType) in D:\Projects\TheSwarmManager-main\Modules\AudioModule.cs:line 313
+2023-07-22 14:41:26	Audio Module	System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Victoria.DefaultQueue`1.Enqueue(T value)
+   at TheSwarmManager.Modules.Audio.AudioModule.PlayAsync(String searchQuery, SearchType setType) in D:\Projects\TheSwarmManager-main\Modules\AudioModule.cs:line 313
+2023-07-22 14:42:00	Interaction Handler|Request	thisusernameisunavailable. requested music-play with arguments:
+2023-07-22 14:42:00	Interaction Handler|Argument	[String]search-query: frenchcore spongebob
+2023-07-22 14:42:00	Interaction Handler|Argument	[String]type: SoundCloud
+2023-07-22 14:42:00	Audio Module	System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Victoria.DefaultQueue`1.Enqueue(T value)
+   at TheSwarmManager.Modules.Audio.AudioModule.PlayAsync(String searchQuery, SearchType setType) in D:\Projects\TheSwarmManager-main\Modules\AudioModule.cs:line 313
+2023-07-22 14:42:12	Interaction Handler|Request	thisusernameisunavailable. requested music-play with arguments:
+2023-07-22 14:42:12	Interaction Handler|Argument	[String]search-query: frenchcore spongebob
+2023-07-22 14:42:12	Interaction Handler|Argument	[String]type: YouTube
+2023-07-22 14:42:15	Victoria	{"players":0,"playingPlayers":0,"uptime":68456,"memory":{"free":152225840,"used":91043792,"allocated":243269632,"reservable":6421479424},"cpu":{"cores":12,"systemLoad":0.09142327476502606,"lavalinkLoad":0.0023642251280155077},"op":"stats"}
+2023-07-22 14:42:45	Victoria	System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+   at System.Net.WebSockets.ManagedWebSocket.ThrowEOFUnexpected()
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TResult](Memory`1 payloadBuffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Victoria.LavaSocket.ReceiveAsync()
+2023-07-22 14:42:45	Victoria	Lavalink reconnect attempt #1. Waiting 10s before next attempt.
