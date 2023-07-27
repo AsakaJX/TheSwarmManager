@@ -1,2 +1,6 @@
 !*.exe
 bin/
+Logs/
+.vscode/
+newSDModel
+SDModelsList
