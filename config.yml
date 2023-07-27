@@ -1,9 +1,9 @@
 prefix: <
 serverGuild: 923615051116589086
-lastRunDate: 2023-07-22
-DailyRunCounter: 13
+lastRunDate: 2023-07-25
+DailyRunCounter: 0
 tokens:
-  discord: MTA2ODk2Mjg5ODg0NTYzODcxNg.GMZF9Z.U0cZSZ82AjsZnFC3pb1bDRz3T60skKxrOvrPDc
+  discord: MTA2ODk2Mjg5ODg0NTYzODcxNg.GauVsw.uKFqg2Rd49j3685lv6Utp4syMSKc7eB3eOsXeM
   openai: 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
 usersGuild:
   owner: 230758744798134282

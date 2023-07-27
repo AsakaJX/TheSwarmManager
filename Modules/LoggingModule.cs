@@ -52,7 +52,7 @@ namespace TheSwarmManager.Modules.Logging {
             var logsName = $"Logs/Log-{obj["lastRunDate"]}-{obj["DailyRunCounter"]}.txt";
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"{date}\t{source}\t{message}");
+            sb.AppendLine($"{date} {source} {message}");
             File.AppendAllText(logsName, sb.ToString());
             //? \...                Save Logs to file                  .../
 
