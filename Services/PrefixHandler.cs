@@ -64,7 +64,7 @@ namespace TheSwarmManager.Services {
                 if (!(message.MentionedUsers.ToArray()[i].ToString() == _client.CurrentUser.ToString() && message.Content.ToString().Trim().IndexOf('>') == message.Content.ToString().Length - 1))
                     continue;
 
-                await message.Channel.SendMessageAsync($"Братик, ты всегда можешь обращаться ко мне через префикс [ **{_config["prefix"][0]}** ], __тебе__ я отвечу в любой момент (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)");
+                await message.Channel.SendMessageAsync($"Префикс команды я больше не поддерживаю. Все мои команды используются через слэш **/**");
                 Log.NewLog(Modules.Logging.LogSeverity.Info, "Prefix Handler|Request", $"{message.Author.ToString()} requested prefix");
                 return;
             }
@@ -89,13 +89,15 @@ namespace TheSwarmManager.Services {
                 var context = new SocketCommandContext(_client, message);
                 string contextConverted = message.Content.ToString().Trim(new Char[] { _config["prefix"][0] });
 
-                await _commands.ExecuteAsync(
-                    context: context,
-                    argPos: argPos,
-                    services: null);
+                await message.Channel.SendMessageAsync("Префикс команды я больше не поддерживаю. Все мои команды используются через слэш **/**");
 
-                if (!(_commands.Search(contextConverted).IsSuccess) && message.MentionedUsers.ToArray().Length == 0)
-                    await message.Channel.SendMessageAsync("(￢_￢;) Братик... я тебя не понимаю...");
+                // await _commands.ExecuteAsync(
+                //     context: context,
+                //     argPos: argPos,
+                //     services: null);
+
+                // if (!(_commands.Search(contextConverted).IsSuccess) && message.MentionedUsers.ToArray().Length == 0)
+                //     await message.Channel.SendMessageAsync("(￢_￢;) brother... я тебя не понимаю...");
 
                 Log.NewLog(Modules.Logging.LogSeverity.Info, "Prefix Handler|Request", $"{context.User.Username} requested {contextConverted}");
             });

@@ -48,3 +48,83 @@
 2023-07-27 11:04:22.543  INFO 339752 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
 2023-07-27 11:04:22.545  INFO 339752 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
 2023-07-27 11:04:22.547  INFO 339752 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2023-07-27 11:31:12.922  INFO 409892 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 17.0.7 on rock with PID 409892 (D:\Projects\TheSwarmManager-main\LavaLink\Lavalink.jar started by paged in D:\Projects\TheSwarmManager-main\LavaLink)
+2023-07-27 11:31:12.926  INFO 409892 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-07-27 11:31:13.734  INFO 409892 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.307 seconds (JVM running for 1.719)
+2023-07-27 11:31:13.737  INFO 409892 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/lavalink-devs/Lavalink/issues/295
+2023-07-27 11:31:13.784  INFO 409892 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.7.7
+	Build time:     21.07.2023 12:33:49 UTC
+	Branch          HEAD
+	Commit:         80ae933
+	Commit time:    21.07.2023 12:30:11 UTC
+	JVM:            17.0.7
+	Lavaplayer      1.4.2-original
+
+2023-07-27 11:31:13.792  INFO 409892 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2023-07-27 11:31:14.565  WARN 409892 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-07-27 11:31:14.590  INFO 409892 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-07-27 11:31:14.590  INFO 409892 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 793 ms
+2023-07-27 11:31:14.840  INFO 409892 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2023-07-27 11:31:15.585  INFO 409892 --- [main] lavalink.server.config.KoeConfiguration  : OS: WINDOWS, Arch: X86_64
+2023-07-27 11:31:15.586  INFO 409892 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2023-07-27 11:31:15.589  INFO 409892 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2023-07-27 11:31:15.594  INFO 409892 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2023-07-27 11:31:15.647  WARN 409892 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2023-07-27 11:31:15.890  INFO 409892 --- [main] io.undertow                              : starting server: Undertow - 2.2.16.Final
+2023-07-27 11:31:15.899  INFO 409892 --- [main] org.xnio                                 : XNIO version 3.8.6.Final
+2023-07-27 11:31:15.910  INFO 409892 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.6.Final
+2023-07-27 11:31:15.980  INFO 409892 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2023-07-27 11:31:16.024  INFO 409892 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 2333 (http)
+2023-07-27 11:31:16.029  INFO 409892 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.287 seconds (JVM running for 4.014)
+2023-07-27 11:31:16.030  INFO 409892 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2023-07-27 11:31:23.348  INFO 409892 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-27 11:31:23.349  INFO 409892 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-27 11:31:23.350  INFO 409892 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-27 11:31:23.376  INFO 409892 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:52845
+2023-07-27 11:31:23.404  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
+2023-07-27 11:31:23.675  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from Victoria/5.2.8.0
+2023-07-27 11:31:23.692  INFO 409892 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
+2023-07-27 11:31:23.693  WARN 409892 --- [XNIO-1 I/O-4] lavalink.server.io.WebSocketHandler      : Sending websocket commands to Lavalink has been deprecated and will be removed in API version 4. API version 3 will be removed in Lavalink 5. Please use the new REST endpoints instead.
+2023-07-27 11:37:28.272  INFO 409892 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:52845 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
+2023-07-27 11:37:34.894  INFO 409892 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:53223
+2023-07-27 11:37:34.896  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
+2023-07-27 11:37:34.897  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
+2023-07-27 11:37:34.898  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
+2023-07-27 11:37:34.931  INFO 409892 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
+2023-07-27 11:45:24.935  INFO 409892 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:53223 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
+2023-07-27 11:45:30.035  INFO 409892 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:53576
+2023-07-27 11:45:30.037  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
+2023-07-27 11:45:30.038  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
+2023-07-27 11:45:30.038  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
+2023-07-27 11:45:30.064  INFO 409892 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
+2023-07-27 11:45:41.915  INFO 409892 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:53576 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
+2023-07-27 11:45:46.936  INFO 409892 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:53596
+2023-07-27 11:45:46.937  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
+2023-07-27 11:45:46.938  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
+2023-07-27 11:45:46.938  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
+2023-07-27 11:45:46.964  INFO 409892 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
+2023-07-27 11:46:02.485  INFO 409892 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:53596 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
+2023-07-27 11:46:07.586  INFO 409892 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:53617
+2023-07-27 11:46:07.587  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
+2023-07-27 11:46:07.588  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
+2023-07-27 11:46:07.588  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
+2023-07-27 11:46:07.614  INFO 409892 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
+2023-07-27 11:50:21.835  INFO 409892 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:53617 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
+2023-07-27 11:50:26.867  INFO 409892 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:53911
+2023-07-27 11:50:26.870  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.RequestLoggingFilter  : GET /, client=0:0:0:0:0:0:0:1
+2023-07-27 11:50:26.871  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 1 events
+2023-07-27 11:50:26.872  INFO 409892 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
+2023-07-27 11:50:26.898  INFO 409892 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
+2023-07-27 11:57:29.849  INFO 409892 --- [XNIO-1 I/O-12] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:53911 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 30 seconds with key Victoria
+2023-07-27 11:57:31.084  INFO 409892 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
+2023-07-27 11:57:31.087  INFO 409892 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-27 11:57:31.088  INFO 409892 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
