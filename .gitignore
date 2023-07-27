@@ -2,5 +2,6 @@
 bin/
 Logs/
 .vscode/
+LavaLink/logs/
 newSDModel
 SDModelsList

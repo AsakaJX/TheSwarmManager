@@ -179,7 +179,6 @@ D:\Projects\TheSwarmManager-main\bin\Debug\net7.0\runtimes\win\lib\net7.0\Module
 D:\Projects\TheSwarmManager-main\bin\Debug\net7.0\runtimes\win\lib\net7.0\Modules\Microsoft.WSMan.Management\WSMan.format.ps1xml
 D:\Projects\TheSwarmManager-main\bin\Debug\net7.0\runtimes\win\lib\net7.0\Modules\PSDiagnostics\PSDiagnostics.psd1
 D:\Projects\TheSwarmManager-main\bin\Debug\net7.0\runtimes\win\lib\net7.0\Modules\PSDiagnostics\PSDiagnostics.psm1
-D:\Projects\TheSwarmManager-main\bin\Debug\net7.0\config.yml
 D:\Projects\TheSwarmManager-main\bin\Debug\net7.0\DNet V3 Bot.exe
 D:\Projects\TheSwarmManager-main\bin\Debug\net7.0\DNet V3 Bot.deps.json
 D:\Projects\TheSwarmManager-main\bin\Debug\net7.0\DNet V3 Bot.runtimeconfig.json
