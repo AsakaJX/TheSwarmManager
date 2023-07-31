@@ -3359,6 +3359,33 @@
           }
         }
       },
+      "Oracle.ManagedDataAccess.Core/3.21.110": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.PerformanceCounter": "6.0.1",
+          "System.DirectoryServices": "6.0.1",
+          "System.DirectoryServices.Protocols": "6.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/Oracle.ManagedDataAccess.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Oracle.ManagedDataAccess.dll": {}
+        }
+      },
+      "Pastel/4.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Pastel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Pastel.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Polly/7.1.0": {
         "type": "package",
         "compile": {
@@ -8680,6 +8707,43 @@
         "nuget_logo.png",
         "openai.1.7.2.nupkg.sha512",
         "openai.nuspec"
+      ]
+    },
+    "Oracle.ManagedDataAccess.Core/3.21.110": {
+      "sha512": "LYQ124w755pmQCbhMe5WYBMAHim40RQVdXq50kADQVEFowsm5R/vvMxSwpkauhMv6oI99GF6q869BuyW1EJ21A==",
+      "type": "package",
+      "path": "oracle.manageddataaccess.core/3.21.110",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "PerfCounters/register_odpc_perfmon_counters.ps1",
+        "PerfCounters/unregister_odpc_perfmon_counters.ps1",
+        "info.txt",
+        "lib/netstandard2.1/Oracle.ManagedDataAccess.dll",
+        "oracle.manageddataaccess.core.3.21.110.nupkg.sha512",
+        "oracle.manageddataaccess.core.nuspec",
+        "readme.txt"
+      ]
+    },
+    "Pastel/4.1.0": {
+      "sha512": "2RGTLbvDyhUyZmNIAdyJZkQTr8RJwD/l4vEvFujLRZN2uxJal1AR8STe7rJwrYESO/Waaa20eYhVd4Q3KX+Nxw==",
+      "type": "package",
+      "path": "pastel/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "icon.png",
+        "lib/net462/Pastel.dll",
+        "lib/net462/Pastel.xml",
+        "lib/net6.0/Pastel.dll",
+        "lib/net6.0/Pastel.xml",
+        "lib/net7.0/Pastel.dll",
+        "lib/net7.0/Pastel.xml",
+        "pastel.4.1.0.nupkg.sha512",
+        "pastel.nuspec"
       ]
     },
     "Polly/7.1.0": {
@@ -14120,6 +14184,8 @@
       "MongoDB.Driver >= 2.20.0",
       "NReco.VideoConverter >= 1.2.0",
       "OpenAI >= 1.7.2",
+      "Oracle.ManagedDataAccess.Core >= 3.21.110",
+      "Pastel >= 4.1.0",
       "SpotifyAPI.Web >= 7.0.0",
       "SpotifyAPI.Web.Auth >= 7.0.0",
       "Victoria >= 5.2.8",
@@ -14276,6 +14342,14 @@
           "OpenAI": {
             "target": "Package",
             "version": "[1.7.2, )"
+          },
+          "Oracle.ManagedDataAccess.Core": {
+            "target": "Package",
+            "version": "[3.21.110, )"
+          },
+          "Pastel": {
+            "target": "Package",
+            "version": "[4.1.0, )"
           },
           "SpotifyAPI.Web": {
             "target": "Package",

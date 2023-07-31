@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+using System.Text;
 using Discord;
 using Discord.Commands;
 using Discord.Interactions;
@@ -5,10 +7,12 @@ using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Yaml;
 using Microsoft.Extensions.DependencyInjection;
-using TheSwarmManager.Modules.CustomEmbedBuilder;
+using Oracle.ManagedDataAccess.Client;
+using Pastel;
 using TheSwarmManager.Modules.Logging;
 using TheSwarmManager.Modules.Prefixes;
 using TheSwarmManager.Modules.XPlayer;
+using TheSwarmManager.Utils.EmbedBuilder;
 using Victoria;
 
 namespace TheSwarmManager.Services {
@@ -34,6 +38,36 @@ namespace TheSwarmManager.Services {
             _prefixHandler = _services.GetRequiredService<PrefixHandler>();
             _lavaNode = _services.GetRequiredService<LavaNode<XLavaPlayer>>();
             _audioService = _services.GetRequiredService<AudioHandler>();
+
+            //  Checking for password from the database.
+            //! If wrong -> exiting.
+            string passwordHash = Log.NewLog(Modules.Logging.LogSeverity.Warning, "Bot Handler|Database", "Please, enter password from the database: ", askForPassword: true);
+            Database.DBHandler db = new Database.DBHandler();
+            while (passwordHash == string.Empty)
+                Thread.Sleep(1000);
+            if (passwordHash != _config["passwordHashes:oracle"]) {
+                Log.NewCriticalError(100, "Bot Handler|Database", "Password is incorrect!".Pastel("#ff3434"));
+            } else {
+                Log.NewLog(Modules.Logging.LogSeverity.Info, "Bot Handler|Database", "Password is correct!".Pastel("#70ff38"));
+                if (db.TestConnection()) {
+                    Log.NewLog(Modules.Logging.LogSeverity.Info, "Database Handler", $"{"Sucessfully".Pastel("#70ff38")} connected to database!");
+                    if (db.GetConnection()?.State.ToString() == "Open") { db.CloseConnection(); }
+                    db.OpenConnection();
+                }
+            }
+
+            // <---------------- DB TEST AREA ---------------->
+            db.TestReadingData();
+            // db.DeleteInRange("todoitem", 0, 100);
+            // db.Delete("todoitem", "description", "Task 2", OracleDbType.Varchar2);
+            // db.ReseedColumn<int>("todoitem", "id", "IDENTITY", 1);
+            // db.Insert("todoitem", new Dictionary<Dictionary<string, OracleDbType>, string>() {
+            //     { new Dictionary<string, OracleDbType>() {
+            //         { "description", OracleDbType.Varchar2 }
+            //     }, "something" }
+            // });
+            db.TestReadingData();
+            // <---------------- DB TEST AREA ---------------->
 
             SubscribeDiscordEvents();
             SubscribeLavaLinkEvents();
@@ -103,9 +137,9 @@ namespace TheSwarmManager.Services {
             _ = Task.Run(async () => {
                 await _services.GetRequiredService<InteractionService>().RegisterCommandsGloballyAsync(true);
 
-                if (!_lavaNode.IsConnected) {
+                if (!_lavaNode.IsConnected)
                     await _lavaNode.ConnectAsync();
-                }
+
                 await _client.SetGameAsync("/help intensively", null, ActivityType.Watching);
                 await _client.SetActivityAsync(_client.Activity);
             });
@@ -133,7 +167,9 @@ namespace TheSwarmManager.Services {
                 .AddSingleton<InteractionHandler>()
                 .AddSingleton<CommandService>()
                 .AddSingleton<PrefixHandler>()
-                .AddSingleton<EmbedBuilding>()
+                .AddSingleton<Builder>()
+
+                .AddSingleton<Database.DBHandler>()
 
                 .AddSingleton(_config)
 

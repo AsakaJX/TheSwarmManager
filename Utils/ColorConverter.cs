@@ -3,9 +3,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Yaml;
 using TheSwarmManager.Modules.Logging;
 
-namespace TheSwarmManager.Modules.ColorConverter {
-    public class Colors {
+namespace TheSwarmManager.Utils.ColorConverter {
+    public class Converter {
         private Logger Log = new Logger();
+        /// <summary>
+        /// Getting color in RGB format from config file by it's name.
+        /// </summary>
+        /// <param name="requestedColor">Name in config file of requested color.</param>
+        /// <returns></returns>
         public Color GetColor(string requestedColor) {
             var _config = new ConfigurationBuilder()
                 .SetBasePath(AppContext.BaseDirectory)

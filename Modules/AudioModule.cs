@@ -4,15 +4,15 @@ using Discord.Audio;
 using Discord.Interactions;
 // using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
+using TheSwarmManager.Modules.Logging;
+using TheSwarmManager.Modules.XPlayer;
+using TheSwarmManager.Services;
 // using OpenAI.GPT3;
 // using OpenAI.GPT3.Managers;
 // using OpenAI.GPT3.ObjectModels;
 // using OpenAI.GPT3.ObjectModels.RequestModels;
-using TheSwarmManager.Modules.ColorConverter;
-using TheSwarmManager.Modules.CustomEmbedBuilder;
-using TheSwarmManager.Modules.Logging;
-using TheSwarmManager.Modules.XPlayer;
-using TheSwarmManager.Services;
+using TheSwarmManager.Utils.ColorConverter;
+using TheSwarmManager.Utils.EmbedBuilder;
 using Victoria;
 using Victoria.Enums;
 using Victoria.Responses.Search;
@@ -22,16 +22,16 @@ namespace TheSwarmManager.Modules.Audio {
         private readonly LavaNode<XLavaPlayer> _lavaNode;
         private readonly AudioHandler _audioService;
         private readonly IConfigurationRoot _config;
-        private readonly EmbedBuilding EB;
+        private readonly Builder EB;
         private readonly Logger Log = new Logger();
-        private readonly Colors ColorConverter = new Colors();
+        private readonly Converter ColorConverter = new Converter();
         // private AudioOutStream? _pcmStream;
 
         public AudioModule(LavaNode<XLavaPlayer> lavaNode, AudioHandler audioService, IConfigurationRoot config) {
             _lavaNode = lavaNode;
             _audioService = audioService;
             _config = config;
-            EB = new EmbedBuilding();
+            EB = new Builder();
         }
 
         // [SlashCommand("ai-ask-waifu", "Задать вопрос ChatGPT и получить ответ в ГОЛОСОВОМ формате И в АСМР стиле на ЯПОНСКОМ языке.")]

@@ -4,22 +4,21 @@ using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Yaml;
-using TheSwarmManager.Modules.CustomEmbedBuilder;
 using TheSwarmManager.Modules.Logging;
+using TheSwarmManager.Utils.EmbedBuilder;
 
 namespace TheSwarmManager.Modules.Prefixes {
     public class PrefixModule : ModuleBase<SocketCommandContext> {
         private Logger Log = new Logger();
         private readonly IConfigurationRoot _config;
-        private readonly EmbedBuilding _EmbedBuilder;
-        private EmbedBuilding EB = new EmbedBuilding();
+        private Builder EB = new Builder();
         public PrefixModule() {
             _config = new ConfigurationBuilder()
                 .SetBasePath(AppContext.BaseDirectory)
                 .AddYamlFile("config.yml")
                 .Build();
 
-            _EmbedBuilder = new EmbedBuilding();
+            EB = new Builder();
         }
 
         // [Command("help")]

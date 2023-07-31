@@ -1,8 +1,11 @@
-﻿using System.Text;
+﻿using System.Security.Cryptography;
+using System.Text;
 using Discord;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Yaml;
+using Pastel;
 using TheSwarmManager.Services;
+using TheSwarmManager.Services.Database;
 
 namespace TheSwarmManager.Modules.Logging {
     public enum LogSeverity {
@@ -19,28 +22,111 @@ namespace TheSwarmManager.Modules.Logging {
             .AddYamlFile("config.yml")
             .Build();
         private PowerShellHandler PowerShell = new PowerShellHandler();
-        Dictionary<LogSeverity, ConsoleColor> ColorTable = new Dictionary<LogSeverity, ConsoleColor> {
-            {LogSeverity.Critical, ConsoleColor.Magenta},
-            {LogSeverity.Debug, ConsoleColor.Yellow},
-            {LogSeverity.Error, ConsoleColor.Red},
-            {LogSeverity.Info, ConsoleColor.Green},
-            {LogSeverity.Verbose, ConsoleColor.Yellow},
-            {LogSeverity.Warning, ConsoleColor.Red},
+        // Dictionary<LogSeverity, ConsoleColor> ColorTable = new Dictionary<LogSeverity, ConsoleColor> {
+        //     {LogSeverity.Critical, ConsoleColor.Magenta},
+        //     {LogSeverity.Debug, ConsoleColor.Yellow},
+        //     {LogSeverity.Error, ConsoleColor.Red},
+        //     {LogSeverity.Info, ConsoleColor.Green},
+        //     {LogSeverity.Verbose, ConsoleColor.Yellow},
+        //     {LogSeverity.Warning, ConsoleColor.Red},
+        // };
+
+        Dictionary<LogSeverity, string> ColorTable = new Dictionary<LogSeverity, string> {
+            {LogSeverity.Critical, "#ea00ff"},
+            {LogSeverity.Debug, "#fbff00"},
+            {LogSeverity.Error, "#ff3434"},
+            {LogSeverity.Info, "#70ff38"}, // 2eff38
+            {LogSeverity.Verbose, "#fbff00"},
+            {LogSeverity.Warning, "#ff3434"},
         };
-        private LogSeverity LogSeverityConverter(Discord.LogSeverity ls) {
-            return (LogSeverity)(int)ls;
-        }
+
+        /// <summary>
+        /// Custom logging method for events. Developed by Asaka.
+        /// </summary>
+        /// <param name="msg">Log message that needs to be processed.</param>
+        /// <returns>Completed task.</returns>
         public Task NewLogForEvents(LogMessage msg) {
-            NewLog(LogSeverityConverter(msg.Severity), msg.Source, msg.Message);
+            NewLog((LogSeverity)(int)msg.Severity, msg.Source, msg.Message);
             return Task.CompletedTask;
         }
-        public void NewLog(
+        /// <summary>
+        /// Like System.Console.ReadLine(), only with a mask. Default mask is "*".
+        /// </summary>
+        /// <param name="mask">a <c>char</c> representing your choice of console mask</param>
+        /// <returns>the string the user typed in </returns>
+
+        public string ReadPassword(char mask) {
+            const int ENTER = 13, BACKSP = 8, CTRLBACKSP = 127;
+            int[] FILTERED = { 0, 27, 9, 10 /*, 32 space, if you care */ };
+
+            var pass = new Stack<char>();
+            char chr = (char)0;
+
+            while ((chr = System.Console.ReadKey(true).KeyChar) != ENTER) {
+                if (chr == BACKSP) {
+                    if (pass.Count > 0) {
+                        System.Console.Write("\b \b");
+                        pass.Pop();
+                    }
+                } else if (chr == CTRLBACKSP) {
+                    while (pass.Count > 0) {
+                        System.Console.Write("\b \b");
+                        pass.Pop();
+                    }
+                } else if (FILTERED.Count(x => chr == x) > 0) { } else {
+                    pass.Push((char)chr);
+                    System.Console.Write(mask.ToString().Pastel(ConsoleColor.Red));
+                }
+            }
+
+            Console.WriteLine();
+
+            string output = ComputeSHA256(new string(pass.Reverse().ToArray()));
+            if (output == _config["passwordHashes:oracle"]) {
+                DBHandler db = new DBHandler();
+                db.SetupConnectionInformation(new string(pass.Reverse().ToArray()));
+            }
+
+            return ComputeSHA256(new string(pass.Reverse().ToArray()));
+        }
+
+        static string ComputeSHA256(string s) {
+            using (SHA256 sha256 = SHA256.Create()) {
+                // Compute the hash of the given string
+                byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(s));
+
+                // Convert the byte array to string format
+                return BitConverter.ToString(hashValue).Replace("-", "");
+            }
+        }
+
+        /// <summary>
+        /// Like System.Console.ReadLine(), only with a mask. Default mask is "*".
+        /// </summary>
+        /// <returns>the string the user typed in </returns>
+        public string ReadPassword() {
+            return ReadPassword('*');
+        }
+        /// <summary>
+        /// Custom logging method. Developed by Asaka.
+        /// </summary>
+        /// <param name="severity">Severity of the message</param>
+        /// <param name="source">Source of the message</param>
+        /// <param name="message">The message itself</param>
+        /// <param name="depth">(Optional)Depth of the message (just changes arrow)</param>
+        /// <param name="askForInput">(Optional)Ask for input before writing new line ?</param>
+        /// <param name="askForPassword">(Optional)Ask for password before writing new line ?</param>
+        /// <returns>Empty string or input/password, depends on what you choosen.</returns>
+
+        public string NewLog(
             LogSeverity severity = LogSeverity.Info,
             string source = "* no source provided *",
             string message = "* empty *",
-            int depth = 0
+            int depth = 0,
+            bool askForInput = false,
+            bool askForPassword = false
         ) {
-            //? /```                Save Logs to file                  ```\
+            //? /```````````````````````````Save Logs to file```````````````````````````\
             string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
             var path = "config.yml";
@@ -54,9 +140,9 @@ namespace TheSwarmManager.Modules.Logging {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"{date} {source} {message}");
             File.AppendAllText(logsName, sb.ToString());
-            //? \...                Save Logs to file                  .../
+            //? \...........................Save Logs to file.........................../
 
-            if (source == "Victoria" && (message.IndexOf("Unable to connect to the remote server") == -1 && message.IndexOf("Unknown OP code received (ready)") == -1)) { return; }
+            if (source == "Victoria" && (message.IndexOf("Unable to connect to the remote server") == -1 && message.IndexOf("Unknown OP code received (ready)") == -1)) { return string.Empty; }
             // string addSpacesDepth = String.Concat(Enumerable.Repeat(" ", depth));
             string arrow = "⇢";
             // if (depth > 0) { arrow = $"{addSpacesDepth}↳"; }
@@ -83,17 +169,83 @@ namespace TheSwarmManager.Modules.Logging {
                 addSpacesSource = "";
             }
 
-            Console.ForegroundColor = ConsoleColor.DarkGray; Console.Write($"{date}  ");
-            Console.ForegroundColor = ColorTable[severity]; Console.Write($"{addSpacesSeverity}{severity.ToString().ToUpper()}");
-            Console.ForegroundColor = ConsoleColor.Cyan; Console.Write(" ⇢ ");
-            Console.ForegroundColor = ConsoleColor.DarkGray; Console.Write("[ ");
-            Console.ForegroundColor = ConsoleColor.Blue; Console.Write($"{source}{addSpacesSource}");
-            Console.ForegroundColor = ConsoleColor.DarkGray; Console.Write(" ]");
-            Console.ForegroundColor = ConsoleColor.Cyan; Console.Write($"\t{arrow}\t");
-            Console.ForegroundColor = ConsoleColor.Gray; Console.Write($"{message}");
+            // Console.ForegroundColor = ConsoleColor.DarkGray; Console.Write($"{date}  ");
+            // Console.ForegroundColor = ColorTable[severity]; Console.Write($"{addSpacesSeverity}{severity.ToString().ToUpper()}");
+            // Console.ForegroundColor = ConsoleColor.Cyan; Console.Write(" ⇢ ");
+            // Console.ForegroundColor = ConsoleColor.DarkGray; Console.Write("[ ");
+            // Console.ForegroundColor = ConsoleColor.Blue; Console.Write($"{source}{addSpacesSource}");
+            // Console.ForegroundColor = ConsoleColor.DarkGray; Console.Write(" ]");
+            // Console.ForegroundColor = ConsoleColor.Cyan; Console.Write($"\t{arrow}\t");
+            // Console.ForegroundColor = ConsoleColor.Gray; Console.Write($"{message}");
 
-            Console.ResetColor();
+            Console.Write($"{date.Pastel(ConsoleColor.Gray)}  {addSpacesSeverity}{severity.ToString().ToUpper().Pastel(ColorTable[severity])}{" ⇢ ".Pastel(ConsoleColor.Cyan)}{"[ ".Pastel("#707070")}{source.Pastel("#2B52AB")}{addSpacesSource}{" ]".Pastel("#707070")}\t{arrow.Pastel(ConsoleColor.Cyan)}\t{message.Pastel(ConsoleColor.DarkGray)}");
+
+            if (askForInput) {
+                string input = Convert.ToString(Console.Read());
+                return input;
+            }
+
+            if (askForPassword)
+                return ReadPassword();
+
             Console.WriteLine();
+            return string.Empty;
+        }
+        /// <summary>
+        /// Custom logging method for critical errors that need to use Environment.Exit(code)
+        /// </summary>
+        /// <param name="code">Error code</param>
+        /// <param name="source">Source of the error</param>
+        /// <param name="message">(Optional)Custom message before system log is sent.</param>
+        /// <param name="depth">(Optional)Depth of the message(just changes arrow)</param>
+        public void NewCriticalError(
+            int code = -1,
+            string source = "* no source provided *",
+            string message = "* empty *",
+            int depth = 0
+        ) {
+            string messageFirstHalf = $"Program experienced a {"CRITICAL".Pastel("#ea00ff")} error with code {code.ToString().Pastel("#ea00ff")}";
+            string messageSecondHalf = message;
+            //? /```````````````````````````Save Logs to file```````````````````````````\
+            string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            var path = "config.yml";
+            var deserializer = new YamlDotNet.Serialization.Deserializer();
+            using var reader = new StreamReader(path);
+            var obj = deserializer.Deserialize<Dictionary<object, object>>(reader);
+            reader.Close();
+
+            var logsName = $"Logs/Log-{obj["lastRunDate"]}-{obj["DailyRunCounter"]}.txt";
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"{date} {source} {messageFirstHalf} + {messageSecondHalf}");
+            File.AppendAllText(logsName, sb.ToString());
+            //? \...........................Save Logs to file.........................../
+
+            string arrow = "⇢";
+            if (depth > 0) { arrow = $"↳"; }
+
+            int sourceLimit = 30;
+            string addSpacesSeverity = "Critical".ToString().Length < "Critical".Length ? String.Concat(Enumerable.Repeat(" ", "Critical".Length - "Critical".ToString().Length)) : "";
+            string addSpacesSource = source.ToString().Length < sourceLimit ? String.Concat(Enumerable.Repeat(" ", sourceLimit - source.ToString().Length)) : "";
+            if (source.IndexOf('|') != -1) {
+                string firstWord = source.Substring(0, source.IndexOf('|'));
+                string secondWord = source.Substring(source.IndexOf('|') + 1);
+
+                source = firstWord + addSpacesSource.Insert(0, " ") + secondWord;
+                addSpacesSource = "";
+            }
+
+            if (message != "* empty *") {
+                Console.Write($"{date.Pastel(ConsoleColor.Gray)}  {addSpacesSeverity}{"CRITICAL".Pastel("#ea00ff")}{" ⇢ ".Pastel(ConsoleColor.Cyan)}{"[ ".Pastel("#707070")}{source.Pastel("#2B52AB")}{addSpacesSource}{" ]".Pastel("#707070")}\t{"↳".Pastel(ConsoleColor.Cyan)}\t{messageSecondHalf.Pastel(ConsoleColor.DarkGray)}");
+                Console.WriteLine();
+            }
+            Console.Write($"{date.Pastel(ConsoleColor.Gray)}  {addSpacesSeverity}{"CRITICAL".Pastel("#ea00ff")}{" ⇢ ".Pastel(ConsoleColor.Cyan)}{"[ ".Pastel("#707070")}{source.Pastel("#2B52AB")}{addSpacesSource}{" ]".Pastel("#707070")}\t{arrow.Pastel(ConsoleColor.Cyan)}\t{messageFirstHalf.Pastel(ConsoleColor.DarkGray)}");
+            Console.WriteLine();
+
+            DBHandler db = new DBHandler();
+            if (db.GetConnection()?.State.ToString() == "Open") { db.CloseConnection(); }
+            Environment.Exit(code);
         }
     }
 }

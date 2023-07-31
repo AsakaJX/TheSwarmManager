@@ -1,7 +1,7 @@
 using System.Collections.Concurrent;
-using TheSwarmManager.Modules.CustomEmbedBuilder;
 using TheSwarmManager.Modules.Logging;
 using TheSwarmManager.Modules.XPlayer;
+using TheSwarmManager.Utils.EmbedBuilder;
 using Victoria;
 using Victoria.Enums;
 using Victoria.EventArgs;
@@ -12,7 +12,7 @@ namespace TheSwarmManager.Services {
         private readonly LavaNode<XLavaPlayer> _lavaNode;
         public readonly HashSet<ulong> VoteQueue;
         private readonly ConcurrentDictionary<ulong, CancellationTokenSource> _disconnectTokens;
-        private EmbedBuilding EB = new EmbedBuilding();
+        private Builder EB = new Builder();
 
         public AudioHandler(LavaNode<XLavaPlayer> lavaNode) {
             _lavaNode = lavaNode;

@@ -11,16 +11,16 @@ using OpenAI.GPT3;
 using OpenAI.GPT3.Managers;
 using OpenAI.GPT3.ObjectModels;
 using OpenAI.GPT3.ObjectModels.RequestModels;
-using TheSwarmManager.Modules.ColorConverter;
-using TheSwarmManager.Modules.CustomEmbedBuilder;
 using TheSwarmManager.Modules.Logging;
 using TheSwarmManager.Services;
+using TheSwarmManager.Utils.ColorConverter;
+using TheSwarmManager.Utils.EmbedBuilder;
 
 namespace TheSwarmManager.Modules.Interactions {
     public class InteractionModule : InteractionModuleBase<SocketInteractionContext> {
         private Logger Log = new Logger();
-        private Colors ColorConverter = new Colors();
-        private EmbedBuilding EB = new EmbedBuilding();
+        private Converter ColorConverter = new Converter();
+        private Builder EB = new Builder();
         private IConfigurationRoot _config;
         private PowerShellHandler PowerShell = new PowerShellHandler();
         public InteractionModule(IConfigurationRoot config) {
@@ -648,7 +648,7 @@ namespace TheSwarmManager.Modules.Interactions {
             [MinValue(2)]
             int upscaleBy = 2
         ) {
-            EmbedBuilding eb = new EmbedBuilding();
+            Builder eb = new Builder();
 
             await RespondAsync(embed: eb.Normal("Stable Diffusion Upscaling", "*Your image is being upscaled now...*"));
 
@@ -717,7 +717,7 @@ namespace TheSwarmManager.Modules.Interactions {
             [MinValue(-1)]
             int seed = -1
         ) {
-            EmbedBuilding eb = new EmbedBuilding();
+            Builder eb = new Builder();
             await RespondAsync(embed: eb.Normal("Stable Diffusion", "*Your image is being generated now...*"));
 
             string outputName = Context.User.Id.ToString();

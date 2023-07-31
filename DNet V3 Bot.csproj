@@ -44,6 +44,10 @@
 
     <PackageReference Include="OpenAI" Version="1.7.2" />
 
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.110" />
+
+    <PackageReference Include="Pastel" Version="4.1.0" />
+
     <PackageReference Include="SpotifyAPI.Web" Version="7.0.0" />
     <PackageReference Include="SpotifyAPI.Web.Auth" Version="7.0.0" />
 

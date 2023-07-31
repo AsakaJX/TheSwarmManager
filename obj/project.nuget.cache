@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SYmYxuFgdG6Q9xq1PhlNf7lWf8DqnvnYJ3A2g7gxW+Oo3uV2eMGErUY/qIsroljlboVkuWJcCxrbq4F+/KLkhg==",
+  "dgSpecHash": "Ufe1QyFqo/KidMbz3SOTMrP6s6IkrNqOLqTf5fJUKaSno+V3WoGEtxMa9joddEBg+S5rjwbRESE0ieQ/aUvBFQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\TheSwarmManager-main\\DNet V3 Bot.csproj",
   "expectedPackageFiles": [
@@ -95,6 +95,8 @@
     "C:\\Users\\paged\\.nuget\\packages\\njsonschema\\10.8.0\\njsonschema.10.8.0.nupkg.sha512",
     "C:\\Users\\paged\\.nuget\\packages\\nreco.videoconverter\\1.2.0\\nreco.videoconverter.1.2.0.nupkg.sha512",
     "C:\\Users\\paged\\.nuget\\packages\\openai\\1.7.2\\openai.1.7.2.nupkg.sha512",
+    "C:\\Users\\paged\\.nuget\\packages\\oracle.manageddataaccess.core\\3.21.110\\oracle.manageddataaccess.core.3.21.110.nupkg.sha512",
+    "C:\\Users\\paged\\.nuget\\packages\\pastel\\4.1.0\\pastel.4.1.0.nupkg.sha512",
     "C:\\Users\\paged\\.nuget\\packages\\polly\\7.1.0\\polly.7.1.0.nupkg.sha512",
     "C:\\Users\\paged\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",
     "C:\\Users\\paged\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
