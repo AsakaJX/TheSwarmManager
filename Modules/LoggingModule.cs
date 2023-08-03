@@ -4,7 +4,6 @@ using Discord;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Yaml;
 using Pastel;
-using TheSwarmManager.Services;
 using TheSwarmManager.Services.Database;
 
 namespace TheSwarmManager.Modules.Logging {
@@ -17,25 +16,16 @@ namespace TheSwarmManager.Modules.Logging {
         Warning,
     }
     public class Logger {
-        private IConfigurationRoot _config = new ConfigurationBuilder()
+        private readonly IConfigurationRoot _config = new ConfigurationBuilder()
             .SetBasePath(AppContext.BaseDirectory)
             .AddYamlFile("config.yml")
             .Build();
-        private PowerShellHandler PowerShell = new PowerShellHandler();
-        // Dictionary<LogSeverity, ConsoleColor> ColorTable = new Dictionary<LogSeverity, ConsoleColor> {
-        //     {LogSeverity.Critical, ConsoleColor.Magenta},
-        //     {LogSeverity.Debug, ConsoleColor.Yellow},
-        //     {LogSeverity.Error, ConsoleColor.Red},
-        //     {LogSeverity.Info, ConsoleColor.Green},
-        //     {LogSeverity.Verbose, ConsoleColor.Yellow},
-        //     {LogSeverity.Warning, ConsoleColor.Red},
-        // };
 
-        Dictionary<LogSeverity, string> ColorTable = new Dictionary<LogSeverity, string> {
+        private readonly Dictionary<LogSeverity, string> ColorTable = new Dictionary<LogSeverity, string> {
             {LogSeverity.Critical, "#ea00ff"},
             {LogSeverity.Debug, "#fbff00"},
             {LogSeverity.Error, "#ff3434"},
-            {LogSeverity.Info, "#70ff38"}, // 2eff38
+            {LogSeverity.Info, "#70ff38"},
             {LogSeverity.Verbose, "#fbff00"},
             {LogSeverity.Warning, "#ff3434"},
         };

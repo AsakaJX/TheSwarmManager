@@ -1,5 +1,3 @@
-using System.Security.Cryptography;
-using System.Text;
 using Discord;
 using Discord.Commands;
 using Discord.Interactions;
@@ -7,12 +5,10 @@ using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Yaml;
 using Microsoft.Extensions.DependencyInjection;
-using Oracle.ManagedDataAccess.Client;
 using Pastel;
 using TheSwarmManager.Modules.Logging;
 using TheSwarmManager.Modules.Prefixes;
 using TheSwarmManager.Modules.XPlayer;
-using TheSwarmManager.Services.Database;
 using TheSwarmManager.Utils.EmbedBuilder;
 using Victoria;
 
