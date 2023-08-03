@@ -158,7 +158,7 @@ namespace TheSwarmManager.Modules.Logging {
                 severity = LogSeverity.Warning;
             }
 
-            int sourceLimit = 30;
+            int sourceLimit = 35;
             string addSpacesSeverity = severity.ToString().Length < "Critical".Length ? String.Concat(Enumerable.Repeat(" ", "Critical".Length - severity.ToString().Length)) : "";
             string addSpacesSource = source.ToString().Length < sourceLimit ? String.Concat(Enumerable.Repeat(" ", sourceLimit - source.ToString().Length)) : "";
             if (source.IndexOf('|') != -1) {

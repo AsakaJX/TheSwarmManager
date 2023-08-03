@@ -12,6 +12,7 @@ using Pastel;
 using TheSwarmManager.Modules.Logging;
 using TheSwarmManager.Modules.Prefixes;
 using TheSwarmManager.Modules.XPlayer;
+using TheSwarmManager.Services.Database;
 using TheSwarmManager.Utils.EmbedBuilder;
 using Victoria;
 
@@ -57,16 +58,9 @@ namespace TheSwarmManager.Services {
             }
 
             // <---------------- DB TEST AREA ---------------->
-            db.TestReadingData();
-            // db.DeleteInRange("todoitem", 0, 100);
-            // db.Delete("todoitem", "description", "Task 2", OracleDbType.Varchar2);
-            // db.ReseedColumn<int>("todoitem", "id", "IDENTITY", 1);
-            // db.Insert("todoitem", new Dictionary<Dictionary<string, OracleDbType>, string>() {
-            //     { new Dictionary<string, OracleDbType>() {
-            //         { "description", OracleDbType.Varchar2 }
-            //     }, "something" }
-            // });
-            db.TestReadingData();
+
+
+
             // <---------------- DB TEST AREA ---------------->
 
             SubscribeDiscordEvents();

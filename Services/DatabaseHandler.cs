@@ -5,6 +5,20 @@ using Pastel;
 using TheSwarmManager.Modules.Logging;
 
 namespace TheSwarmManager.Services.Database {
+    // public struct KeyTypePair {
+    //     public string Key { get; set; }
+    //     public OracleDbType Type { get; set; }
+    //     public KeyTypePair(string key, OracleDbType type) {
+    //         Key = key;
+    //         Type = type;
+    //     }
+    // }
+    // public class TripleValueDictionary<T> : Dictionary<KeyTypePair, T> where T : notnull {
+    //     public void Add(string kvpKey, OracleDbType kvpType, T value) {
+    //         KeyTypePair kvp = new KeyTypePair(kvpKey, kvpType);
+    //         this.Add(kvp, value);
+    //     }
+    // }
     class DBHandler {
         private IConfigurationRoot _config = new ConfigurationBuilder()
             .SetBasePath(AppContext.BaseDirectory)
@@ -18,6 +32,17 @@ namespace TheSwarmManager.Services.Database {
         private static OracleConnection _connection;
         private static OracleCommand _command;
 #pragma warning restore
+        /// <summary>
+        /// Execute command method to prevent repeating myself.
+        /// </summary>
+        /// <param name="cmd">Oracle Command object</param>
+        private void TryToExecuteCommand(OracleCommand cmd) {
+            try {
+                cmd.ExecuteNonQuery();
+            } catch (Exception ex) {
+                Log.NewLog(LogSeverity.Error, "Database Handler|Command Runner", ex.Message);
+            }
+        }
         // <------------------- Test section ------------------->
         /// <summary>
         /// Testing connection to database.
@@ -28,7 +53,7 @@ namespace TheSwarmManager.Services.Database {
                 _connection.Open();
                 _connection.Close();
             } catch (Exception ex) {
-                Log.NewCriticalError(104, "Database Handler|Connection", ex.Message);
+                Log.NewCriticalError(104, "Database Handler|Test", ex.Message);
                 return false;
             }
             return true;
@@ -38,28 +63,59 @@ namespace TheSwarmManager.Services.Database {
         /// Test case for reading data.
         /// </summary>
         public void TestReadingData() {
-            if (_connection == null) {
-                Log.NewCriticalError(101, "Bot Handler|Database", "Connection for some reason is null.");
-                return;
-            }
-            OracleCommand command = _connection.CreateCommand();
-
-            //? Retrieve sample data
-            try {
-                command.CommandText = "SELECT id, description, done FROM todoitem";
-                OracleDataReader reader = command.ExecuteReader();
-                while (reader.Read()) {
-                    if (reader.GetBoolean(2))
-                        Console.WriteLine($"Index: {reader.GetInt32(0)}, Description: {reader.GetString(1)} is done.");
-                    else
-                        Console.WriteLine($"Index: {reader.GetInt32(0)}, Description: {reader.GetString(1)} is NOT done.");
-                }
-            } catch (Exception ex) {
-                Console.WriteLine(ex.Message);
+            var output = Read("todoitem", "description, id");
+            foreach (var element in output.Keys) {
+                foreach (var element2 in output[element])
+                    Log.NewLog(LogSeverity.Debug, "Database Handler|Test", $"{element}: {element2}");
             }
         }
 
         // <------------------- Usage section ------------------->
+        /// <summary>
+        /// Read data from the table by specified column(-s) / and with specified range.
+        /// </summary>
+        /// <param name="table">Table name</param>
+        /// <param name="columns">Column names splited by ","</param>
+        /// <param name="rangeMin">(Optional) Min value of range</param>
+        /// <param name="rangeMax">(Optional) Max value of range</param>
+        /// <returns></returns>
+        public Dictionary<string, string[]> Read(string table, string columns, int rangeMin = 0, int rangeMax = 0) {
+            _command.CommandText = $"SELECT {columns} FROM {table} {(rangeMin > 0 && rangeMax > 0 ? $"WHERE ID BETWEEN {rangeMin} AND {rangeMax}" : "")}";
+            string[] columnsArray = columns.Replace(" ", "").Split(",");
+
+            Dictionary<string, string> output = new Dictionary<string, string>();
+            foreach (var element in columnsArray) {
+                output.Add(element, "");
+            }
+
+            try {
+                OracleDataReader reader = _command.ExecuteReader();
+                while (reader.Read()) {
+                    foreach (var element in columnsArray) {
+                        var index = reader.GetOrdinal(element);
+                        output[element] += reader.GetString(index) + "ORACLE_NEWLINE";
+                    }
+                }
+            } catch (Exception ex) {
+                Log.NewLog(LogSeverity.Error, "Database Handler|Read", ex.Message);
+            }
+
+            if (output.Values.Last().IndexOf("ORACLE_NEWLINE") == -1) {
+                Dictionary<string, string[]> empty = new Dictionary<string, string[]>();
+                foreach (var element in output.Keys) {
+                    empty.Add(element, Array.Empty<string>());
+                }
+                Log.NewLog(LogSeverity.Warning, "Database Handler|Read", "Output array is empty. I either didn't find a column or table is empty!");
+                return empty;
+            }
+
+            Dictionary<string, string[]> final = new Dictionary<string, string[]>();
+            foreach (var element in output) {
+                final.Add(element.Key, element.Value.Remove(element.Value.LastIndexOf("ORACLE_NEWLINE"), 14).Split("ORACLE_NEWLINE"));
+            }
+
+            return final;
+        }
         /// <summary>
         /// Setup connection information.
         /// </summary>
@@ -92,22 +148,18 @@ namespace TheSwarmManager.Services.Database {
         /// </summary>
         public void CloseConnection() {
             _connection.Close();
+            _connection.Dispose();
         }
         /// <summary>
-        /// Deletes one entry in table.
+        /// Deletes one entry from the table.
         /// </summary>
         /// <param name="table">Table where we're gonna to nuke something</param>
         /// <param name="column">(Specific column) Finding exact coordinates of the motherfucker by his IP Adress</param>
         /// <param name="filter">Filter</param>
         /// <param name="dataType">Type of the column(maybe could be automated idk)</param>
-        public void Delete(string table, string column, string filter, OracleDbType dataType) {
-            _command.CommandText = $"DELETE FROM {table} WHERE {column} = :p{column}";
-            _command.Parameters.Add($":p{column}", dataType).Value = filter;
-            try {
-                _command.ExecuteNonQuery();
-            } catch (Exception ex) {
-                Log.NewLog(LogSeverity.Error, "Database Handler", ex.Message);
-            }
+        public void Delete(string table, string column, string filter) {
+            _command.CommandText = $"DELETE FROM {table} WHERE {column} = {filter}";
+            TryToExecuteCommand(_command);
         }
         /// <summary>
         /// Delete rows by ID COLUMN! (if that doesn't exist - YOU SHOULD CREATE IT YOURSELF) in specific range (INCLUDING FIRST AND LAST!).
@@ -116,12 +168,8 @@ namespace TheSwarmManager.Services.Database {
         /// <param name="startIndex">Start index (including)</param>
         /// <param name="endIndex">End index (including)</param>
         public void DeleteInRange(string table, uint startIndex, uint endIndex) {
-            try {
-                _command.CommandText = $"DELETE FROM {table} WHERE ID BETWEEN {startIndex} AND {endIndex}";
-                _command.ExecuteNonQuery();
-            } catch (Exception ex) {
-                Log.NewLog(LogSeverity.Error, "Database Handler", ex.Message);
-            }
+            _command.CommandText = $"DELETE FROM {table} WHERE ID BETWEEN {startIndex} AND {endIndex}";
+            TryToExecuteCommand(_command);
         }
         /// <summary>
         /// Reseed specific column.
@@ -132,81 +180,66 @@ namespace TheSwarmManager.Services.Database {
         /// <param name="startWith">From what value to start with</param>
         public void ReseedColumn<T>(string table, string column, string columnIdentifiesAs, T startWith) {
             _command.CommandText = $"ALTER TABLE {table} MODIFY({column} GENERATED AS {columnIdentifiesAs} (START WITH {startWith}))";
-            try {
-                _command.ExecuteNonQuery();
-            } catch (Exception ex) {
-                Log.NewLog(LogSeverity.Error, "Database Handler", ex.Message);
-            }
+            TryToExecuteCommand(_command);
         }
-        //! IN PROGRESS
         /// <summary>
-        /// Insert one-or-many items in table.
+        /// Insert one item to table with specific columns and their values.
         /// </summary>
         /// <param name="table">Table name</param>
-        /// <param name="columnsAndValues">Dictionary with column names and their values</param>
-        //! IN PROGRESS
-        public void Insert(string table, Dictionary<Dictionary<string, OracleDbType>, string> columnsAndValues) {
-            //? First method
-            // _command.CommandText = "INSERT INTO todoitem (DESCRIPTION, DONE) VALUES (:pDESCRIPTION, :pDONE)";
-            // _command.Parameters.Add(":pDONE", OracleDbType.Bit).Value = 0;
-            // _command.Parameters.Add(":pDESCRIPTION", OracleDbType.NVarchar2).Value = "ULTRA COOL NEW ROW #2";
-
-            //? Second method
-            // _command.CommandText = "INSERT INTO todoitem (DESCRIPTION, DONE) VALUES ('ULTRA COOL NEW ROW', 0)";
-
-            string ColumnString = "";
-            foreach (var element in columnsAndValues.Keys) {
-                ColumnString += $"{element}, ";
-            }
-            string ValuesString = "";
-            foreach (var element in columnsAndValues.Values) {
-                ValuesString += $"{element}, ";
-            }
-            ColumnString = ColumnString.Remove(ColumnString.Length - 2, 2);
-            ValuesString = ValuesString.Remove(ValuesString.Length - 2, 2);
-
-            for (int i = 0; i < columnsAndValues.Count; i++) {
-                _command.CommandText += $"INSERT INTO {table} ({ColumnString}) VALUES ({ValuesString});\n";
-            }
-
-            try {
-                System.Console.WriteLine(_command.CommandText);
-                _command.ExecuteNonQuery();
-            } catch (Exception ex) {
-                Console.WriteLine("Error: " + ex);
-                Console.WriteLine(ex.StackTrace);
+        /// <param name="columns">Column names separated with "," !!!</param>
+        /// <param name="values">Column names separated with "," AND if it's string put it in " " !!!</param>
+        public void Insert(string table, string columns, string values) {
+            _command.CommandText = $"INSERT INTO {table} ({columns}) VALUES ({values})";
+            TryToExecuteCommand(_command);
+        }
+        /// <summary>
+        /// Update one-or-many columns in table.
+        /// </summary>
+        /// <param name="table">Table name</param>
+        /// <param name="newColumn">New column dictionary with key - column name and value - new column value (if it's string put it in " ") !!!</param>
+        /// <param name="filterColumn">Filter column dictionary with key - column name and value - old column value (if it's string put it in " ") !!!</param>
+        public void Update(string table, Dictionary<string, string> newColumn, Dictionary<string, string> filterColumn) {
+            foreach (var element in newColumn) {
+                _command.CommandText = $"UPDATE {table} SET {element.Key} = {element.Value} WHERE {filterColumn.Keys.First()} = {filterColumn.Values.First()}";
+                TryToExecuteCommand(_command);
             }
         }
-
-        public void Main() {
-            OracleCommand command = _connection.CreateCommand();
-
-            //? Trying to create new data elements
-            try {
-                //? SQL Command for Inserting Items
-                // command.CommandText = "INSERT INTO todoitem (DESCRIPTION, DONE) VALUES (:pDESCRIPTION, :pDONE)";
-
-                // //? Writing data
-                // command.Parameters.Add(":pDESCRIPTION", OracleDbType.NVarchar2).Value = "ULTRA COOL NEW ROW #2";
-                // command.Parameters.Add(":pDONE", OracleDbType.Int32).Value = 1;
-                command.CommandText = "INSERT INTO todoitem (DESCRIPTION, DONE) VALUES ('ULTRA COOL NEW ROW', 0)";
-                command.ExecuteNonQuery();
-
-                //? Shorter version below
-                command.CommandText = "INSERT INTO todoitem (DESCRIPTION, DONE) VALUES ('OMEGALUL', 0)";
-
-                //? Executing Inserting Command as NON QUERY (Used for delete, insert, update).
-                int rowCount = command.ExecuteNonQuery();
-
-                Console.WriteLine("Row Count affected = " + rowCount);
-            } catch (Exception ex) {
-                Console.WriteLine("Error: " + ex);
-                Console.WriteLine(ex.StackTrace);
-            }
-
-            //? Closing and Disposing connection.
-            _connection.Close();
-            _connection.Dispose();
+        /// <summary>
+        /// Create new table in database.
+        /// </summary>
+        /// <param name="tableName">Table name</param>
+        /// <param name="columnArguments">Arguments for pre made columns (Default is only id column)</param>
+        public void CreateTable(string tableName, string columnArguments = "id NUMBER GENERATED ALWAYS AS IDENTITY, PRIMARY KEY(id)") {
+            _command.CommandText = $"CREATE TABLE {tableName} ({columnArguments})";
+            TryToExecuteCommand(_command);
+        }
+        /// <summary>
+        /// Creates new column to the table.
+        /// </summary>
+        /// <param name="table">Table name</param>
+        /// <param name="columnName">Column name</param>
+        /// <param name="columnType">Column type</param>
+        /// <param name="columnModifiers">Column modifiers</param>
+        public void CreateColumn(string table, string columnName, string columnType, string columnModifiers = "") {
+            _command.CommandText = $"ALTER TABLE {table} ADD {columnName} {columnType} {columnModifiers}";
+            TryToExecuteCommand(_command);
+        }
+        /// <summary>
+        /// Drops column from the table.
+        /// </summary>
+        /// <param name="table">Table name</param>
+        /// <param name="columnName">Column name</param>
+        public void DeleteColumn(string table, string columnName) {
+            _command.CommandText = $"ALTER TABLE {table} DROP COLUMN {columnName}";
+            TryToExecuteCommand(_command);
+        }
+        /// <summary>
+        /// Execute custom command, that hasn't been implemented already.
+        /// </summary>
+        /// <param name="command">Command string</param>
+        public void Execute(string command) {
+            _command.CommandText = command;
+            TryToExecuteCommand(_command);
         }
     }
 }
