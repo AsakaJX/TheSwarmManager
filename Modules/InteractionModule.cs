@@ -1,28 +1,30 @@
 ﻿using System.Diagnostics;
+using System.Linq;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 using Discord;
 using Discord.Interactions;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Yaml;
-using MongoDB.Bson;
-using MongoDB.Driver;
 using OpenAI.GPT3;
 using OpenAI.GPT3.Managers;
 using OpenAI.GPT3.ObjectModels;
 using OpenAI.GPT3.ObjectModels.RequestModels;
+using Oracle.ManagedDataAccess.Client;
 using TheSwarmManager.Modules.Logging;
 using TheSwarmManager.Services;
+using TheSwarmManager.Services.Database;
 using TheSwarmManager.Utils.ColorConverter;
 using TheSwarmManager.Utils.EmbedBuilder;
 
 namespace TheSwarmManager.Modules.Interactions {
     public class InteractionModule : InteractionModuleBase<SocketInteractionContext> {
-        private Logger Log = new Logger();
-        private Converter ColorConverter = new Converter();
-        private Builder EB = new Builder();
-        private IConfigurationRoot _config;
-        private PowerShellHandler PowerShell = new PowerShellHandler();
+        private readonly Logger Log = new Logger();
+        private readonly Converter ColorConverter = new Converter();
+        private readonly Builder EB = new Builder();
+        private readonly IConfigurationRoot _config;
+        private readonly PowerShellHandler PowerShell = new PowerShellHandler();
+        private readonly DBHandler _db = new DBHandler();
         public InteractionModule(IConfigurationRoot config) {
             _config = config;
         }
@@ -32,35 +34,22 @@ namespace TheSwarmManager.Modules.Interactions {
 
         [SlashCommand("debug-test1", "test")]
         public async Task HandleTest1Command() {
-            await RespondAsync("test");
-            MongoClient dbClient = new MongoClient("mongodb://localhost:27017");
-            IMongoDatabase dbCluster = dbClient.GetDatabase("TheSwarmManagerCluster0");
-            IMongoCollection<BsonDocument> dbCollection = dbCluster.GetCollection<BsonDocument>("Slots");
-
-            BsonDocument testDoc = new BsonDocument{
-                { "test", "tom" }
-            };
-            BsonDocument testDoc1 = new BsonDocument{
-                { "test1", "tom1" }
-            };
-            BsonDocument testDoc2 = new BsonDocument{
-                { "test2", "tom" }
-            };
-
-            // dbCollection.InsertOne(testDoc);
-            // dbCollection.InsertOne(testDoc1);
-            // dbCollection.InsertOne(testDoc2);
-
-            // ? \/ this is how you find and edit documents
-
-            var filter = Builders<BsonDocument>.Filter
-                .Eq("test", "tom");
-            System.Console.WriteLine(dbCollection.Find(filter).CountDocuments());
-            // var newdoc = new BsonDocument {
-            //     // _id is optional here, but if it's present, it must match the replaced doc's _id
-            //     {"asdadasd", "asdadadsa"}
-            // };
-            // var result = dbCollection.ReplaceOne(filter, newdoc);
+            if (((IGuildUser)Context.User).RoleIds.ToArray().Contains(Convert.ToUInt64(_config["roleGuild:owner"])) == false) {
+                await RespondAsync(embed: EB.Error("Эта команда только для админов!"));
+            }
+            await RespondAsync(embed: EB.Success("test"));
+            // _db.CreateTable("slots", "user_id NUMBER, money NUMBER, prizes PRIZESTYPE");
+            // _db.Insert("slots", "user_id, money, prizes", $"{Context.User.Id}, 10000, PRIZESTYPE('nothing', 10)");
+            // _db.DropTable("slots");
+            string replyString = "";
+            var reader = _db.Read("slots", "id, user_id, money, prizes");
+            foreach (var k in reader.Keys) {
+                replyString += $"{k}: ";
+                foreach (var v in reader[k]) {
+                    replyString += $"{v}\n";
+                }
+            }
+            await ReplyAsync(embed: EB.Normal("DB Table: Slots", replyString));
         }
 
         [SlashCommand("debug-test2", "test")]
@@ -159,34 +148,10 @@ namespace TheSwarmManager.Modules.Interactions {
                     await RespondAsync(embed: EB.ErrorWithAuthor(Context.User, "Ты не можешь крутить за других людей. anger"));
             }
 
-            // ? Database
+            // <---------------- DB AREA ---------------->
 
-            MongoClient dbClient = new MongoClient("mongodb://localhost:27017");
-            IMongoDatabase dbCluster = dbClient.GetDatabase("TheSwarmManagerCluster0");
-            IMongoCollection<BsonDocument> dbCollection = dbCluster.GetCollection<BsonDocument>("Slots");
 
-            BsonDocument userDocument = new BsonDocument{
-                { "user_id", user?.Id.ToString() },
-                { "money", "0" },
-                { "stats", new BsonDocument() {
-                    { "prize_0", "0" },
-                    { "prize_1", "0" },
-                    { "prize_2", "0" },
-                    { "prize_3", "0" },
-                    { "prize_4", "0" },
-                    { "prize_5", "0" },
-                    { "prize_6", "0" },
-                    { "prize_7", "0" },
-                    { "prize_8", "0" },
-                    { "prize_9", "0" }
-                }}
-            };
-
-            var filterCheck = Builders<BsonDocument>.Filter
-                .Eq("user_id", user?.Id.ToString());
-
-            if (dbCollection.Find(filterCheck).CountDocuments() == 0)
-                dbCollection.InsertOne(userDocument);
+            // <---------------- DB AREA ---------------->
 
             if (user == null) { return; }
 
@@ -402,28 +367,6 @@ namespace TheSwarmManager.Modules.Interactions {
                 }
                 CongratulationString = $"<@{user.Id}> brother, ты выйграл ***{PrizesArray[MiddleRowMaxKey]} x {PrizeMultiplier}***";
             }
-
-            // ? \/ this is how you find and edit documents
-
-            // var filter = Builders<BsonElement>.Filter.Where(x => x.AgendaId == agendaId && x.Items.Any(i => i.Id == itemId));
-            // var update = Builders<TempAgenda>.Update.Set(x => x.Items[-1].Title, title);
-            // var result = _collection.UpdateOneAsync(filter, update).Result;
-
-            // var filterH2O = Builders<BsonDocument>.Filter
-            //     .Eq("user_id", user.Id.ToString());
-            // var getDoc = dbCollection.Find(filterH2O).FirstOrDefault();
-
-            // var filter = new BsonDocument("user_id", user.Id.ToString());
-            // var getPrizesFromDB = getDoc.GetElement("stats").Value as BsonDocument;
-            // var updateSettings = new BsonDocument("$set", new BsonDocument("stats", new BsonDocument($"prize_{MiddleRowMaxKey}", "555")));
-
-            // var result = await dbCollection.UpdateOneAsync(filter, updateSettings);
-
-            // Console.WriteLine($"Matched: {result.MatchedCount}; Modified: {result.ModifiedCount}");
-
-            // Log.NewLog(Logging.LogSeverity.Debug, "Slots", getStats.ToString() ?? "why is this null");
-            // dbCollection.DeleteMany(filter);
-            // dbCollection.ReplaceOne(filter, newDoc);
 
             switch (MiddleValue) {
                 case 1:

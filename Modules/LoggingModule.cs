@@ -16,6 +16,7 @@ namespace TheSwarmManager.Modules.Logging {
         Warning,
     }
     public class Logger {
+        private readonly int sourceLimit = 35;
         private readonly IConfigurationRoot _config = new ConfigurationBuilder()
             .SetBasePath(AppContext.BaseDirectory)
             .AddYamlFile("config.yml")
@@ -72,7 +73,7 @@ namespace TheSwarmManager.Modules.Logging {
             Console.WriteLine();
 
             string output = ComputeSHA256(new string(pass.Reverse().ToArray()));
-            if (output == _config["passwordHashes:oracle"]) {
+            if (output == _config["passwordHashes:database"].ToString()) {
                 DBHandler db = new DBHandler();
                 db.SetupConnectionInformation(new string(pass.Reverse().ToArray()));
             }
@@ -148,7 +149,6 @@ namespace TheSwarmManager.Modules.Logging {
                 severity = LogSeverity.Warning;
             }
 
-            int sourceLimit = 35;
             string addSpacesSeverity = severity.ToString().Length < "Critical".Length ? String.Concat(Enumerable.Repeat(" ", "Critical".Length - severity.ToString().Length)) : "";
             string addSpacesSource = source.ToString().Length < sourceLimit ? String.Concat(Enumerable.Repeat(" ", sourceLimit - source.ToString().Length)) : "";
             if (source.IndexOf('|') != -1) {
@@ -168,7 +168,7 @@ namespace TheSwarmManager.Modules.Logging {
             // Console.ForegroundColor = ConsoleColor.Cyan; Console.Write($"\t{arrow}\t");
             // Console.ForegroundColor = ConsoleColor.Gray; Console.Write($"{message}");
 
-            Console.Write($"{date.Pastel(ConsoleColor.Gray)}  {addSpacesSeverity}{severity.ToString().ToUpper().Pastel(ColorTable[severity])}{" ⇢ ".Pastel(ConsoleColor.Cyan)}{"[ ".Pastel("#707070")}{source.Pastel("#2B52AB")}{addSpacesSource}{" ]".Pastel("#707070")}\t{arrow.Pastel(ConsoleColor.Cyan)}\t{message.Pastel(ConsoleColor.DarkGray)}");
+            Console.Write($"{date.Pastel(ConsoleColor.Gray)}  {addSpacesSeverity}{severity.ToString().ToUpper().Pastel(ColorTable[severity])}{" ⇢ ".Pastel(ConsoleColor.Cyan)}{"[ ".Pastel("#707070")}{source.Pastel("#2B52AB")}{addSpacesSource}{" ]".Pastel("#707070")}       {arrow.Pastel(ConsoleColor.Cyan)}       {message.Pastel(ConsoleColor.DarkGray)}");
 
             if (askForInput) {
                 string input = Convert.ToString(Console.Read());
@@ -215,7 +215,6 @@ namespace TheSwarmManager.Modules.Logging {
             string arrow = "⇢";
             if (depth > 0) { arrow = $"↳"; }
 
-            int sourceLimit = 30;
             string addSpacesSeverity = "Critical".ToString().Length < "Critical".Length ? String.Concat(Enumerable.Repeat(" ", "Critical".Length - "Critical".ToString().Length)) : "";
             string addSpacesSource = source.ToString().Length < sourceLimit ? String.Concat(Enumerable.Repeat(" ", sourceLimit - source.ToString().Length)) : "";
             if (source.IndexOf('|') != -1) {
@@ -227,10 +226,10 @@ namespace TheSwarmManager.Modules.Logging {
             }
 
             if (message != "* empty *") {
-                Console.Write($"{date.Pastel(ConsoleColor.Gray)}  {addSpacesSeverity}{"CRITICAL".Pastel("#ea00ff")}{" ⇢ ".Pastel(ConsoleColor.Cyan)}{"[ ".Pastel("#707070")}{source.Pastel("#2B52AB")}{addSpacesSource}{" ]".Pastel("#707070")}\t{"↳".Pastel(ConsoleColor.Cyan)}\t{messageSecondHalf.Pastel(ConsoleColor.DarkGray)}");
+                Console.Write($"{date.Pastel(ConsoleColor.Gray)}  {addSpacesSeverity}{"CRITICAL".Pastel("#ea00ff")}{" ⇢ ".Pastel(ConsoleColor.Cyan)}{"[ ".Pastel("#707070")}{source.Pastel("#2B52AB")}{addSpacesSource}{" ]".Pastel("#707070")}       {"↳".Pastel(ConsoleColor.Cyan)}       {messageSecondHalf.Pastel(ConsoleColor.DarkGray)}");
                 Console.WriteLine();
             }
-            Console.Write($"{date.Pastel(ConsoleColor.Gray)}  {addSpacesSeverity}{"CRITICAL".Pastel("#ea00ff")}{" ⇢ ".Pastel(ConsoleColor.Cyan)}{"[ ".Pastel("#707070")}{source.Pastel("#2B52AB")}{addSpacesSource}{" ]".Pastel("#707070")}\t{arrow.Pastel(ConsoleColor.Cyan)}\t{messageFirstHalf.Pastel(ConsoleColor.DarkGray)}");
+            Console.Write($"{date.Pastel(ConsoleColor.Gray)}  {addSpacesSeverity}{"CRITICAL".Pastel("#ea00ff")}{" ⇢ ".Pastel(ConsoleColor.Cyan)}{"[ ".Pastel("#707070")}{source.Pastel("#2B52AB")}{addSpacesSource}{" ]".Pastel("#707070")}       {arrow.Pastel(ConsoleColor.Cyan)}       {messageFirstHalf.Pastel(ConsoleColor.DarkGray)}");
             Console.WriteLine();
 
             DBHandler db = new DBHandler();

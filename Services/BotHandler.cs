@@ -39,23 +39,25 @@ namespace TheSwarmManager.Services {
             //  Checking for password from the database.
             //! If wrong -> exiting.
             string passwordHash = Log.NewLog(Modules.Logging.LogSeverity.Warning, "Bot Handler|Database", "Please, enter password from the database: ", askForPassword: true);
-            Database.DBHandler db = new Database.DBHandler();
+            Database.DBHandler _db = new Database.DBHandler();
             while (passwordHash == string.Empty)
                 Thread.Sleep(1000);
-            if (passwordHash != _config["passwordHashes:oracle"]) {
+            if (passwordHash != _config["passwordHashes:database"]) {
                 Log.NewCriticalError(100, "Bot Handler|Database", "Password is incorrect!".Pastel("#ff3434"));
             } else {
                 Log.NewLog(Modules.Logging.LogSeverity.Info, "Bot Handler|Database", "Password is correct!".Pastel("#70ff38"));
-                if (db.TestConnection()) {
-                    Log.NewLog(Modules.Logging.LogSeverity.Info, "Database Handler", $"{"Sucessfully".Pastel("#70ff38")} connected to database!");
-                    if (db.GetConnection()?.State.ToString() == "Open") { db.CloseConnection(); }
-                    db.OpenConnection();
+                if (_db.TestConnection()) {
+                    Log.NewLog(Modules.Logging.LogSeverity.Info, "Database Handler", $"{"Successfully".Pastel("#70ff38")} connected to database!");
+                    if (_db.GetConnection()?.State.ToString() == "Open") { _db.CloseConnection(); }
+                    _db.OpenConnection();
                 }
             }
 
             // <---------------- DB TEST AREA ---------------->
 
-
+            // _db.DropTable("slots");
+            // _db.CreateTable("jopa");
+            // _db.DropTable("jopa");
 
             // <---------------- DB TEST AREA ---------------->
 

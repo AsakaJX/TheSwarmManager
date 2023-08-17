@@ -32,17 +32,6 @@ namespace TheSwarmManager.Services.Database {
         private static OracleConnection _connection;
         private static OracleCommand _command;
 #pragma warning restore
-        /// <summary>
-        /// Execute command method to prevent repeating myself.
-        /// </summary>
-        /// <param name="cmd">Oracle Command object</param>
-        private void TryToExecuteCommand(OracleCommand cmd) {
-            try {
-                cmd.ExecuteNonQuery();
-            } catch (Exception ex) {
-                Log.NewLog(LogSeverity.Error, "Database Handler|Command Runner", ex.Message);
-            }
-        }
         // <------------------- Test section ------------------->
         /// <summary>
         /// Testing connection to database.
@@ -71,6 +60,19 @@ namespace TheSwarmManager.Services.Database {
         }
 
         // <------------------- Usage section ------------------->
+        /// <summary>
+        /// Execute command method to prevent repeating myself.
+        /// </summary>
+        /// <param name="cmd">Oracle Command object</param>
+        private void TryToExecuteCommand(OracleCommand cmd) {
+            try {
+                cmd.ExecuteNonQuery();
+                Log.NewLog(LogSeverity.Info, "Database Handler|Command Runner", $"Command \"{cmd.CommandText}\" has been executed {"successfully".Pastel("#70ff38")}!");
+            } catch (Exception ex) {
+                Log.NewLog(LogSeverity.Error, "Database Handler|Command Runner", $"{"Exception".Pastel("#ff3434")} caught during execution of \"{cmd.CommandText}\" command!");
+                Log.NewLog(LogSeverity.Error, "Database Handler|Command Runner", ex.Message, 1);
+            }
+        }
         /// <summary>
         /// Read data from the table by specified column(-s) / and with specified range.
         /// </summary>
@@ -133,7 +135,7 @@ namespace TheSwarmManager.Services.Database {
         /// Get's and returns current connection.
         /// </summary>
         /// <returns>Oracle Connection object</returns>
-        public OracleConnection? GetConnection() {
+        public OracleConnection GetConnection() {
             return _connection;
         }
         /// <summary>
@@ -162,7 +164,8 @@ namespace TheSwarmManager.Services.Database {
             TryToExecuteCommand(_command);
         }
         /// <summary>
-        /// Delete rows by ID COLUMN! (if that doesn't exist - YOU SHOULD CREATE IT YOURSELF) in specific range (INCLUDING FIRST AND LAST!).
+        /// Delete rows by ID COLUMN! in specific range (INCLUDING FIRST AND LAST!).
+        /// (if id column doesn't exist - YOU SHOULD CREATE IT YOURSELF)
         /// </summary>
         /// <param name="table">Table name</param>
         /// <param name="startIndex">Start index (including)</param>
@@ -197,20 +200,37 @@ namespace TheSwarmManager.Services.Database {
         /// </summary>
         /// <param name="table">Table name</param>
         /// <param name="newColumn">New column dictionary with key - column name and value - new column value (if it's string put it in " ") !!!</param>
-        /// <param name="filterColumn">Filter column dictionary with key - column name and value - old column value (if it's string put it in " ") !!!</param>
-        public void Update(string table, Dictionary<string, string> newColumn, Dictionary<string, string> filterColumn) {
+        /// <param name="id">ID of the column</param>
+        public void Update(string table, Dictionary<string, string> newColumn, int id) {
             foreach (var element in newColumn) {
-                _command.CommandText = $"UPDATE {table} SET {element.Key} = {element.Value} WHERE {filterColumn.Keys.First()} = {filterColumn.Values.First()}";
+                _command.CommandText = $"UPDATE {table} SET {element.Key} = {element.Value} WHERE id = {id}";
                 TryToExecuteCommand(_command);
             }
         }
         /// <summary>
         /// Create new table in database.
+        /// Id column would be created aswell.
         /// </summary>
         /// <param name="tableName">Table name</param>
         /// <param name="columnArguments">Arguments for pre made columns (Default is only id column)</param>
-        public void CreateTable(string tableName, string columnArguments = "id NUMBER GENERATED ALWAYS AS IDENTITY, PRIMARY KEY(id)") {
+        public void CreateTable(string tableName, string columnArguments) {
+            columnArguments = $"id NUMBER GENERATED ALWAYS AS IDENTITY{(columnArguments != "" ? $", {columnArguments}, " : ", ")}PRIMARY KEY(id)";
             _command.CommandText = $"CREATE TABLE {tableName} ({columnArguments})";
+            TryToExecuteCommand(_command);
+        }
+        /// <summary>
+        /// Create new table in database but only with id column.
+        /// </summary>
+        /// <param name="tableName">Table name</param>
+        public void CreateTable(string tableName) {
+            CreateTable(tableName, "");
+        }
+        /// <summary>
+        /// Drops the table.
+        /// </summary>
+        /// <param name="tableName">Table name</param>
+        public void DeleteTable(string tableName) {
+            _command.CommandText = $"DROP TABLE {tableName} PURGE";
             TryToExecuteCommand(_command);
         }
         /// <summary>
