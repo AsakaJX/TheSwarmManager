@@ -6,6 +6,8 @@ using Discord;
 using Discord.Interactions;
 using Discord.WebSocket;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using OpenAI.GPT3;
 using OpenAI.GPT3.Managers;
 using OpenAI.GPT3.ObjectModels;
@@ -34,18 +36,22 @@ namespace TheSwarmManager.Modules.Interactions {
 
         [SlashCommand("debug-test1", "test")]
         public async Task HandleTest1Command() {
-            if (((IGuildUser)Context.User).RoleIds.ToArray().Contains(Convert.ToUInt64(_config["roleGuild:owner"])) == false) {
+            if (!((IGuildUser)Context.User).RoleIds.ToArray().Contains(Convert.ToUInt64(_config["roleGuild:owner"]))) {
                 await RespondAsync(embed: EB.Error("Эта команда только для админов!"));
             }
-            await RespondAsync(embed: EB.Success("test"));
-            // _db.CreateTable("slots", "user_id NUMBER, money NUMBER, prizes PRIZESTYPE");
-            // _db.Insert("slots", "user_id, money, prizes", $"{Context.User.Id}, 10000, PRIZESTYPE('nothing', 10)");
-            // _db.DropTable("slots");
+            await RespondAsync(embed: EB.Success("<--- debug-test1 --->"));
+
             string replyString = "";
             var reader = _db.Read("slots", "id, user_id, money, prizes");
             foreach (var k in reader.Keys) {
                 replyString += $"{k}: ";
                 foreach (var v in reader[k]) {
+                    // if (k == "prizes") {
+                    //     JObject json = JObject.Parse(v);
+                    //     Console.WriteLine($"{json}\n");
+                    //     Console.WriteLine($"{json["PRIZE_NAME"]}");
+                    //     Console.WriteLine($"{json["PRIZE_COUNT"]}");
+                    // }
                     replyString += $"{v}\n";
                 }
             }
@@ -54,7 +60,43 @@ namespace TheSwarmManager.Modules.Interactions {
 
         [SlashCommand("debug-test2", "test")]
         public async Task HandleTest2Command() {
-            await RespondAsync("test");
+            if (!((IGuildUser)Context.User).RoleIds.ToArray().Contains(Convert.ToUInt64(_config["roleGuild:owner"]))) {
+                await RespondAsync(embed: EB.Error("Эта команда только для админов!"));
+            }
+            await RespondAsync(embed: EB.Success("<--- debug-test2 --->"));
+            _db.Update("slots_inventory", "MONEY", "5000000000", "USER_ID", Context.User.Id.ToString());
+        }
+
+        [SlashCommand("debug-test3", "test")]
+        public async Task HandleTest3Command() {
+            if (!((IGuildUser)Context.User).RoleIds.ToArray().Contains(Convert.ToUInt64(_config["roleGuild:owner"]))) {
+                await RespondAsync(embed: EB.Error("Эта команда только для админов!"));
+            }
+            await RespondAsync(embed: EB.Success("<--- debug-test3 --->"));
+
+            _db.Update("slots_inventory", "MONEY", "50000000000", "USER_ID", Context.User.Id.ToString());
+        }
+
+        [SlashCommand("debug-test4", "test")]
+        public async Task HandleTest4Command() {
+            if (!((IGuildUser)Context.User).RoleIds.ToArray().Contains(Convert.ToUInt64(_config["roleGuild:owner"]))) {
+                await RespondAsync(embed: EB.Error("Эта команда только для админов!"));
+            }
+            await RespondAsync(embed: EB.Success("<--- debug-test4 --->"));
+            _db.DeleteInRange("slots_stats", 1, 10);
+            _db.ReseedColumn("slots_stats", "id", "IDENTITY", 1);
+
+            _db.DeleteInRange("slots_inventory", 1, 10);
+            _db.ReseedColumn("slots_inventory", "id", "IDENTITY", 1);
+        }
+
+        [SlashCommand("debug-embeds", "test")]
+        public async Task HandleDebugEmbedsCommand() {
+            if (!((IGuildUser)Context.User).RoleIds.ToArray().Contains(Convert.ToUInt64(_config["roleGuild:owner"]))) {
+                await RespondAsync(embed: EB.Error("Эта команда только для админов!"));
+            }
+            await RespondAsync(embed: EB.Success("<--- debug-embeds --->"));
+
             await ReplyAsync("NORMAL", embed: EB.Normal("title", "description"));
             await ReplyAsync("NORMAL WITH AUTHOR", embed: EB.NormalWithAuthor(Context.User, "title", "description"));
             await ReplyAsync("ERROR", embed: EB.Error("errorText"));
@@ -63,13 +105,13 @@ namespace TheSwarmManager.Modules.Interactions {
             await ReplyAsync("SUCCESS WITH AUTHOR", embed: EB.SuccessWithAuthor(Context.User, "description"));
         }
 
-        [SlashCommand("help", "brother, через эту команду ты можешь узнать весь мой внутренний мир (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)")]
+        [SlashCommand("help", "Братик, через эту команду ты можешь узнать весь мой внутренний мир (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)")]
         public async Task HandleHelpCommand() {
             string DeveloperNotes = File.ReadAllText("Resources/Help/DeveloperNotes.txt");
 
             var devNotes = new EmbedBuilder { };
             devNotes.WithColor(ColorConverter.GetColor("normal"))
-                 .WithAuthor("<- Этот brother хочет узнать меня получше (≧◡≦)", Context.User.GetAvatarUrl())
+                 .WithAuthor("<- Этот братик хочет узнать меня получше (≧◡≦)", Context.User.GetAvatarUrl())
                   //  .WithTitle("**General**\n")
                   .WithDescription(
                     $"Это страница помощи бота **{Context.Guild.CurrentUser.Username}**!\n" +
@@ -98,13 +140,11 @@ namespace TheSwarmManager.Modules.Interactions {
             var user = Context.User as SocketGuildUser;
             if (user == null) { return; }
 
-            var ownerRole = (user as IGuildUser).Guild.Roles.FirstOrDefault(x => x.Id == Convert.ToUInt64(_config["roleGuild:owner"]));
-
-            if (user.Roles.ToArray().Contains(ownerRole)) {
-                await RespondAsync(embed: EB.NormalCCWithAuthor(Context.Interaction));
-            } else {
+            if (!((IGuildUser)Context.User).RoleIds.ToArray().Contains(Convert.ToUInt64(_config["roleGuild:owner"]))) {
                 await RespondAsync(embed: EB.ErrorWithAuthor(Context.User, "У тебя нет роли администратора!"));
                 return;
+            } else {
+                await RespondAsync(embed: EB.NormalCCWithAuthor(Context.Interaction));
             }
 
             var messages = await Context.Channel.GetMessagesAsync(await GetOriginalResponseAsync(), Direction.Before, amount).FlattenAsync();
@@ -134,10 +174,16 @@ namespace TheSwarmManager.Modules.Interactions {
             [Summary("user", "За кого крутить ? (Только для админов.)")]
             SocketUser? set_user = null
         ) {
+            //! ВРЕМЕННАЯ ПРОВЕРКА (НА ВРЕМЯ ТЕХ.РАБОТ)
+            // if (Context.User.Id.ToString() != _config["usersGuild:owner"]) {
+            //     await RespondAsync(embed: EB.Error("Над этой командой сейчас ведутся тех.работы. Она доступна только Асаке."));
+            //     return;
+            // }
+
             if (set_user == Context.Guild.CurrentUser) { await RespondAsync(embed: EB.Error("Эта проверка существует из-за Егора. ヾ(`ヘ´)ﾉ - Асака")); }
             var user = Context.User as SocketGuildUser;
-            if (user == null) { return; }
 
+            if (user == null) { return; }
             var ownerRole = (user as IGuildUser).Guild.Roles.FirstOrDefault(x => x.Id == Convert.ToUInt64(_config["roleGuild:owner"]));
             var eliteVictimRole = (user as IGuildUser).Guild.Roles.FirstOrDefault(x => x.Id == Convert.ToUInt64(_config["roleGuild:elite"]));
 
@@ -147,13 +193,52 @@ namespace TheSwarmManager.Modules.Interactions {
                 else
                     await RespondAsync(embed: EB.ErrorWithAuthor(Context.User, "Ты не можешь крутить за других людей. anger"));
             }
-
-            // <---------------- DB AREA ---------------->
-
-
-            // <---------------- DB AREA ---------------->
-
             if (user == null) { return; }
+
+            // Creating new database item if it's not present already.
+            // ? I writed here read function from DBHandler one more time
+            // ? Because I didn't like that I'm getting warning about non-existing item in table.
+            string checkIfExist = String.Empty;
+            var CIEConnection = _db.GetConnection();
+            var CIECommand = CIEConnection.CreateCommand();
+            CIECommand.CommandText = $"SELECT user_id FROM slots_stats WHERE user_id = {user.Id.ToString()}";
+            var CIEReader = CIECommand.ExecuteReader();
+            while (CIEReader.Read()) {
+                var index = CIEReader.GetOrdinal("user_id");
+                checkIfExist += CIEReader.GetString(index);
+            }
+            if (checkIfExist == String.Empty) {
+                _db.Insert("slots_stats",
+                    "USER_ID, MONEY, " +
+                    "PRIZE_0, " +
+                    "PRIZE_1, " +
+                    "PRIZE_2, " +
+                    "PRIZE_3, " +
+                    "PRIZE_4, " +
+                    "PRIZE_5, " +
+                    "PRIZE_6, " +
+                    "PRIZE_7, " +
+                    "PRIZE_8, " +
+                    "PRIZE_9",
+                    $"{user.Id}, 0, " +
+                    "0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+                );
+                _db.Insert("slots_inventory",
+                    "USER_ID, MONEY, " +
+                    "PRIZE_0, " +
+                    "PRIZE_1, " +
+                    "PRIZE_2, " +
+                    "PRIZE_3, " +
+                    "PRIZE_4, " +
+                    "PRIZE_5, " +
+                    "PRIZE_6, " +
+                    "PRIZE_7, " +
+                    "PRIZE_8, " +
+                    "PRIZE_9",
+                    $"{user.Id}, 0, " +
+                    "0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+                );
+            }
 
             var embed = EB.NormalWithAuthor(user, "",
                 "```"
@@ -187,7 +272,6 @@ namespace TheSwarmManager.Modules.Interactions {
                 "145"
             };
 
-            // ? 373
             Dictionary<char, int> Reel1 = new Dictionary<char, int>() {
                 { '0', 80 },
                 { '1', 70 },
@@ -200,7 +284,6 @@ namespace TheSwarmManager.Modules.Interactions {
                 { '8', 3  },
                 { '9', 10 }
             };
-            // ? 372
             Dictionary<char, int> Reel2 = new Dictionary<char, int>() {
                 { '0', 80 },
                 { '1', 70 },
@@ -213,7 +296,6 @@ namespace TheSwarmManager.Modules.Interactions {
                 { '8', 2  },
                 { '9', 10 }
             };
-            // ? 371
             Dictionary<char, int> Reel3 = new Dictionary<char, int>() {
                 { '0', 80 },
                 { '1', 70 },
@@ -226,7 +308,6 @@ namespace TheSwarmManager.Modules.Interactions {
                 { '8', 1  },
                 { '9', 10 }
             };
-            // ? 374
             Dictionary<char, int> Reel4 = new Dictionary<char, int>() {
                 { '0', 80 },
                 { '1', 70 },
@@ -239,7 +320,6 @@ namespace TheSwarmManager.Modules.Interactions {
                 { '8', 4  },
                 { '9', 10 }
             };
-            // ? 373
             Dictionary<char, int> Reel5 = new Dictionary<char, int>() {
                 { '0', 80 },
                 { '1', 70 },
@@ -265,26 +345,27 @@ namespace TheSwarmManager.Modules.Interactions {
                 { 4, "" }
             };
 
-            void LuckManipulation(ulong[] userID, char prizeID, int newPrizeValue, bool toggle = true) {
+            void LuckManipulation(ulong[] userID, int prizeID, int newPrizeValue, bool toggle = true) {
                 if (!toggle) { return; }
+                char prize = prizeID.ToString()[0];
                 for (int i = 0; i < userID.Length; i++) {
                     if (user.Id == userID[i]) {
-                        Reel1[prizeID] = newPrizeValue;
-                        Reel2[prizeID] = newPrizeValue;
-                        Reel3[prizeID] = newPrizeValue;
-                        Reel4[prizeID] = newPrizeValue;
-                        Reel5[prizeID] = newPrizeValue;
+                        Reel1[prize] = newPrizeValue;
+                        Reel2[prize] = newPrizeValue;
+                        Reel3[prize] = newPrizeValue;
+                        Reel4[prize] = newPrizeValue;
+                        Reel5[prize] = newPrizeValue;
                     }
                 }
             }
 
-            LuckManipulation(new ulong[] { 230758744798134282 }, '8', 10000, true);
+            LuckManipulation(new ulong[] { 230758744798134282 }, 5, 10000, true);
             LuckManipulation(new ulong[] {
                 358116406421618689,
                 929080513438822510,
                 1029429289319411732
-            }, '6', 10000, true);
-            LuckManipulation(new ulong[] { 323046843795898369 }, '8', 6000, false);
+            }, 6, 10000, true);
+            LuckManipulation(new ulong[] { 323046843795898369 }, 8, 6000, false);
 
             // ? Preparing reels
             for (int i = 0; i < ReelsCollection.Length; i++) {
@@ -301,6 +382,8 @@ namespace TheSwarmManager.Modules.Interactions {
             Random rand = new Random();
             Dictionary<char, int> Dict = new Dictionary<char, int>();
 
+            int[] arrowIndexes = { 161, 164, 167, 170, 173 };
+
             for (int i = 0; i < 15; i++) {
                 embedDescriptionArray[Convert.ToInt32(SlotsIndexes[i])] = ReelsReady[i / 3][
                     rand.Next(0, ReelsReady[i / 3].Length)
@@ -308,6 +391,11 @@ namespace TheSwarmManager.Modules.Interactions {
 
                 if ((i + 1) % 3 == 0) {
                     embedDescription = new string(embedDescriptionArray);
+                    // embedDescription.Replace("^", "");
+                    if (i / 3 != 4) {
+                        embedDescription = embedDescription.Remove(arrowIndexes[i / 3], 1);
+                        embedDescription = embedDescription.Insert(arrowIndexes[i / 3], "^");
+                    }
                     embed.Description = embedDescription;
                     await ModifyOriginalResponseAsync(x => x.Embed = embed.WithDescription(embedDescription).Build());
                     await Task.Delay(1000);
@@ -339,130 +427,217 @@ namespace TheSwarmManager.Modules.Interactions {
             if (MiddleValue == 5)
                 PrizeString = "* J A C K P O T *";
 
-            string[] PrizesArray = new string[] {
-                "Ничего xD",                    //? 0
-                "Кирпичи :bricks:",             //? 1
-                "Бетон :bricks:",               //? 2
-                "meow",                         //? 3
-                "Таймаут на 5 минут :skull:",   //? 4
-                "Таймаут на 15 минут :skull:",  //? 5
-                "Таймаут на 30 минут :skull:",  //? 6
-                "Кик с сервера",                //? 7
-                "Шанс на получение админки!",   //? 8
-                "Роль Элитного раба Нейро-самы" //? 9
+            string[] PrizesArray = {
+            /* 0 */     "Ничего",
+            /* 1 */     "Тарелку риса :rice:",
+            /* 2 */     "Кошка жену <:catgirl:1143268164470329374>",
+            /* 3 */     "+500 соц.рейтинга",
+            /* 4 */     "+1000 соц.рейтинга",
+            /* 5 */     "+5000 соц.рейтинга",
+            /* 6 */     "-1000 соц.рейтинга",
+            /* 7 */     "-2500 соц.рейтинга",
+            /* 8 */     "Путевку в исправительный лагерь на 15 минут!",
+            /* 9 */     "Роль Элитного раба Нейро-самы"
             };
-
-            int[] MultiplierBlackList = new int[] { 0, 3, 7, 8, 9 };
 
             embedDescription = new string(embedDescription.Remove(156, PrizeString.Length).Insert(156, PrizeString));
             string embedAuthorName = new string(embed.Author.Name.ToString());
 
-            int PrizeMultiplier = MiddleValue == 5 ? PrizeMultiplier = 10 : PrizeMultiplier = MiddleValue;
+            int[] MultiplierBlackList = { 0, 7, 9 };
+            int PrizeMultiplier = MiddleValue == 5 ? PrizeMultiplier = 10 : PrizeMultiplier = MiddleValue - 1;
             string CongratulationString = "";
-            for (int i = 0; i < MultiplierBlackList.Length; i++) {
-                if (PrizeMultiplier < 1) { break; }
-                if (MiddleRowMaxKey == MultiplierBlackList[i]) {
-                    CongratulationString = $"<@{user.Id}> brother, ты выйграл ***{PrizesArray[MiddleRowMaxKey]}***";
-                    break;
-                }
-                CongratulationString = $"<@{user.Id}> brother, ты выйграл ***{PrizesArray[MiddleRowMaxKey]} x {PrizeMultiplier}***";
-            }
+
+            if (MultiplierBlackList.Contains(MiddleRowMaxKey) || PrizeMultiplier == 1)
+                CongratulationString = $"<@{user.Id}> братик, ты выйграл **{PrizesArray[MiddleRowMaxKey]}**";
+            else
+                CongratulationString = $"<@{user.Id}> братик, ты выйграл **{PrizesArray[MiddleRowMaxKey]} x {PrizeMultiplier}**";
+
+            int choosenPrize = MiddleRowMaxKey;
 
             switch (MiddleValue) {
                 case 1:
-                    await ReplyAsync($"<@{user.Id}> brother, ты выйграл ***{PrizesArray[0]}***");
-                    embedAuthorName = $"{embedAuthorName} - {PrizesArray[0]}"; break;
+                    choosenPrize = 0;
+                    await ReplyAsync($"<@{user.Id}> братик, ты выйграл **{PrizesArray[choosenPrize]}**"); break;
                 case 2 or 3 or 4:
-                    await ReplyAsync(CongratulationString);
-                    embedAuthorName = $"{embedAuthorName} - {PrizesArray[MiddleRowMaxKey]}"; break;
+                    await ReplyAsync(CongratulationString); break;
                 case 5:
                     await ModifyOriginalResponseAsync(x => x.Embed = embed.WithDescription(embedDescription).Build());
-                    embedAuthorName = $"{embedAuthorName} - {PrizesArray[MiddleRowMaxKey]}";
                     await ReplyAsync(CongratulationString); break;
                 default:
-                    await ReplyAsync(CongratulationString);
-                    embedAuthorName = $"{embedAuthorName} - {PrizesArray[MiddleRowMaxKey]}"; break;
+                    await ReplyAsync(CongratulationString); break;
             }
-
+            string prizeNameReady = Regex.Replace(PrizesArray[choosenPrize], " (\\:|\\<)(.*)", "");
+            embedAuthorName = $"{embedAuthorName} - {prizeNameReady}{((MultiplierBlackList.Contains(choosenPrize) || PrizeMultiplier == 1) ? "" : $" x {PrizeMultiplier}")}";
             await ModifyOriginalResponseAsync(x => x.Embed = embed.WithAuthor(embedAuthorName, user.GetAvatarUrl()).Build());
 
-            if (MiddleValue == 1) { return; }
-            if (MiddleRowMaxKey == 4 || MiddleRowMaxKey == 5 || MiddleRowMaxKey == 6 || MiddleRowMaxKey == 7) {
-                if (user.Roles.ToArray().Contains(ownerRole)) {
-                    await ReplyAsync("brother, ты слишком ценный материал в моем улье, я не могу позволить себе причинить тебе боль :heart:");
-                    return;
-                }
+            // Updating database values in stats table
+            var columnName = $"prize_{choosenPrize}";
+            try {
+                var statsCurrentCounter = _db.ReadWithCondition("slots_stats", columnName, "user_id", user.Id.ToString())[columnName].FirstOrDefault();
+                var statsUpdatedCounter = Convert.ToInt32(statsCurrentCounter) + 1 * (PrizeMultiplier != 0 ? PrizeMultiplier : 1);
+                _db.Update("slots_stats", columnName, statsUpdatedCounter.ToString(), "user_id", user.Id.ToString());
+            } catch (Exception ex) {
+                Log.NewLog(Logging.LogSeverity.Critical, "Interaction Module|Slots", "There's occured error during saving data to the database.");
+                Log.NewCriticalError(200, "Interaction Module|Slots", ex.Message);
             }
 
+            int[] negativePrizes = { 8 };
+            if (MiddleValue == 1) { return; }
+            if (negativePrizes.Contains(MiddleRowMaxKey) && user.Roles.ToArray().Contains(ownerRole)) {
+                await ReplyAsync("Братик, ты слишком ценный материал в моем улье, я не могу позволить себе причинить тебе боль :heart:");
+                return;
+            }
 
-            switch (MiddleRowMaxKey) {
-                case 3:
-                    if (MiddleValue == 5) {
-                        await ReplyAsync("/ᐠﹷ ‸ ﹷ ᐟ\\\\ ﾉ\nhttps://www.youtube.com/watch?v=XGiqxxEjhNo");
-                        break;
-                    }
-                    await Context.Channel.SendFileAsync("Resources/Media/mewo.mp4", "/ᐠﹷ ‸ ﹷ ᐟ\\\\ ﾉ"); break;
-                case 4:
-                    if (!user.Roles.ToArray().Contains(ownerRole))
-                        await user.SetTimeOutAsync(TimeSpan.FromMinutes(5 * PrizeMultiplier));
-                    break;
-                case 5:
-                    if (!user.Roles.ToArray().Contains(ownerRole))
-                        await user.SetTimeOutAsync(TimeSpan.FromMinutes(15 * PrizeMultiplier));
-                    break;
-                case 6:
-                    if (!user.Roles.ToArray().Contains(ownerRole))
-                        await user.SetTimeOutAsync(TimeSpan.FromMinutes(30 * PrizeMultiplier));
-                    break;
-                case 7:
-                    if (!user.Roles.ToArray().Contains(ownerRole)) {
-                        await Discord.UserExtensions.SendMessageAsync(user, "Поздравляем с получением приза в рулетке Асаки (thisusernameisunavailable.)!\nhttps://discord.gg/aQ2VMhSeak");
-                        await user.KickAsync("Поздравляем с получением приза в рулетке Асаки (thisusernameisunavailable.)!");
-                    }
-                    break;
+            int[] moneyIndexes = { 3, 4, 5, 6, 7 };
+            if (moneyIndexes.Contains(choosenPrize)) {
+                var moneyCurrentCounter = _db.ReadWithCondition("slots_stats", "money", "user_id", user.Id.ToString())["money"].FirstOrDefault();
+                int moneyUpdatedCounter = Convert.ToInt32(moneyCurrentCounter) + Convert.ToInt32(Regex.Match(PrizesArray[choosenPrize], "(\\-|\\+)\\d(.*)\\d").Value) * PrizeMultiplier;
+                _db.Update("slots_stats", "money", moneyUpdatedCounter.ToString(), "user_id", user.Id.ToString());
+                _db.Update("slots_inventory", "money", moneyUpdatedCounter.ToString(), "user_id", user.Id.ToString());
+                return;
+            }
+
+            if (!(moneyIndexes.Contains(choosenPrize) || choosenPrize == 0)) {
+                var inventoryCurrentCounter = _db.ReadWithCondition("slots_inventory", columnName, "user_id", user.Id.ToString())[columnName].FirstOrDefault();
+                var inventoryUpdatedCounter = Convert.ToInt32(inventoryCurrentCounter) + 1 * (PrizeMultiplier != 0 ? PrizeMultiplier : 1);
+                _db.Update("slots_inventory", columnName, inventoryUpdatedCounter.ToString(), "user_id", user.Id.ToString());
+            }
+
+            switch (choosenPrize) {
                 case 8:
-                    if (MiddleValue != 5) {
-                        await ReplyAsync("brother ты не смог выбить все 5 восьмерок! Поэтому админки ты не получишь. ( `ε´ )");
-                        return;
-                    }
-                    await ReplyAsync("Поздравляю brother! Ты выбил 5 восьмерок! Молодец! Хотя мне казалось что шанса 1 к 100 миллиардам будет достаточно... ");
-                    await Task.Delay(3000);
-                    await ReplyAsync("А теперь перейдем к самой интересной части! У тебя есть шанс 50 на 50 чтобы выбить админку либо же получить вместо нее ***:bricks: ЦЕЛУЮ КУЧУ КИРПИЧЕЙ :bricks:***!!!");
-                    await Task.Delay(1000);
-                    await ReplyAsync("Удачи brother!");
-
-                    string str = "Поздравляю brother! Ты выйграл";
-                    for (int f = 0; f < 3; f++) {
-                        str = str.Insert(str.Length, ".");
-                        await Task.Delay(1000);
-                        await ReplyAsync(str);
-                    }
-
-                    int PrizeAdmin = rand.Next(0, 2);
-                    if (PrizeAdmin == 0)
-                        await ReplyAsync("Поздравляю brother! Ты выйграл ***:bricks: ЦЕЛУЮ КУЧУ КИРПИЧЕЙ :bricks:***");
-                    else {
-                        await ReplyAsync("Поздравляю brother! Ты выйграл ***:crown: Админку :crown:***");
-                        if (user.Roles.ToArray().Contains(ownerRole)) {
-                            await ReplyAsync("brother, ты выйграл админку, но так как у тебя она уже была, я заберу у тебя ее!");
-                            await user.RemoveRoleAsync(ownerRole);
-                            await Task.Delay(1000);
-                            await ReplyAsync("Удачи в следующий раз! (ノ_<。)ヾ(´ ▽ ` )");
-                            break;
-                        }
-                        await user.AddRoleAsync(ownerRole);
-                    }
+                    await user.SetTimeOutAsync(TimeSpan.FromMinutes(15 * PrizeMultiplier));
                     break;
                 case 9:
-                    if (!user.Roles.ToArray().Contains(eliteVictimRole)) {
+                    if (!user.Roles.ToArray().Contains(eliteVictimRole))
                         await user.AddRoleAsync(eliteVictimRole);
-                    } else {
-                        await ReplyAsync("brother, ты уже мой любимый и элитный раб, тебе не нужна вторая такая же роль ( 〃▽〃)");
+                    else {
+                        await ReplyAsync("Братик, ты уже мой любимый и элитный раб, тебе не нужна вторая такая же роль ( 〃▽〃)\n" +
+                            "Но ты можешь ее подарить кому-нибудь! Я добавила тебе ее в твой инвентарь. (команда: slots-inventory)");
+                        var inventoryCurrentCounter = _db.ReadWithCondition("slots_inventory", "prize_9", "user_id", user.Id.ToString())[columnName].FirstOrDefault();
+                        var inventoryUpdatedCounter = Convert.ToInt32(inventoryCurrentCounter) + 1;
+                        _db.Update("slots_inventory", "prize_9", inventoryUpdatedCounter.ToString(), "user_id", user.Id.ToString());
                     }
                     break;
                 default:
                     break;
             }
+        }
+
+        [SlashCommand("slots-stats", "Посмотреть статистику слотов.")]
+        public async Task HandleSlotsStatsCommand(
+            [Summary("user", "Чью статистику посмотреть ?")]
+            SocketUser? set_user = null
+        ) {
+            if (set_user == Context.Guild.CurrentUser) { await RespondAsync(embed: EB.Error("Братик, у меня есть абсолютно все вещи в этой вселенной, тебе не обязательно смотреть мой инвентарь...")); return; }
+            var user = Context.User as SocketGuildUser;
+            if (set_user != null) { user = set_user as SocketGuildUser; }
+            if (user == null) { return; }
+
+            var reader = _db.ReadWithCondition(
+                "slots_stats",
+                "MONEY, PRIZE_0, PRIZE_1, PRIZE_2, PRIZE_3, PRIZE_4, PRIZE_5, PRIZE_6, PRIZE_7, PRIZE_8, PRIZE_9",
+                "USER_ID",
+                user.Id.ToString()
+            );
+            // If stats hasn't been generated yet.
+            if (reader.Values.FirstOrDefault()?.Count() == 0) {
+                await RespondAsync(embed: EB.Error("У данного пользователя еще не была создана статистика!"));
+                return;
+            }
+
+            string money = reader["MONEY"][0];
+            string moneySpaces = new string(' ', (31 - money.Length) / 2);
+            string moneyRow = " " + moneySpaces + $"$ {money}" + moneySpaces + (money.Length % 2 == 0 ? "  " : " ");
+
+            var embed = EB.NormalWithAuthor(user, "",
+                "```"
+                + $"            ╭—————————————╮   \n"
+                + $" ╭——————————│    Stats    │——————————╮\n"
+                + $" │          ╰—————————————╯          │\n"
+                + $" │      Всего рейтинга получено      │\n"
+                + $" │{moneyRow}│\n"
+                + $" │                                   │\n"
+                + $" │                                   │\n"
+                + $" ╰———————————————————————————————————╯"
+                + "```"
+            ).ToEmbedBuilder();
+
+            string[] prizeNameArr = {
+                "Ничего",
+                "Тарелки риса",
+                "Кошка-жена",
+                "+500 рейтинга",
+                "+1000 рейтига",
+                "+5000 рейтига",
+                "-1000 рейтига",
+                "-2500 рейтига",
+                "Путевка в (конц)лагерь",
+                "Роль элитного раба"
+            };
+
+            string descBuilding = embed.Description;
+            for (int i = prizeNameArr.Length - 1; i >= 0; i--) {
+                descBuilding = descBuilding.Insert(229, $" │ {prizeNameArr[i]}: {new string(' ', 33 - prizeNameArr[i].Length - 2 - reader[$"PRIZE_{i}"][0].Length)}{reader[$"PRIZE_{i}"][0]} │\n");
+            }
+            embed.WithDescription(descBuilding);
+
+            await RespondAsync(embed: embed.Build());
+        }
+
+        [SlashCommand("slots-inventory", "Посмотреть инвентарь слотов.")]
+        public async Task HandleSlotsInventoryCommand(
+            [Summary("user", "Чей инвентарь посмотреть ?")]
+            SocketUser? set_user = null
+        ) {
+            if (set_user == Context.Guild.CurrentUser) { await RespondAsync(embed: EB.Error("Братик, у меня есть абсолютно все вещи в этой вселенной, тебе не обязательно смотреть мой инвентарь...")); return; }
+            var user = Context.User as SocketGuildUser;
+            if (set_user != null) { user = set_user as SocketGuildUser; }
+            if (user == null) { return; }
+
+            var reader = _db.ReadWithCondition(
+                "slots_inventory",
+                "MONEY, PRIZE_1, PRIZE_2, PRIZE_8, PRIZE_9",
+                "USER_ID",
+                user.Id.ToString()
+            );
+            // If inventory hasn't been generated yet.
+            if (reader.Values.FirstOrDefault()?.Count() == 0) {
+                await RespondAsync(embed: EB.Error("У данного пользователя еще не был создан инвентарь!"));
+                return;
+            }
+
+            string money = reader["MONEY"][0];
+            string moneySpaces = new string(' ', (31 - money.Length) / 2);
+            string moneyRow = " " + moneySpaces + $"$ {money}" + moneySpaces + (money.Length % 2 == 0 ? "  " : " ");
+
+            string rice = reader["PRIZE_1"][0];
+            string riceSpaces = new string(' ', 19 - rice.Length);
+
+            string cat = reader["PRIZE_2"][0];
+            string catSpaces = new string(' ', 21 - cat.Length);
+
+            string timeout = reader["PRIZE_8"][0];
+            string timeoutSpaces = new string(' ', 15 - timeout.Length);
+
+            string elite = reader["PRIZE_9"][0];
+            string eliteSpaces = new string(' ', 13 - elite.Length);
+            var embed = EB.NormalWithAuthor(user, "",
+                "```"
+                + $"            ╭—————————————╮           \n"
+                + $" ╭——————————│  Inventory  │——————————╮\n"
+                + $" │          ╰—————————————╯          │\n"
+                + $" │{moneyRow}│\n"
+                + $" │                                   │\n"
+                + $" │ Тарелки риса: {riceSpaces}{rice} │\n"
+                + $" │ Кошка-жена: {catSpaces}{cat} │\n"
+                + $" │ Путевка в лагерь: {timeoutSpaces}{timeout} │\n"
+                + $" │ Роль элитного раба: {eliteSpaces}{elite} │\n"
+                + $" │                                   │\n"
+                + $" ╰———————————————————————————————————╯"
+                + "```"
+            ).ToEmbedBuilder();
+
+            await RespondAsync(embed: embed.Build());
         }
 
         [SlashCommand("asaka-shutdown", "Выключить пк Асаки(Только для Асаки)")]

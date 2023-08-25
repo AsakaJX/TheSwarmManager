@@ -53,14 +53,6 @@ namespace TheSwarmManager.Services {
                 }
             }
 
-            // <---------------- DB TEST AREA ---------------->
-
-            // _db.DropTable("slots");
-            // _db.CreateTable("jopa");
-            // _db.DropTable("jopa");
-
-            // <---------------- DB TEST AREA ---------------->
-
             SubscribeDiscordEvents();
             SubscribeLavaLinkEvents();
         }

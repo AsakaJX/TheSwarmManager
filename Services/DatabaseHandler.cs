@@ -5,20 +5,6 @@ using Pastel;
 using TheSwarmManager.Modules.Logging;
 
 namespace TheSwarmManager.Services.Database {
-    // public struct KeyTypePair {
-    //     public string Key { get; set; }
-    //     public OracleDbType Type { get; set; }
-    //     public KeyTypePair(string key, OracleDbType type) {
-    //         Key = key;
-    //         Type = type;
-    //     }
-    // }
-    // public class TripleValueDictionary<T> : Dictionary<KeyTypePair, T> where T : notnull {
-    //     public void Add(string kvpKey, OracleDbType kvpType, T value) {
-    //         KeyTypePair kvp = new KeyTypePair(kvpKey, kvpType);
-    //         this.Add(kvp, value);
-    //     }
-    // }
     class DBHandler {
         private IConfigurationRoot _config = new ConfigurationBuilder()
             .SetBasePath(AppContext.BaseDirectory)
@@ -34,9 +20,9 @@ namespace TheSwarmManager.Services.Database {
 #pragma warning restore
         // <------------------- Test section ------------------->
         /// <summary>
-        /// Testing connection to database.
+        /// Testing connection to database.<br/>
+        /// Returns: True if connection opened successfully.
         /// </summary>
-        /// <returns>true if succeeded and false if not.</returns>
         public bool TestConnection() {
             try {
                 _connection.Open();
@@ -61,28 +47,37 @@ namespace TheSwarmManager.Services.Database {
 
         // <------------------- Usage section ------------------->
         /// <summary>
-        /// Execute command method to prevent repeating myself.
+        /// Execute command method to prevent repeating myself.<br/>
+        /// Returns: True if command executed successfully.
         /// </summary>
         /// <param name="cmd">Oracle Command object</param>
-        private void TryToExecuteCommand(OracleCommand cmd) {
+        private bool TryToExecuteCommand(OracleCommand cmd) {
             try {
                 cmd.ExecuteNonQuery();
                 Log.NewLog(LogSeverity.Info, "Database Handler|Command Runner", $"Command \"{cmd.CommandText}\" has been executed {"successfully".Pastel("#70ff38")}!");
+                return true;
             } catch (Exception ex) {
                 Log.NewLog(LogSeverity.Error, "Database Handler|Command Runner", $"{"Exception".Pastel("#ff3434")} caught during execution of \"{cmd.CommandText}\" command!");
                 Log.NewLog(LogSeverity.Error, "Database Handler|Command Runner", ex.Message, 1);
+                return false;
             }
         }
         /// <summary>
-        /// Read data from the table by specified column(-s) / and with specified range.
+        /// Read data from table and specified columns.
         /// </summary>
         /// <param name="table">Table name</param>
-        /// <param name="columns">Column names splited by ","</param>
-        /// <param name="rangeMin">(Optional) Min value of range</param>
-        /// <param name="rangeMax">(Optional) Max value of range</param>
+        /// <param name="columns">Columns names separated with column if you want to read multiple columns</param>
         /// <returns></returns>
-        public Dictionary<string, string[]> Read(string table, string columns, int rangeMin = 0, int rangeMax = 0) {
-            _command.CommandText = $"SELECT {columns} FROM {table} {(rangeMin > 0 && rangeMax > 0 ? $"WHERE ID BETWEEN {rangeMin} AND {rangeMax}" : "")}";
+        public Dictionary<string, string[]> Read(string table, string columns, uint rangeMin = 0, uint rangeMax = 0, string conditionColumn = "", string conditionValue = "") {
+            _command.CommandText = $"SELECT {columns} FROM {table}";
+
+            if (rangeMax != 0) {
+                _command.CommandText += $" WHERE ID BETWEEN {rangeMin} AND {rangeMax}";
+                conditionColumn = "";
+            }
+            if (conditionColumn != String.Empty)
+                _command.CommandText += $" WHERE {conditionColumn} = {conditionValue}";
+
             string[] columnsArray = columns.Replace(" ", "").Split(",");
 
             Dictionary<string, string> output = new Dictionary<string, string>();
@@ -117,6 +112,28 @@ namespace TheSwarmManager.Services.Database {
             }
 
             return final;
+        }
+        /// <summary>
+        /// Read data from table and specified columns with condition. 
+        /// </summary>
+        /// <param name="table">Table name</param>
+        /// <param name="columns">Columns names separated with comma</param>
+        /// <param name="conditionColumn">Condition column</param>
+        /// <param name="conditionValue">Condition value</param>
+        /// <returns></returns>
+        public Dictionary<string, string[]> ReadWithCondition(string table, string columns, string conditionColumn, string conditionValue) {
+            return Read(table, columns, 0, 0, conditionColumn, conditionValue);
+        }
+        /// <summary>
+        /// Read data from table and specified columns in range.
+        /// </summary>
+        /// <param name="table">Table name</param>
+        /// <param name="columns">Column names separated with comma</param>
+        /// <param name="rangeMin">(Optional) Min value of range</param>
+        /// <param name="rangeMax">(Optional) Max value of range</param>
+        /// <returns></returns>
+        public Dictionary<string, string[]> ReadInRange(string table, string columns, uint rangeMin = 0, uint rangeMax = 0) {
+            return Read(table, columns, rangeMin, rangeMax);
         }
         /// <summary>
         /// Setup connection information.
@@ -196,15 +213,41 @@ namespace TheSwarmManager.Services.Database {
             TryToExecuteCommand(_command);
         }
         /// <summary>
-        /// Update one-or-many columns in table.
+        /// Update one column in table.
+        /// </summary>
+        /// <param name="table">Table name</param>
+        /// <param name="columnName">Column name, which is being updated</param>
+        /// <param name="columnValue">New column value</param>
+        /// <param name="id">ID of the column</param>
+        public void Update(string table, string columnName, string columnValue, int id) {
+            _command.CommandText = $"UPDATE {table} SET {columnName} = {columnValue} WHERE id = {id}";
+            TryToExecuteCommand(_command);
+        }
+        /// <summary>
+        /// Update one column in table with condition.
+        /// </summary>
+        /// <param name="table">Table name</param>
+        /// <param name="columnName">Column name, which is being updated</param>
+        /// <param name="columnValue">New column value</param>
+        /// <param name="conditionColumn">Condition column name</param>
+        /// <param name="conditionValue">Conditionm column value</param>
+        public void Update(string table, string columnName, string columnValue, string conditionColumn, string conditionValue) {
+            _command.CommandText = $"UPDATE {table} SET {columnName} = {columnValue} WHERE {conditionColumn} = {conditionValue}";
+            TryToExecuteCommand(_command);
+        }
+        /// <summary>
+        /// Update many columns in table.
         /// </summary>
         /// <param name="table">Table name</param>
         /// <param name="newColumn">New column dictionary with key - column name and value - new column value (if it's string put it in " ") !!!</param>
         /// <param name="id">ID of the column</param>
-        public void Update(string table, Dictionary<string, string> newColumn, int id) {
+        public void UpdateMany(string table, Dictionary<string, string> newColumn, int id) {
             foreach (var element in newColumn) {
-                _command.CommandText = $"UPDATE {table} SET {element.Key} = {element.Value} WHERE id = {id}";
-                TryToExecuteCommand(_command);
+                // ? This is previous version from Update function, which was being used for updating one or many columns.
+                // ? Now this functions are separated for easier usage.
+                // _command.CommandText = $"UPDATE {table} SET {element.Key} = {element.Value} WHERE id = {id}";
+                // TryToExecuteCommand(_command);
+                Update(table, element.Key, element.Value, id);
             }
         }
         /// <summary>
@@ -260,6 +303,16 @@ namespace TheSwarmManager.Services.Database {
         public void Execute(string command) {
             _command.CommandText = command;
             TryToExecuteCommand(_command);
+        }
+        /// <summary>
+        /// Execute custom command, that hasn't been implemented already
+        /// and get execution result (1 - successfull, 0 - not successfull)
+        /// </summary>
+        /// <param name="command">Command string</param>
+        /// <returns>Execution result</returns>
+        public bool ExecuteWithOutput(string command) {
+            _command.CommandText = command;
+            return TryToExecuteCommand(_command);
         }
     }
 }

@@ -46,7 +46,7 @@ namespace TheSwarmManager.Modules.Logging {
         /// <param name="mask">a <c>char</c> representing your choice of console mask</param>
         /// <returns>the string the user typed in </returns>
 
-        public string ReadPassword(char mask) {
+        private string ReadPassword(char mask) {
             const int ENTER = 13, BACKSP = 8, CTRLBACKSP = 127;
             int[] FILTERED = { 0, 27, 9, 10 /*, 32 space, if you care */ };
 
@@ -81,7 +81,7 @@ namespace TheSwarmManager.Modules.Logging {
             return ComputeSHA256(new string(pass.Reverse().ToArray()));
         }
 
-        static string ComputeSHA256(string s) {
+        private static string ComputeSHA256(string s) {
             using (SHA256 sha256 = SHA256.Create()) {
                 // Compute the hash of the given string
                 byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(s));
@@ -95,7 +95,7 @@ namespace TheSwarmManager.Modules.Logging {
         /// Like System.Console.ReadLine(), only with a mask. Default mask is "*".
         /// </summary>
         /// <returns>the string the user typed in </returns>
-        public string ReadPassword() {
+        private string ReadPassword() {
             return ReadPassword('*');
         }
         /// <summary>

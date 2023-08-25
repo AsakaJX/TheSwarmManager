@@ -1,4 +1,5 @@
 {
     "materialTheme.accent": "Blue",
-    "C_Cpp.dimInactiveRegions": true
+    "C_Cpp.dimInactiveRegions": true,
+    "discord.enabled": true
 }
