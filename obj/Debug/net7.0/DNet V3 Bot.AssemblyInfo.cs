@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DNet V3 Bot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcadef6e97cc4f078825e3d070e7c0feaaea3028")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a418824b46578ecbb6131bb18f7f70ab6c216d0a")]
 [assembly: System.Reflection.AssemblyProductAttribute("DNet V3 Bot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DNet V3 Bot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

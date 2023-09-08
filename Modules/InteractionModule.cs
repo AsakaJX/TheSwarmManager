@@ -34,6 +34,15 @@ namespace TheSwarmManager.Modules.Interactions {
         // ? Сделать функцию проверки необходимых требований для использования команды, которая сама будет отвечать эмбедами +
         // ? если не прошел требования, она должна в эмбеде написать полный список требований, которым не удовлетворяет пользователь
 
+        [SlashCommand("testing", "soosoado")]
+        public async Task HandleTestingCommand() {
+            try {
+                await RespondAsync("kajsdkdska");
+            } catch (Exception ex) {
+                System.Console.WriteLine(ex.Message);
+            }
+        }
+
         [SlashCommand("debug-test1", "test")]
         public async Task HandleTest1Command() {
             if (!((IGuildUser)Context.User).RoleIds.ToArray().Contains(Convert.ToUInt64(_config["roleGuild:owner"]))) {
