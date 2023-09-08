@@ -50,3 +50,27 @@
 2023-09-09 00:01:31.613  INFO 18880 --- [XNIO-1 task-1] lavalink.server.io.SocketContext         : Replaying 0 events
 2023-09-09 00:01:31.613  INFO 18880 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Resumed session with key Victoria
 2023-09-09 00:01:31.638  INFO 18880 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"key":"Victoria","timeout":30,"op":"configureResuming"}
+2023-09-09 00:14:57.392  INFO 18880 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
+2023-09-09 00:14:57.395  INFO 18880 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-09 00:14:57.396  INFO 18880 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2023-09-09 00:14:57.397 ERROR 18880 --- [XNIO-1 I/O-3] org.xnio.listener                        : XNIO001007: A channel event listener threw an exception
+
+java.util.concurrent.RejectedExecutionException: XNIO007007: Thread is terminating
+	at org.xnio.nio.WorkerThread.execute(WorkerThread.java:620) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:396) ~[undertow-websockets-jsr-2.2.16.Final.jar!/:2.2.16.Final]
+	at io.undertow.websockets.jsr.UndertowSession$3.handleEvent(UndertowSession.java:388) ~[undertow-websockets-jsr-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:1081) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at io.undertow.server.protocol.framed.AbstractFramedChannel$FrameCloseListener.handleEvent(AbstractFramedChannel.java:994) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.terminated(WriteReadyHandler.java:70) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.writeTerminated(NioSocketConduit.java:204) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.terminateWrites(NioSocketConduit.java:193) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.truncateWrites(NioSocketConduit.java:198) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at io.undertow.conduits.IdleTimeoutConduit.truncateWrites(IdleTimeoutConduit.java:387) ~[undertow-core-2.2.16.Final.jar!/:2.2.16.Final]
+	at org.xnio.conduits.ConduitStreamSinkChannel.close(ConduitStreamSinkChannel.java:186) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.IoUtils.safeClose(IoUtils.java:152) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.forceTermination(WriteReadyHandler.java:57) ~[xnio-api-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.NioSocketConduit.forceTermination(NioSocketConduit.java:108) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:507) ~[xnio-nio-3.8.6.Final.jar!/:3.8.6.Final]
+

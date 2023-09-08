@@ -145,7 +145,7 @@ namespace TheSwarmManager.Services {
                     SelfDeaf = true,
                     ReconnectAttempts = 3,
                     Port = 2333,
-                    Hostname = "localhost",
+                    Hostname = "192.168.0.34",
                     EnableResume = true
                 })
                 .AddSingleton<AudioHandler>()
