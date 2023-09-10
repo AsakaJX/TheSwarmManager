@@ -13,7 +13,6 @@ namespace TheSwarmManager.Services {
 
             PSDataCollection<PSObject> outputCollection = new();
             ps.Streams.Error.DataAdded += (object? sender, DataAddedEventArgs e) => {
-                // ! Could or couldn't work -> ?? "nothing"
                 errorMessage = (sender as PSDataCollection<ErrorRecord> ?? "nothing")[e.Index].ToString();
             };
             IAsyncResult result = ps.BeginInvoke<PSObject, PSObject>(null, outputCollection);

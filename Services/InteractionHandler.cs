@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using Discord.Interactions;
 using Discord.WebSocket;
+using Microsoft.Extensions.Configuration;
 using TheSwarmManager.Modules.Logging;
 
 namespace TheSwarmManager.Services {
@@ -9,8 +10,10 @@ namespace TheSwarmManager.Services {
         private readonly DiscordSocketClient _client;
         private readonly InteractionService _commands;
         private readonly IServiceProvider _services;
+        private readonly IConfigurationRoot _config;
 
-        public InteractionHandler(DiscordSocketClient client, InteractionService commands, IServiceProvider services) {
+        public InteractionHandler(DiscordSocketClient client, InteractionService commands, IServiceProvider services, IConfigurationRoot config) {
+            _config = config;
             _client = client;
             _commands = commands;
             _services = services;

@@ -275,7 +275,6 @@ namespace TheSwarmManager.Modules.Audio {
             SearchType setType = SearchType.Direct
         ) {
             try {
-
                 if (setType == SearchType.SoundCloud) {
                     await RespondAsync(embed: EB.Error($"SoundCloud не работает, потому что разработчик россиянин :)\n:fist: Россия великая страна :fist:"));
                     return;
@@ -317,7 +316,7 @@ namespace TheSwarmManager.Modules.Audio {
                     var track = searchResponse.Tracks.FirstOrDefault();
                     player.Queue.Enqueue(track);
 
-                    await RespondAsync(embed: EB.Success($"**Добавила в очередь**: [{track?.Title}]({track?.Url})\n**Длина**: {track?.Duration.ToString(@"hh\:mm\:ss")}"));
+                    await RespondAsync(embed: EB.Success($"**Добавила в очередь**: [{track?.Title}]({track?.Url}) by {track?.Author}\n**Длина**: {track?.Duration.ToString(@"hh\:mm\:ss")}"));
                 }
 
                 if (player.PlayerState is PlayerState.Playing or PlayerState.Paused) {
@@ -506,8 +505,6 @@ namespace TheSwarmManager.Modules.Audio {
                 .WithTitle($"Текущий трек")
                 .WithDescription($"[{track.Title}]({track.Url})")
                 .WithColor(ColorConverter.GetColor("normal"))
-                // .WithImageUrl(artwork)
-                // .WithUrl(track.Url)
                 .WithFooter($"{currentHrs}:{currentMin}:{currentSec}/{track.Duration}")
             ;
 
@@ -521,19 +518,25 @@ namespace TheSwarmManager.Modules.Audio {
             }
 
             List<LavaTrack> QueueList = player.Queue.ToList();
-            string FinalString = "### Очередь\n";
+            // string FinalString = "### Очередь\n";
+            // for (int i = 0; i < QueueList.Count; i++) {
+            //     FinalString += $"> [{QueueList[i].Title}]({QueueList[i].Url})\n";
+            // }
+
+            // string currentlyPlaying = "*ничего*";
+            // if (player.PlayerState == PlayerState.Playing) {
+            //     currentlyPlaying = $"> [{player.Track.Title}]({player.Track.Url})";
+            // }
+
+            // if (QueueList.Count <= 0) { FinalString = "### Очередь\n*пусто*"; }
+
+            // await RespondAsync(embed: EB.Normal("Очередь", "### Сейчас играет\n" + $"{currentlyPlaying}\n\n" + FinalString));
+
+            string FinalString = "";
             for (int i = 0; i < QueueList.Count; i++) {
-                FinalString += $"> [{QueueList[i].Title}]({QueueList[i].Url})\n";
+                FinalString += $"**{i + 1}**. [{QueueList[i].Title}]({QueueList[i].Url}) by {QueueList[i].Author}\n";
             }
-
-            string currentlyPlaying = "*пусто*";
-            if (player.PlayerState == PlayerState.Playing) {
-                currentlyPlaying = $"> [{player.Track.Title}]({player.Track.Url})";
-            }
-
-            if (QueueList.Count <= 0) { FinalString = "### Очередь\n*пусто*"; }
-
-            await RespondAsync(embed: EB.Normal("Очередь", "### Сейчас играет\n" + $"{currentlyPlaying}\n\n" + FinalString));
+            await RespondAsync(embed: EB.Normal("Очередь", $"{(FinalString == "" ? "*пусто*" : FinalString)}"));
         }
     }
 }

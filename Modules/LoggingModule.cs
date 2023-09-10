@@ -179,6 +179,14 @@ namespace TheSwarmManager.Modules.Logging {
                 return ReadPassword();
 
             Console.WriteLine();
+            _ = Task.Run(() => {
+                ConsoleKeyInfo key = Console.ReadKey(true);
+                while (key.KeyChar.ToString().ToLower() != "q") {
+                    key = Console.ReadKey(true);
+                }
+                Console.Write($"{date.Pastel(ConsoleColor.Gray)}  {" "}{LogSeverity.Warning.ToString().ToUpper().Pastel(ColorTable[LogSeverity.Warning])}{" ⇢ ".Pastel(ConsoleColor.Cyan)}{"[ ".Pastel("#707070")}{"User Input".Pastel("#2B52AB")}{"                         "}{" ]".Pastel("#707070")}       {arrow.Pastel(ConsoleColor.Cyan)}       {"\"Q\" key has been pressed! Shutting down...".Pastel(ConsoleColor.DarkGray)}");
+                Environment.Exit(1000);
+            });
             return string.Empty;
         }
         /// <summary>

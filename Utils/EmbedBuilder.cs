@@ -69,7 +69,7 @@ namespace TheSwarmManager.Utils.EmbedBuilder {
         /// <returns></returns>
         public Embed Error(string errorText) {
             var embed = new Discord.EmbedBuilder()
-                .WithTitle("Error")
+                .WithTitle("Ошибка")
                 .WithColor(ColorConverter.GetColor("red"))
                 .WithDescription(errorText)
                 .Build()
@@ -87,7 +87,7 @@ namespace TheSwarmManager.Utils.EmbedBuilder {
             string username = socketUser.Username;
             string avatarUrl = socketUser.GetAvatarUrl();
             var embed = new Discord.EmbedBuilder()
-                .WithTitle("Error")
+                .WithTitle("Ошибка")
                 .WithAuthor(username, avatarUrl)
                 .WithColor(ColorConverter.GetColor("red"))
                 .WithDescription(errorText)
@@ -103,7 +103,7 @@ namespace TheSwarmManager.Utils.EmbedBuilder {
         /// <returns></returns>
         public Embed Success(string description) {
             var embed = new Discord.EmbedBuilder()
-                .WithTitle("Success")
+                .WithTitle("Успех")
                 .WithDescription(description)
                 .WithColor(ColorConverter.GetColor("green"))
                 .Build()
@@ -121,7 +121,7 @@ namespace TheSwarmManager.Utils.EmbedBuilder {
             string username = socketUser.Username;
             string avatarUrl = socketUser.GetAvatarUrl();
             var embed = new Discord.EmbedBuilder()
-                .WithTitle("Success")
+                .WithTitle("Успех")
                 .WithAuthor(username, avatarUrl)
                 .WithDescription(description)
                 .WithColor(ColorConverter.GetColor("green"))
