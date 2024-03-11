@@ -114,7 +114,7 @@ namespace TheSwarmManager.Modules.Interactions {
             await ReplyAsync("SUCCESS WITH AUTHOR", embed: EB.SuccessWithAuthor(Context.User, "description"));
         }
 
-        [SlashCommand("help", "Братик, через эту команду ты можешь узнать весь мой внутренний мир (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)")]
+        [SlashCommand("help", $"{user.Username.ToString()}, через эту команду ты можешь узнать весь мой внутренний мир (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)")]
         public async Task HandleHelpCommand() {
             string DeveloperNotes = File.ReadAllText("Resources/Help/DeveloperNotes.txt");
 
@@ -493,7 +493,7 @@ namespace TheSwarmManager.Modules.Interactions {
             int[] negativePrizes = { 8 };
             if (MiddleValue == 1) { return; }
             if (negativePrizes.Contains(MiddleRowMaxKey) && user.Roles.ToArray().Contains(ownerRole)) {
-                await ReplyAsync("Братик, ты слишком ценный материал в моем улье, я не могу позволить себе причинить тебе боль :heart:");
+                await ReplyAsync($"{user.Username.ToString()}, ты слишком ценный материал в моем улье, я не могу позволить себе причинить тебе боль :heart:");
                 return;
             }
 
@@ -520,7 +520,7 @@ namespace TheSwarmManager.Modules.Interactions {
                     if (!user.Roles.ToArray().Contains(eliteVictimRole))
                         await user.AddRoleAsync(eliteVictimRole);
                     else {
-                        await ReplyAsync("Братик, ты уже мой любимый и элитный раб, тебе не нужна вторая такая же роль ( 〃▽〃)\n" +
+                        await ReplyAsync($"{user.Username.ToString()}, ты уже мой любимый и элитный раб, тебе не нужна вторая такая же роль ( 〃▽〃)\n" +
                             "Но ты можешь ее подарить кому-нибудь! Я добавила тебе ее в твой инвентарь. (команда: slots-inventory)");
                         var inventoryCurrentCounter = _db.ReadWithCondition("slots_inventory", "prize_9", "user_id", user.Id.ToString())[columnName].FirstOrDefault();
                         var inventoryUpdatedCounter = Convert.ToInt32(inventoryCurrentCounter) + 1;
@@ -537,7 +537,7 @@ namespace TheSwarmManager.Modules.Interactions {
             [Summary("user", "Чью статистику посмотреть ?")]
             SocketUser? set_user = null
         ) {
-            if (set_user == Context.Guild.CurrentUser) { await RespondAsync(embed: EB.Error("Братик, у меня есть абсолютно все вещи в этой вселенной, тебе не обязательно смотреть мой инвентарь...")); return; }
+            if (set_user == Context.Guild.CurrentUser) { await RespondAsync(embed: EB.Error($"{user.Username.ToString()}, у меня есть абсолютно все вещи в этой вселенной, тебе не обязательно смотреть мой инвентарь...")); return; }
             var user = Context.User as SocketGuildUser;
             if (set_user != null) { user = set_user as SocketGuildUser; }
             if (user == null) { return; }
@@ -598,7 +598,7 @@ namespace TheSwarmManager.Modules.Interactions {
             [Summary("user", "Чей инвентарь посмотреть ?")]
             SocketUser? set_user = null
         ) {
-            if (set_user == Context.Guild.CurrentUser) { await RespondAsync(embed: EB.Error("Братик, у меня есть абсолютно все вещи в этой вселенной, тебе не обязательно смотреть мой инвентарь...")); return; }
+            if (set_user == Context.Guild.CurrentUser) { await RespondAsync(embed: EB.Error($"{user.Username.ToString()}, у меня есть абсолютно все вещи в этой вселенной, тебе не обязательно смотреть мой инвентарь...")); return; }
             var user = Context.User as SocketGuildUser;
             if (set_user != null) { user = set_user as SocketGuildUser; }
             if (user == null) { return; }
