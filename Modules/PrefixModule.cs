@@ -27,7 +27,7 @@ namespace TheSwarmManager.Modules.Prefixes {
         //     embed
         //         .WithColor(176, 98, 101)
         //         .WithAuthor(
-        //             "Братик хочет узнать меня получше (≧◡≦)",
+        //             $"{user.Username.ToString()} хочет узнать меня получше (≧◡≦)",
         //             Context.Message.Author.GetAvatarUrl()
         //         )
         //         .WithTitle("Some Title")
@@ -100,7 +100,7 @@ namespace TheSwarmManager.Modules.Prefixes {
         //         proc.Start();
         //         do {
         //             //string line = proc.StandardError.ReadLine();
-        //             await ReplyAsync(embed: _EmbedBuilder.Success("Братик, твой пк выключится через 1 минуту! Введи команду 'sdc' чтобы отменить. (＞﹏＜)"));
+        //             await ReplyAsync(embed: _EmbedBuilder.Success($"{user.Username.ToString()}, твой пк выключится через 1 минуту! Введи команду 'sdc' чтобы отменить. (＞﹏＜)"));
         //         }
         //         while (!proc.StandardOutput.EndOfStream);
         //     } else {
@@ -122,7 +122,7 @@ namespace TheSwarmManager.Modules.Prefixes {
         //         do {
         //             // ! Could or couldn't work ->     ?? "This line is null." 
         //             string line = proc.StandardError.ReadLine() ?? "This line is null.";
-        //             await ReplyAsync(embed: _EmbedBuilder.Success("Братик, выключение пк было остановлено! (￣ω￣)7"));
+        //             await ReplyAsync(embed: _EmbedBuilder.Success($"{user.Username.ToString()}, выключение пк было остановлено! (￣ω￣)7"));
         //         }
         //         while (!proc.StandardOutput.EndOfStream);
         //     } else {
@@ -393,7 +393,7 @@ namespace TheSwarmManager.Modules.Prefixes {
         //     if (MiddleValue == 1) { return; }
         //     if (MiddleRowMaxKey == 4 || MiddleRowMaxKey == 5 || MiddleRowMaxKey == 6 || MiddleRowMaxKey == 7) {
         //         if (user.Roles.ToArray().Contains(ownerRole)) {
-        //             await ReplyAsync("Братик, ты слишком ценный материал в моем улье, я не могу позволить себе причинить тебе боль :heart:");
+        //             await ReplyAsync($"{user.Username.ToString()}, ты слишком ценный материал в моем улье, я не могу позволить себе причинить тебе боль :heart:");
         //             return;
         //         }
         //     }
@@ -428,7 +428,7 @@ namespace TheSwarmManager.Modules.Prefixes {
         //             break;
         //         case 8:
         //             if (MiddleValue != 5) {
-        //                 await ReplyAsync("Братик ты не смог выбить все 5 восьмерок! Поэтому админки ты не получишь. ( `ε´ )");
+        //                 await ReplyAsync($"{user.Username.ToString()} ты не смог выбить все 5 восьмерок! Поэтому админки ты не получишь. ( `ε´ )");
         //                 return;
         //             }
         //             await ReplyAsync("Поздравляю братик! Ты выбил 5 восьмерок! Молодец! Хотя мне казалось что шанса 1 к 100 миллиардам будет достаточно... ");
@@ -450,8 +450,8 @@ namespace TheSwarmManager.Modules.Prefixes {
         //             else {
         //                 await ReplyAsync("Поздравляю братик! Ты выйграл ***:crown: Админку :crown:***");
         //                 if (user.Roles.ToArray().Contains(ownerRole)) {
-        //                     // await ReplyAsync("Братик, ты выйграл админку, но так как у тебя она уже была, я не смогу тебе ее выдать!");
-        //                     await ReplyAsync("Братик, ты выйграл админку, но так как у тебя она уже была, я заберу у тебя ее!");
+        //                     // await ReplyAsync($"{user.Username.ToString()}, ты выйграл админку, но так как у тебя она уже была, я не смогу тебе ее выдать!");
+        //                     await ReplyAsync($"{user.Username.ToString()}, ты выйграл админку, но так как у тебя она уже была, я заберу у тебя ее!");
         //                     await user.RemoveRoleAsync(ownerRole);
         //                     await Task.Delay(1000);
         //                     await ReplyAsync("Удачи в следующий раз! (ノ_<。)ヾ(´ ▽ ` )");
@@ -464,7 +464,7 @@ namespace TheSwarmManager.Modules.Prefixes {
         //             if (!user.Roles.ToArray().Contains(eliteVictimRole)) {
         //                 await user.AddRoleAsync(eliteVictimRole);
         //             } else {
-        //                 await ReplyAsync("Братик, ты уже мой любимый и элитный раб, тебе не нужна вторая такая же роль ( 〃▽〃)");
+        //                 await ReplyAsync($"{user.Username.ToString()}, ты уже мой любимый и элитный раб, тебе не нужна вторая такая же роль ( 〃▽〃)");
         //             }
         //             break;
         //         default:
