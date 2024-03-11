@@ -120,7 +120,7 @@ namespace TheSwarmManager.Modules.Interactions {
 
             var devNotes = new EmbedBuilder { };
             devNotes.WithColor(ColorConverter.GetColor("normal"))
-                 .WithAuthor("<- Этот братик хочет узнать меня получше (≧◡≦)", Context.User.GetAvatarUrl())
+                 .WithAuthor("<- Этот user хочет узнать меня получше (≧◡≦)", Context.User.GetAvatarUrl())
                   //  .WithTitle("**General**\n")
                   .WithDescription(
                     $"Это страница помощи бота **{Context.Guild.CurrentUser.Username}**!\n" +
@@ -446,7 +446,7 @@ namespace TheSwarmManager.Modules.Interactions {
             /* 6 */     "-1000 соц.рейтинга",
             /* 7 */     "-2500 соц.рейтинга",
             /* 8 */     "Путевку в исправительный лагерь на 15 минут!",
-            /* 9 */     "Роль Элитного раба Нейро-самы"
+            /* 9 */     "Роль Элитного юзера Нейро-самы"
             };
 
             embedDescription = new string(embedDescription.Remove(156, PrizeString.Length).Insert(156, PrizeString));
@@ -457,16 +457,16 @@ namespace TheSwarmManager.Modules.Interactions {
             string CongratulationString = "";
 
             if (MultiplierBlackList.Contains(MiddleRowMaxKey) || PrizeMultiplier == 1)
-                CongratulationString = $"<@{user.Id}> братик, ты выйграл **{PrizesArray[MiddleRowMaxKey]}**";
+                CongratulationString = $"<@{user.Id}> user, ты выйграл **{PrizesArray[MiddleRowMaxKey]}**";
             else
-                CongratulationString = $"<@{user.Id}> братик, ты выйграл **{PrizesArray[MiddleRowMaxKey]} x {PrizeMultiplier}**";
+                CongratulationString = $"<@{user.Id}> user, ты выйграл **{PrizesArray[MiddleRowMaxKey]} x {PrizeMultiplier}**";
 
             int choosenPrize = MiddleRowMaxKey;
 
             switch (MiddleValue) {
                 case 1:
                     choosenPrize = 0;
-                    await ReplyAsync($"<@{user.Id}> братик, ты выйграл **{PrizesArray[choosenPrize]}**"); break;
+                    await ReplyAsync($"<@{user.Id}> user, ты выйграл **{PrizesArray[choosenPrize]}**"); break;
                 case 2 or 3 or 4:
                     await ReplyAsync(CongratulationString); break;
                 case 5:
