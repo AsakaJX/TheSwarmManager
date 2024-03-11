@@ -83,7 +83,7 @@ namespace TheSwarmManager.Modules.Prefixes {
         //         proc.StartInfo.CreateNoWindow = true;
         //         proc.Start();
         //     } else {
-        //         await ReplyAsync(embed: _EmbedBuilder.Error("Ты не мой любимый братик! Отстань от меня! ヾ(`ヘ´)ﾉﾞ"));
+        //         await ReplyAsync(embed: _EmbedBuilder.Error("Ты не мой любимый user! Отстань от меня! ヾ(`ヘ´)ﾉﾞ"));
         //     }
         // }
 
@@ -104,7 +104,7 @@ namespace TheSwarmManager.Modules.Prefixes {
         //         }
         //         while (!proc.StandardOutput.EndOfStream);
         //     } else {
-        //         await ReplyAsync(embed: _EmbedBuilder.Error("Ты не мой любимый братик! Отстань от меня! ヾ(`ヘ´)ﾉﾞ"));
+        //         await ReplyAsync(embed: _EmbedBuilder.Error("Ты не мой любимый user! Отстань от меня! ヾ(`ヘ´)ﾉﾞ"));
         //     }
         // }
 
@@ -126,7 +126,7 @@ namespace TheSwarmManager.Modules.Prefixes {
         //         }
         //         while (!proc.StandardOutput.EndOfStream);
         //     } else {
-        //         await ReplyAsync(embed: _EmbedBuilder.Error("Ты не мой любимый братик! Отстань от меня! ヾ(`ヘ´)ﾉﾞ"));
+        //         await ReplyAsync(embed: _EmbedBuilder.Error("Ты не мой любимый user! Отстань от меня! ヾ(`ヘ´)ﾉﾞ"));
         //     }
         // }
 
@@ -351,16 +351,16 @@ namespace TheSwarmManager.Modules.Prefixes {
         //     for (int i = 0; i < MultiplierBlackList.Length; i++) {
         //         if (PrizeMultiplier < 1) { break; }
         //         if (MiddleRowMaxKey == MultiplierBlackList[i]) {
-        //             CongratulationString = $"<@{Context.User.Id}> Братик, ты выйграл ***{PrizesArray[MiddleRowMaxKey]}***";
+        //             CongratulationString = $"<@{Context.User.Id}> user, ты выйграл ***{PrizesArray[MiddleRowMaxKey]}***";
         //             break;
         //         }
-        //         CongratulationString = $"<@{Context.User.Id}> Братик, ты выйграл ***{PrizesArray[MiddleRowMaxKey]} x {PrizeMultiplier}***";
+        //         CongratulationString = $"<@{Context.User.Id}> user, ты выйграл ***{PrizesArray[MiddleRowMaxKey]} x {PrizeMultiplier}***";
         //     }
 
         //     switch (MiddleValue) {
         //         case 1:
         //             //await ReplyAsync(embed: _EmbedBuilder.Normal($"Joined {voiceState.VoiceChannel.Name}!", ""));
-        //             await ReplyAsync($"<@{Context.User.Id}> Братик, ты выйграл ***{PrizesArray[0]}***");
+        //             await ReplyAsync($"<@{Context.User.Id}> user, ты выйграл ***{PrizesArray[0]}***");
         //             embedAuthorName = $"{embedAuthorName} - {PrizesArray[0]}"; break;
         //         case 2:
         //             await ReplyAsync(CongratulationString);
@@ -431,13 +431,13 @@ namespace TheSwarmManager.Modules.Prefixes {
         //                 await ReplyAsync($"{user.Username.ToString()} ты не смог выбить все 5 восьмерок! Поэтому админки ты не получишь. ( `ε´ )");
         //                 return;
         //             }
-        //             await ReplyAsync("Поздравляю братик! Ты выбил 5 восьмерок! Молодец! Хотя мне казалось что шанса 1 к 100 миллиардам будет достаточно... ");
+        //             await ReplyAsync("Поздравляю user! Ты выбил 5 восьмерок! Молодец! Хотя мне казалось что шанса 1 к 100 миллиардам будет достаточно... ");
         //             await Task.Delay(3000);
         //             await ReplyAsync("А теперь перейдем к самой интересной части! У тебя есть шанс 50 на 50 чтобы выбить админку либо же получить вместо нее ***:bricks: ЦЕЛУЮ КУЧУ КИРПИЧЕЙ :bricks:***!!!");
         //             await Task.Delay(1000);
-        //             await ReplyAsync("Удачи Братик!");
+        //             await ReplyAsync("Удачи user!");
 
-        //             string str = "Поздравляю братик! Ты выйграл";
+        //             string str = "Поздравляю user! Ты выйграл";
         //             for (int f = 0; f < 3; f++) {
         //                 str = str.Insert(str.Length, ".");
         //                 await Task.Delay(1000);
@@ -446,9 +446,9 @@ namespace TheSwarmManager.Modules.Prefixes {
 
         //             int PrizeAdmin = rand.Next(0, 2);
         //             if (PrizeAdmin == 0)
-        //                 await ReplyAsync("Поздравляю братик! Ты выйграл ***:bricks: ЦЕЛУЮ КУЧУ КИРПИЧЕЙ :bricks:***");
+        //                 await ReplyAsync("Поздравляю user! Ты выйграл ***:bricks: ЦЕЛУЮ КУЧУ КИРПИЧЕЙ :bricks:***");
         //             else {
-        //                 await ReplyAsync("Поздравляю братик! Ты выйграл ***:crown: Админку :crown:***");
+        //                 await ReplyAsync("Поздравляю user! Ты выйграл ***:crown: Админку :crown:***");
         //                 if (user.Roles.ToArray().Contains(ownerRole)) {
         //                     // await ReplyAsync($"{user.Username.ToString()}, ты выйграл админку, но так как у тебя она уже была, я не смогу тебе ее выдать!");
         //                     await ReplyAsync($"{user.Username.ToString()}, ты выйграл админку, но так как у тебя она уже была, я заберу у тебя ее!");
