@@ -136,7 +136,7 @@ namespace TheSwarmManager.Services {
                     LogGatewayIntentWarnings = false,
                     AlwaysDownloadUsers = true,
                     // To prevent interactions from throwing an exception "Cannot respond to interaction after 3 seconds"
-                    // because of our local time is off-sync, we're using this config parameter.
+                    // because our local time is being off-sync, this config parameter fixes it.
                     UseInteractionSnowflakeDate = false
                 }))
 
