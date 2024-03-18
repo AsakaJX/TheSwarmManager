@@ -17,4 +17,4 @@
 6. 😎 Cool 😎 logging system
 7. Added (for some reason) password checker from db on launch; if incorrect - bot not launches (might remove it later)
 7.1. Password saved as hash, so all good :)
-8. Other misc commands to lazy to list all of them
+8. Other misc commands, too lazy to list all of them
