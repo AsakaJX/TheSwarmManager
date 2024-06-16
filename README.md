@@ -15,6 +15,5 @@
 5.1. WIP: inventory system, money system
 5.2. WIP DONE: stats system
 6. 😎 Cool 😎 logging system
-7. Added (for some reason) password checker from db on launch; if incorrect - bot not launches (might remove it later)
-7.1. Password saved as hash, so all good :)
+7. Added (for some reason) password checker from db on launch; if incorrect - bot not launches (might remove it later) (Password saved as hash, so no security issues)
 8. Other misc commands, too lazy to list all of them
