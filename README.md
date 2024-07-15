@@ -1,4 +1,4 @@
-# "TheSwarmManager" - this is bot that I created specifically for my Discord server.
+# "TheSwarmManager" - discord bot that I created specifically for my Discord server.
 > [!IMPORTANT]
 > Should be manually builded. Also it's possibly not going to work rn.
 > Maybe I'll revisit this bot later and make it more understandable to work with it.
